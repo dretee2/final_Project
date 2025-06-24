@@ -43,8 +43,9 @@ jobs:
 
       - name: Set environment variables
         run: |
-          echo "API_EMAIL=${{ secrets.API_EMAIL }}" >> $GITHUB_ENV
-          echo "API_PASSWORD=${{ secrets.API_PASSWORD }}" >> $GITHUB_ENV
+          echo "USER_EMAIL=${{ secrets.USER_EMAIL }}" >> $GITHUB_ENV
+          echo "USER_PASSWORD=${{ secrets.USER_PASSWORD }}" >> $GITHUB_ENV
+          echo "BASE_API_URL=https://test-v2.tramatch.com" >> $GITHUB_ENV
 
       - name: Set PYTHONPATH
         run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
