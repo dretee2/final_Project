@@ -16,6 +16,10 @@ jobs:
           - test_Services/test_recommendation.py
           - test_Services/test_chats.py
           - test_Services/test_alert.py
+          - test_Services/test_featureSwitch.py
+          - test_Services/test_bytebox.py
+          - test_Services/test_main.py
+
 
     steps:
       - name: Checkout repository
