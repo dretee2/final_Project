@@ -1,4 +1,4 @@
-from gevent.libev.corecffi import recommended_backends
+
 
 from Utilities.readSchemaUrl import ReadSchemaProperties
 from Utilities.runner import SchemathesisRunner
