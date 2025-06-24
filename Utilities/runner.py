@@ -1,7 +1,7 @@
 import subprocess
 
 class SchemathesisRunner:
-    def __init__(self, token: str):
+    def __init__(self, token):
         self.token = token
 
     def run_test(self, name: str, url: str):
