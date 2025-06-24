@@ -1,8 +1,12 @@
 import configparser
 import json
+from pathlib import Path
+
+
+CONFIG_PATH = Path(__file__).resolve().parent.parent / "config.ini"
 
 configs = configparser.RawConfigParser()
-configs.read("config.ini")
+configs.read(CONFIG_PATH)
 
 
 class ReadSchemaProperties:

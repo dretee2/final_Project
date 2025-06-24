@@ -1,6 +1,6 @@
 from Utilities.runner import SchemathesisRunner
 from Utilities.readSchemaUrl import ReadSchemaProperties
-from authentication import get_access_token
+from Utilities.user_auth import get_access_token
 import os
 
 
