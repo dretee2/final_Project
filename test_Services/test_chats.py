@@ -9,5 +9,7 @@ os.makedirs("reports", exist_ok=True)
 
 Chats_schema= ReadSchemaProperties.get_chats_schema()
 
+runner = SchemathesisRunner(token)
+
 for name, url in Chats_schema.items():
-    SchemathesisRunner.run_test(name, url, token)
+    runner.run_test(name, url)

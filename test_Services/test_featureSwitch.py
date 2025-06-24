@@ -9,6 +9,7 @@ os.makedirs("reports", exist_ok=True)
 
 feature_switch_schema= ReadSchemaProperties.get_feature_switch_schema()
 
+runner = SchemathesisRunner(token)
 
 for name, url in feature_switch_schema.items():
-    SchemathesisRunner.run_test(name, url, token)
+    runner.run_test(name, url)

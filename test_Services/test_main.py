@@ -9,5 +9,7 @@ os.makedirs("reports", exist_ok=True)
 
 main_schema= ReadSchemaProperties.get_main_schema()
 
+runner = SchemathesisRunner(token)
+
 for name, url in main_schema.items():
-    SchemathesisRunner.run_test(name, url, token)
+    runner.run_test(name, url)

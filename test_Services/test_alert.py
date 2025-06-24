@@ -9,5 +9,7 @@ os.makedirs("reports", exist_ok=True)
 
 alerts_schema= ReadSchemaProperties.get_alerts_schema()
 
+runner = SchemathesisRunner(token)
+
 for name, url in alerts_schema.items():
-    SchemathesisRunner.run_test(name, url, token)
+    runner.run_test(name, url)
