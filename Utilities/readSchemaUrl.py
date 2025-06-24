@@ -2,7 +2,7 @@ import configparser
 import json
 
 configs = configparser.RawConfigParser()
-configs.read(r"C:\Users\BAB AL SAFA\PycharmProjects\Schemathesis_Project\config.ini")
+configs.read(r"C:\Users\BAB AL SAFA\PycharmProjects\testing\config.ini")
 
 
 class ReadSchemaProperties:
