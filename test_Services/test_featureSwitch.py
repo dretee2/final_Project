@@ -1,10 +1,10 @@
 from Utilities.runner import SchemathesisRunner
 from Utilities.readSchemaUrl import ReadSchemaProperties
-from authentication import get_access_token
+from Utilities.user_auth import get_access_token_for_user
 import os
 
 
-token = get_access_token()
+token = get_access_token_for_user()
 os.makedirs("reports", exist_ok=True)
 
 feature_switch_schema= ReadSchemaProperties.get_feature_switch_schema()
