@@ -11,10 +11,6 @@ class SchemathesisRunner:
             "-H", f"Authorization: Bearer {self.token}",
             "--checks", "all",
             "--workers", "4",
-            "--hypothesis-max-examples", "50",
-            "--junit-xml", f"reports/{name}-report.xml",
-            "--report", f"reports/{name}-report.html",
-            "--report", f"reports/{name}-report.json",
             url
         ]
         subprocess.run(cmd, check=True)
