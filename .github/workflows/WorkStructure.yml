@@ -1,0 +1,38 @@
+name: Schemathesis Services Tests
+
+on:
+  push:
+    branches: [ contract-testing ]
+  pull_request:
+
+jobs:
+  run-contract-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        testfile:
+          - test_Services/test_userManagement.py
+          - test_Services/test_recommendation.py
+          - test_Services/test_chats.py
+          - test_Services/test_alert.py
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Set environment variables
+        run: |
+          echo "API_EMAIL=${{ secrets.API_EMAIL }}" >> $GITHUB_ENV
+          echo "API_PASSWORD=${{ secrets.API_PASSWORD }}" >> $GITHUB_ENV
+
+      - name: Run contract test - ${{ matrix.testfile }}
+        run:  python ${{ matrix.testfile }}

@@ -1,0 +1,4 @@
+# file: C:\Users\BAB AL SAFA\PycharmProjects\Schemathesis_Project\test_Services\conftest.py
+# hypothesis_version: 6.133.2
+
+[200, 'API_EMAIL', 'API_PASSWORD', 'access_token', 'email', 'password', 'session']
