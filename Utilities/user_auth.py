@@ -1,14 +1,15 @@
-
 import os
 import json
-import pytest
 import requests
 from pathlib import Path
 from typing import Optional
-from Utilities.URL_Environment import BASE_API_URL
+from dotenv import load_dotenv
 
 
 BASE_PATH = Path(__file__).parent
+
+# Load environment variables from test.env
+load_dotenv(dotenv_path=BASE_PATH.parent / "test.env")
 
 SAMPLE_USER = {
     "email": os.getenv("USER_EMAIL"),
@@ -17,31 +18,17 @@ SAMPLE_USER = {
 
 
 def get_access_token_for_user() -> Optional[str]:
-    """Util for authenticating a user
-
-     Args:
-         user_email (str): Target user email
-         password (str): Target user password
-
-     Returns:
-         Optional[str]: Access token
-     """
-
-    user_email = "preciousanthony1997@gmail.com"
-    password = "Adinlewa150497"
-
-    """email = os.getenv("API_EMAIL")
-        password = os.getenv("API_PASSWORD")"""
-
-
+    """Util for authenticating a user"""
     response = requests.post(
-            f"{BASE_API_URL}/api/usermgmt/v2/account/login",
-            json={"email": user_email, "password": password},
-        )
+        f"{os.getenv("BASE_API_URL")}/api/usermgmt/v2/account/login",
+        json=SAMPLE_USER,
+    )
     if response.status_code == 200:
-            return response.json()["access_token"]
+        return response.json()["access_token"]
     if response.status_code >= 500:
-            print("critical error occured")
-            print(response.text)
+        print("critical error occurred")
+        print(response.text)
     raise ValueError("Failed to get token")
 
+
+print(get_access_token_for_user())
