@@ -21,7 +21,6 @@ class SchemathesisRunner:
             "--checks", "all",
             "--workers", "4",
             "--report", html_report,
-            "--show-errors-tracebacks"
         ]
 
         print(f"\n🚀 Running Schemathesis test for: {name}")
