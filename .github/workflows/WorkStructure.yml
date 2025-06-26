@@ -11,13 +11,13 @@ jobs:
       fail-fast: false
       matrix:
         testfile:
-          - schemathesis_testing/test_Services/test_user_management.py
-          - schemathesis_testing/test_Services/test_recommendation.py
-          - schemathesis_testing/test_Services/test_chats.py
-          - schemathesis_testing/test_Services/test_alert.py
-          - schemathesis_testing/test_Services/test_feature_switch.py
-          - schemathesis_testing/test_Services/test_bytebox.py
-          - schemathesis_testing/test_Services/test_main.py
+          - test_Services/test_user_management.py
+          - test_Services/test_recommendation.py
+          - test_Services/test_chats.py
+          - test_Services/test_alert.py
+          - test_Services/test_feature_switch.py
+          - test_Services/test_bytebox.py
+          - test_Services/test_main.py
 
     steps:
       - name: Checkout repository
@@ -39,7 +39,7 @@ jobs:
           pip install cffi
 
       - name: Install Python dependencies
-        run: pip install -r schemathesis_testing/requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Set environment variables
         run: |
