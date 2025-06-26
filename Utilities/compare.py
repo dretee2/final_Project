@@ -9,7 +9,7 @@ class SchemathesisRunner:
         self.token = token
         self.report_dir = report_dir
 
-    def run_test(self, name: str, url: str):
+    def run_test(self, url: str, name: str):
         timestamp = datetime.now().strftime("%Y-%m-%d_%H%M%S")
         safe_name = name.replace("/", "_")
 
