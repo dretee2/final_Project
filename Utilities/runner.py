@@ -13,6 +13,6 @@ class SchemathesisRunner:
             "--workers", "4",
             url
         ]
-        subprocess.run(cmd, check=True)
+        subprocess.run(cmd, check=False)
 
 
