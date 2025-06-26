@@ -54,10 +54,12 @@ jobs:
         run: |
           python ${{ matrix.testfile }}
 
+
+      - name: List files for debug
+        run: ls -R reports
+
       - name: Upload reports for ${{ matrix.testfile }}
         uses: actions/upload-artifact@v4
         with:
           name: schemathesis-report-${{ matrix.testfile }}
-          path: |
-            *.html
-            *.xml
+          path: reports/
