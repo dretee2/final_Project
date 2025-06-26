@@ -12,14 +12,14 @@ from dotenv import load_dotenv
 BASE_PATH = Path(__file__).parent
 
 # Load environment variables from test.env
-#load_dotenv(dotenv_path=BASE_PATH.parent / "test.env")
+load_dotenv(dotenv_path=BASE_PATH.parent / "test.env")
 
 TOKEN_CACHE_FILE = BASE_PATH / "token_cache.json"
 
 BASE_API_URL = os.getenv("BASE_API_URL")
 
-#if not BASE_API_URL:
-#    raise EnvironmentError("Missing required environment variable: BASE_API_URL")
+if not BASE_API_URL:
+    raise EnvironmentError("Missing required environment variable: BASE_API_URL")
 
 SAMPLE_USER = {
     "email": os.getenv("USER_EMAIL"),
