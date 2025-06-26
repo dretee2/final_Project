@@ -5,26 +5,26 @@ on:
   pull_request:
 
 jobs:
-  run-contract-tests:
+  run-schemathesis-tests:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         testfile:
-          - test_Services/test_userManagement.py
-          - test_Services/test_recommendation.py
-          - test_Services/test_chats.py
-          - test_Services/test_alert.py
-          - test_Services/test_featureSwitch.py
-          - test_Services/test_bytebox.py
-          - test_Services/test_main.py
+          - schemathesis_testing/test_Services/test_user_management.py
+          - schemathesis_testing/test_Services/test_recommendation.py
+          - schemathesis_testing/test_Services/test_chats.py
+          - schemathesis_testing/test_Services/test_alert.py
+          - schemathesis_testing/test_Services/test_feature_switch.py
+          - schemathesis_testing/test_Services/test_bytebox.py
+          - schemathesis_testing/test_Services/test_main.py
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
@@ -39,16 +39,25 @@ jobs:
           pip install cffi
 
       - name: Install Python dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r schemathesis_testing/requirements.txt
 
       - name: Set environment variables
         run: |
-          echo "USER_EMAIL=${{ secrets.USER_EMAIL }}" >> $GITHUB_ENV
-          echo "USER_PASSWORD=${{ secrets.USER_PASSWORD }}" >> $GITHUB_ENV
-          echo "BASE_API_URL=https://test-v2.tramatch.com" >> $GITHUB_ENV
+          echo "API_EMAIL=${{ secrets.API_EMAIL }}" >> $GITHUB_ENV
+          echo "API_PASSWORD=${{ secrets.API_PASSWORD }}" >> $GITHUB_ENV
+          echo "API_TOKEN=${{ secrets.API_TOKEN }}" >> $GITHUB_ENV
 
       - name: Set PYTHONPATH
         run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
 
-      - name: Run contract test - ${{ matrix.testfile }}
-        run: python ${{ matrix.testfile }}
+      - name: Run schemathesis test - ${{ matrix.testfile }}
+        run: |
+          python ${{ matrix.testfile }}
+
+      - name: Upload reports for ${{ matrix.testfile }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: schemathesis-report-${{ matrix.testfile }}
+          path: |
+            *.html
+            *.xml
