@@ -23,8 +23,7 @@ class SchemathesisRunner:
             "-H", f"Authorization: Bearer {self.token}",
             "--checks", "all",
             "--workers", "4",
-            "--report", "junit",
-            "--show-errors-tracebacks"
+            "--report", "junit"
         ]
 
         print(f"\n🚀 Running Schemathesis test for: {name}")
