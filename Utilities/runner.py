@@ -14,7 +14,6 @@ class SchemathesisRunner:
         safe_name = name.replace("/", "_")
 
         html_report = os.path.join(self.report_dir, f"{safe_name}_{timestamp}_report.html")
-        junit_report = os.path.join(self.report_dir, f"{safe_name}_{timestamp}_report.xml")
 
         cmd = [
             "schemathesis", "run", url,
@@ -22,7 +21,6 @@ class SchemathesisRunner:
             "--checks", "all",
             "--workers", "4",
             "--report", html_report,
-            "--junit-xml", junit_report,
             "--show-errors-tracebacks"
         ]
 
