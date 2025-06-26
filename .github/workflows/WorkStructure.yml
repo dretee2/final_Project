@@ -50,12 +50,13 @@ jobs:
       - name: Set PYTHONPATH
         run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
 
+      - name: Create reports directory
+        run: mkdir -p reports
+
       - name: Run schemathesis test - ${{ matrix.testfile }}
-        run: |
-          python ${{ matrix.testfile }}
+        run: python ${{ matrix.testfile }}
 
-
-      - name: List files for debug
+      - name: Debug - list reports folder
         run: ls -R reports
 
       - name: Upload reports for ${{ matrix.testfile }}
