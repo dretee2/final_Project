@@ -5,26 +5,26 @@ on:
   pull_request:
 
 jobs:
-  run-contract-tests:
+  run-schemathesis-tests:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         testfile:
-          - test_Services/test_userManagement.py
-          - test_Services/test_recommendation.py
-          - test_Services/test_chats.py
-          - test_Services/test_alert.py
-          - test_Services/test_featureSwitch.py
-          - test_Services/test_bytebox.py
-          - test_Services/test_main.py
+          - test_services/test_user_management.py
+          - test_services/test_recommendation.py
+          - test_services/test_chats.py
+          - test_services/test_alert.py
+          - test_services/test_feature_switch.py
+          - test_services/test_bytebox.py
+          - test_services/test_main.py
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
@@ -43,11 +43,29 @@ jobs:
 
       - name: Set environment variables
         run: |
-          echo "API_EMAIL=${{ secrets.API_EMAIL }}" >> $GITHUB_ENV
-          echo "API_PASSWORD=${{ secrets.API_PASSWORD }}" >> $GITHUB_ENV
+          echo "USER_EMAIL=${{ secrets.USER_EMAIL }}" >> $GITHUB_ENV
+          echo "USER_PASSWORD=${{ secrets.USER_PASSWORD }}" >> $GITHUB_ENV
+          
 
       - name: Set PYTHONPATH
         run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
 
-      - name: Run contract test - ${{ matrix.testfile }}
+      - name: Create reports directory
+        run: mkdir -p reports
+
+      - name: Run schemathesis test - ${{ matrix.testfile }}
         run: python ${{ matrix.testfile }}
+
+      - name: Debug - list reports folder
+        run: ls -R reports
+
+      - name: Sanitize artifact name
+        run: |
+          SAFE_NAME="${{ matrix.testfile//\//_}}"
+          echo "SAFE_ARTIFACT_NAME=$SAFE_NAME" >> $GITHUB_ENV
+          
+      - name: Upload reports for ${{ matrix.testfile }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: schemathesis-report-${{ env.SAFE_ARTIFACT_NAME }}
+          path: test_services
