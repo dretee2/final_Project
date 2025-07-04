@@ -59,13 +59,15 @@ jobs:
       - name: Debug - list reports folder
         run: ls -R reports
 
-      - name: Sanitize artifact name
+
+      - name: Sanitize artifact name (replace / with _)
         run: |
-          SAFE_NAME="${{ matrix.testfile//\//_}}"
+          SAFE_NAME="${{ matrix.testfile }}"
+          SAFE_NAME="${SAFE_NAME//\//_}"
           echo "SAFE_ARTIFACT_NAME=$SAFE_NAME" >> $GITHUB_ENV
-          
+
       - name: Upload reports for ${{ matrix.testfile }}
         uses: actions/upload-artifact@v4
         with:
           name: schemathesis-report-${{ env.SAFE_ARTIFACT_NAME }}
-          path: test_services
+          path: reports

@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 
 BASE_PATH = Path(__file__).parent
 
-# Load environment variables from test.env
+# Load environment variables from test.environment
 load_dotenv(dotenv_path=BASE_PATH.parent / "test.env")
 
 TOKEN_CACHE_FILE = BASE_PATH / "token_cache.json"
