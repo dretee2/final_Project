@@ -23,7 +23,7 @@ class SchemathesisRunner:
             "-H", f"Authorization: Bearer {self.token}",
             "--checks", "all",
             "--workers", "4",
-            "--report", "junit"
+                "--report", "junit"
         ]
 
         self.logger.info(f"🚀 Running Schemathesis test for: {name}")
