@@ -11,13 +11,13 @@ jobs:
       fail-fast: false
       matrix:
         testfile:
-          - test_Services/test_user_management.py
-          - test_Services/test_recommendation.py
-          - test_Services/test_chats.py
-          - test_Services/test_alert.py
-          - test_Services/test_feature_switch.py
-          - test_Services/test_bytebox.py
-          - test_Services/test_main.py
+          - test_services/test_user_management.py
+          - test_services/test_recommendation.py
+          - test_services/test_chats.py
+          - test_services/test_alert.py
+          - test_services/test_feature_switch.py
+          - test_services/test_bytebox.py
+          - test_services/test_main.py
 
     steps:
       - name: Checkout repository
@@ -63,4 +63,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: schemathesis-report-${{ matrix.testfile }}
-          path: reports/
+          path: test_services
