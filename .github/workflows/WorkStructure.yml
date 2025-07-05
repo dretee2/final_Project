@@ -36,7 +36,7 @@ jobs:
       - name: Upgrade pip and install cffi
         run: |
           pip install --upgrade pip setuptools wheel
-          pip install cffi
+          pip install cffi pytest pytest-html
 
       - name: Install Python dependencies
         run: pip install -r requirements.txt
@@ -57,17 +57,51 @@ jobs:
         run: |
           TEST_FILE="${{ matrix.testfile }}"
           BASE_NAME=$(basename "$TEST_FILE" .py)
-          REPORT_PATH="reports/${BASE_NAME}_report.xml"
+          REPORT_PATH="reports/${BASE_NAME}_report.html"
           echo "REPORT_PATH=$REPORT_PATH" >> $GITHUB_ENV
-          echo "REPORT_FILE_NAME=${BASE_NAME}_report.xml" >> $GITHUB_ENV
+          echo "REPORT_FILE_NAME=${BASE_NAME}_report.html" >> $GITHUB_ENV
           echo "SAFE_NAME=${TEST_FILE//\//_}" >> $GITHUB_ENV
 
       - name: Run schemathesis test - ${{ matrix.testfile }}
         run: |
-          python ${{ matrix.testfile }} > "$REPORT_PATH"
+          pytest ${{ matrix.testfile }} --html=${{ env.REPORT_PATH }} --self-contained-html
 
-      - name: Upload report for ${{ matrix.testfile }}
+      - name: Upload report as artifact
         uses: actions/upload-artifact@v4
         with:
           name: schemathesis-report-${{ env.SAFE_NAME }}
           path: ${{ env.REPORT_PATH }}
+
+  email-report:
+    name: Email Combined Reports
+    needs: run-schemathesis-tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download all test reports
+        uses: actions/download-artifact@v4
+        with:
+          path: downloaded-reports
+
+      - name: List downloaded reports
+        run: ls -R downloaded-reports
+
+      - name: Send test reports via email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Schemathesis Test Reports - Run #${{ github.run_number }}"
+          to: ${{ secrets.EMAIL_TO }}
+          from: ${{ secrets.EMAIL_USERNAME }}
+          body: |
+            Hello,
+
+            Attached are the HTML reports for all Schemathesis test cases executed in GitHub Actions run #${{ github.run_number }}.
+
+            Regards,  
+            GitHub Actions
+          attachments: |
+            downloaded-reports/**/*
