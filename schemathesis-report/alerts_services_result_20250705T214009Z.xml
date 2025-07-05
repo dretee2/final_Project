@@ -1,0 +1,430 @@
+<?xml version="1.0" ?>
+<testsuites disabled="0" errors="0" failures="10" tests="10" time="28.638000000006286">
+	<testsuite disabled="0" errors="0" failures="10" name="schemathesis" skipped="10" tests="10" time="28.638000000006286" hostname="UyahTee">
+		<testcase name="GET /api/alerts/v2/notifications/" time="4.891000">
+			<failure type="failure" message="1. Test Case ID: 1qjFtO
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/alerts/v2/notifications/`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X GET 'https://test-v2.tramatch.com/api/alerts/v2/notifications/?read=true&amp;per_page=20'"/>
+			<failure type="failure" message="1. Test Case ID: 1qjFtO
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/alerts/v2/notifications/`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X GET 'https://test-v2.tramatch.com/api/alerts/v2/notifications/?read=true&amp;per_page=20'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/alerts/v2/notifications/{notification_id}" time="3.734000">
+			<failure type="failure" message="1. Test Case ID: xVVTNn
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 422
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Notification not found&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/alerts/v2/notifications/0"/>
+			<failure type="failure" message="1. Test Case ID: xVVTNn
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 422
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Notification not found&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/alerts/v2/notifications/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/alerts/v2/notifications/" time="4.921000">
+			<failure type="failure" message="1. Test Case ID: EG7XfB
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;message&quot;:&quot;Succesfully deleted items&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;notifications_id&quot;: []}' https://test-v2.tramatch.com/api/alerts/v2/notifications/
+
+2. Test Case ID: ODZ9KG
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `PUT /api/alerts/v2/notifications/`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;notifications_id&quot;: []}' https://test-v2.tramatch.com/api/alerts/v2/notifications/"/>
+			<failure type="failure" message="1. Test Case ID: EG7XfB
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;message&quot;:&quot;Succesfully deleted items&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;notifications_id&quot;: []}' https://test-v2.tramatch.com/api/alerts/v2/notifications/
+
+2. Test Case ID: ODZ9KG
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `PUT /api/alerts/v2/notifications/`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;notifications_id&quot;: []}' https://test-v2.tramatch.com/api/alerts/v2/notifications/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/alerts/v2/notifications/bulk/read" time="4.844000">
+			<failure type="failure" message="1. Test Case ID: rbhTPN
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;updated&quot;:0}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;notifications_id&quot;: []}' https://test-v2.tramatch.com/api/alerts/v2/notifications/bulk/read
+
+2. Test Case ID: mWHlT1
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `PUT /api/alerts/v2/notifications/bulk/read`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;notifications_id&quot;: []}' https://test-v2.tramatch.com/api/alerts/v2/notifications/bulk/read"/>
+			<failure type="failure" message="1. Test Case ID: rbhTPN
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;updated&quot;:0}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;notifications_id&quot;: []}' https://test-v2.tramatch.com/api/alerts/v2/notifications/bulk/read
+
+2. Test Case ID: mWHlT1
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `PUT /api/alerts/v2/notifications/bulk/read`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;notifications_id&quot;: []}' https://test-v2.tramatch.com/api/alerts/v2/notifications/bulk/read"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/alerts/v2/emails/announcements" time="1.281000">
+			<failure type="failure" message="1. Test Case ID: uRGCvA
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 201, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;body&quot;: {}, &quot;description&quot;: &quot;confirm.jinja2&quot;, &quot;recipients&quot;: [], &quot;subject&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/alerts/v2/emails/announcements"/>
+			<failure type="failure" message="1. Test Case ID: uRGCvA
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 201, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;body&quot;: {}, &quot;description&quot;: &quot;confirm.jinja2&quot;, &quot;recipients&quot;: [], &quot;subject&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/alerts/v2/emails/announcements"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/alerts/v2/emails/announcements/bulk" time="1.328000">
+			<failure type="failure" message="1. Test Case ID: d23Zsx
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 201, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;countries&quot;: null, &quot;created_date&quot;: null, &quot;medium&quot;: [], &quot;religions&quot;: null, &quot;template&quot;: {&quot;body&quot;: {}, &quot;description&quot;: &quot;confirm.jinja2&quot;, &quot;subject&quot;: &quot;&quot;}}' https://test-v2.tramatch.com/api/alerts/v2/emails/announcements/bulk"/>
+			<failure type="failure" message="1. Test Case ID: d23Zsx
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 201, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;countries&quot;: null, &quot;created_date&quot;: null, &quot;medium&quot;: [], &quot;religions&quot;: null, &quot;template&quot;: {&quot;body&quot;: {}, &quot;description&quot;: &quot;confirm.jinja2&quot;, &quot;subject&quot;: &quot;&quot;}}' https://test-v2.tramatch.com/api/alerts/v2/emails/announcements/bulk"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/alerts/v2/notifications/count/" time="3.421000">
+			<failure type="failure" message="1. Test Case ID: htbGnE
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;count&quot;:1}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/alerts/v2/notifications/count/
+
+2. Test Case ID: 3Wrrxr
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/alerts/v2/notifications/count/`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/alerts/v2/notifications/count/"/>
+			<failure type="failure" message="1. Test Case ID: htbGnE
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;count&quot;:1}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/alerts/v2/notifications/count/
+
+2. Test Case ID: 3Wrrxr
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/alerts/v2/notifications/count/`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/alerts/v2/notifications/count/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/alerts/v2/health/" time="1.843000">
+			<failure type="failure" message="1. Test Case ID: L2lGIj
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/alerts/v2/health/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/alerts/v2/engagements/" time="1.203000">
+			<failure type="failure" message="1. Test Case ID: JTQ57P
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 201, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;body&quot;: &quot;&quot;, &quot;dispute_id&quot;: null, &quot;medium&quot;: &quot;CHAT&quot;, &quot;message_id&quot;: null, &quot;parent_id&quot;: null, &quot;recipients&quot;: [], &quot;subject&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/alerts/v2/engagements/"/>
+			<failure type="failure" message="1. Test Case ID: JTQ57P
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 201, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;body&quot;: &quot;&quot;, &quot;dispute_id&quot;: null, &quot;medium&quot;: &quot;CHAT&quot;, &quot;message_id&quot;: null, &quot;parent_id&quot;: null, &quot;recipients&quot;: [], &quot;subject&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/alerts/v2/engagements/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/alerts/v2/engagements/search" time="1.172000">
+			<failure type="failure" message="1. Test Case ID: cp7p0M
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/alerts/v2/engagements/search?page=1&amp;page_size=20&amp;sender=&amp;message_id=0&amp;dispute_id=&amp;medium=EMAIL'"/>
+			<failure type="failure" message="1. Test Case ID: cp7p0M
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/alerts/v2/engagements/search?page=1&amp;page_size=20&amp;sender=&amp;message_id=0&amp;dispute_id=&amp;medium=EMAIL'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+	</testsuite>
+</testsuites>

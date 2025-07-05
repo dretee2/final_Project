@@ -1,0 +1,1289 @@
+<?xml version="1.0" ?>
+<testsuites disabled="0" errors="0" failures="21" tests="21" time="35.34400000005553">
+	<testsuite disabled="0" errors="0" failures="21" name="schemathesis" skipped="21" tests="21" time="35.34400000005553" hostname="UyahTee">
+		<testcase name="GET /api/bytebox/v2/health" time="2.812000">
+			<failure type="failure" message="1. Test Case ID: I8KJou
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/bytebox/v2/health"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/bytebox/v2/images/flagged" time="2.157000">
+			<failure type="failure" message="1. Test Case ID: W7bQlo
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 500
+
+[401] Unauthorized:
+
+    `{&quot;error&quot;:&quot;Unauthorized&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;filename&quot;: &quot;&quot;, &quot;flagged&quot;: false}' https://test-v2.tramatch.com/api/bytebox/v2/images/flagged"/>
+			<failure type="failure" message="1. Test Case ID: W7bQlo
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 500
+
+[401] Unauthorized:
+
+    `{&quot;error&quot;:&quot;Unauthorized&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;filename&quot;: &quot;&quot;, &quot;flagged&quot;: false}' https://test-v2.tramatch.com/api/bytebox/v2/images/flagged"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/bytebox/v2/images/flagged" time="2.266000">
+			<failure type="failure" message="1. Test Case ID: vEjUnI
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 200, 500
+
+[400] Bad Request:
+
+    `Failed to deserialize query string: missing field `page_size``
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/bytebox/v2/images/flagged?page=0'"/>
+			<failure type="failure" message="1. Test Case ID: vEjUnI
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 200, 500
+
+[400] Bad Request:
+
+    `Failed to deserialize query string: missing field `page_size``
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/bytebox/v2/images/flagged?page=0'
+
+2. Test Case ID: 2rZsSE
+
+- API accepts requests without authentication
+
+    Expected 401, got `200 OK` for `GET /api/bytebox/v2/images/flagged`
+
+[200] OK:
+
+    `[]`
+
+Reproduce with: 
+
+    curl -X GET 'https://test-v2.tramatch.com/api/bytebox/v2/images/flagged?page=0&amp;page_size=0'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/bytebox/v2/images/bulk" time="3.718000">
+			<failure type="failure" message="1. Test Case ID: PSFO1a
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `[]`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;image_type&quot;: null, &quot;users&quot;: []}' https://test-v2.tramatch.com/api/bytebox/v2/images/bulk
+
+2. Test Case ID: ouqjok
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/bytebox/v2/images/bulk`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Missing authorization header&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;image_type&quot;: null, &quot;users&quot;: []}' https://test-v2.tramatch.com/api/bytebox/v2/images/bulk"/>
+			<failure type="failure" message="1. Test Case ID: PSFO1a
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `[]`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;image_type&quot;: null, &quot;users&quot;: []}' https://test-v2.tramatch.com/api/bytebox/v2/images/bulk
+
+2. Test Case ID: ouqjok
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/bytebox/v2/images/bulk`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Missing authorization header&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;image_type&quot;: null, &quot;users&quot;: []}' https://test-v2.tramatch.com/api/bytebox/v2/images/bulk"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/bytebox/v2/images/status/analyzed" time="3.109000">
+			<failure type="failure" message="1. Test Case ID: ZeiKlV
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;message&quot;:&quot;Updated 0 images' analyzed status&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;analyzed&quot;: false, &quot;filenames&quot;: []}' https://test-v2.tramatch.com/api/bytebox/v2/images/status/analyzed
+
+2. Test Case ID: aeNVhj
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `PUT /api/bytebox/v2/images/status/analyzed`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Missing authorization header&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;analyzed&quot;: false, &quot;filenames&quot;: []}' https://test-v2.tramatch.com/api/bytebox/v2/images/status/analyzed"/>
+			<failure type="failure" message="1. Test Case ID: ZeiKlV
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;message&quot;:&quot;Updated 0 images' analyzed status&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;analyzed&quot;: false, &quot;filenames&quot;: []}' https://test-v2.tramatch.com/api/bytebox/v2/images/status/analyzed
+
+2. Test Case ID: aeNVhj
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `PUT /api/bytebox/v2/images/status/analyzed`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Missing authorization header&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;analyzed&quot;: false, &quot;filenames&quot;: []}' https://test-v2.tramatch.com/api/bytebox/v2/images/status/analyzed"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/bytebox/v2/images/{filename}" time="1.844000">
+			<failure type="failure" message="1. Test Case ID: wzEoT2
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/bytebox/v2/images/0"/>
+			<failure type="failure" message="1. Test Case ID: wzEoT2
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/bytebox/v2/images/0
+
+2. Test Case ID: CnUFl2
+
+- Response violates schema
+
+    {'detail': &quot;Image '0' not found in database&quot;} is not valid under any of the given schemas
+
+    Schema:
+
+        {
+            &quot;oneOf&quot;: [
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;ObjectNotFound&quot;
+                    ],
+                    &quot;properties&quot;: {
+                        &quot;ObjectNotFound&quot;: {
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;example&quot;: &quot;User not found&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;BadRequest&quot;
+                    ],
+            // Output truncated...
+        }
+
+    Value:
+
+        {
+            &quot;detail&quot;: &quot;Image '0' not found in database&quot;
+        }
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Image '0' not found in database&quot;}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/bytebox/v2/images/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="DELETE /api/bytebox/v2/images/{filename}/delete" time="1.344000">
+			<failure type="failure" message="1. Test Case ID: jdXqzK
+
+- Response violates schema
+
+    {'detail': 'Image not found'} is not valid under any of the given schemas
+
+    Schema:
+
+        {
+            &quot;oneOf&quot;: [
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;ObjectNotFound&quot;
+                    ],
+                    &quot;properties&quot;: {
+                        &quot;ObjectNotFound&quot;: {
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;example&quot;: &quot;User not found&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;BadRequest&quot;
+                    ],
+            // Output truncated...
+        }
+
+    Value:
+
+        {
+            &quot;detail&quot;: &quot;Image not found&quot;
+        }
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Image not found&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/bytebox/v2/images/0/delete"/>
+			<failure type="failure" message="1. Test Case ID: jdXqzK
+
+- Response violates schema
+
+    {'detail': 'Image not found'} is not valid under any of the given schemas
+
+    Schema:
+
+        {
+            &quot;oneOf&quot;: [
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;ObjectNotFound&quot;
+                    ],
+                    &quot;properties&quot;: {
+                        &quot;ObjectNotFound&quot;: {
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;example&quot;: &quot;User not found&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;BadRequest&quot;
+                    ],
+            // Output truncated...
+        }
+
+    Value:
+
+        {
+            &quot;detail&quot;: &quot;Image not found&quot;
+        }
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Image not found&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/bytebox/v2/images/0/delete"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/bytebox/v2/images/upload" time="1.249000">
+			<failure type="failure" message="1. Test Case ID: DTchWx
+
+- Response violates schema
+
+    {'detail': 'Missing filename'} is not valid under any of the given schemas
+
+    Schema:
+
+        {
+            &quot;oneOf&quot;: [
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;ObjectNotFound&quot;
+                    ],
+                    &quot;properties&quot;: {
+                        &quot;ObjectNotFound&quot;: {
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;example&quot;: &quot;User not found&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;BadRequest&quot;
+                    ],
+            // Output truncated...
+        }
+
+    Value:
+
+        {
+            &quot;detail&quot;: &quot;Missing filename&quot;
+        }
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Missing filename&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: multipart/form-data; boundary=ea96552fd31509470d4d13f2860dbf36' -d '--df3fc61f0d23b50ebc2becebd67a971a
+Content-Disposition: form-data; name=&quot;file&quot;
+
+
+--df3fc61f0d23b50ebc2becebd67a971a
+Content-Disposition: form-data; name=&quot;image_type&quot;
+
+Collection
+--df3fc61f0d23b50ebc2becebd67a971a
+Content-Disposition: form-data; name=&quot;public&quot;
+
+False
+--df3fc61f0d23b50ebc2becebd67a971a--
+' https://test-v2.tramatch.com/api/bytebox/v2/images/upload"/>
+			<failure type="failure" message="1. Test Case ID: DTchWx
+
+- Response violates schema
+
+    {'detail': 'Missing filename'} is not valid under any of the given schemas
+
+    Schema:
+
+        {
+            &quot;oneOf&quot;: [
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;ObjectNotFound&quot;
+                    ],
+                    &quot;properties&quot;: {
+                        &quot;ObjectNotFound&quot;: {
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;example&quot;: &quot;User not found&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;BadRequest&quot;
+                    ],
+            // Output truncated...
+        }
+
+    Value:
+
+        {
+            &quot;detail&quot;: &quot;Missing filename&quot;
+        }
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Missing filename&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: multipart/form-data; boundary=ea96552fd31509470d4d13f2860dbf36' -d '--df3fc61f0d23b50ebc2becebd67a971a
+Content-Disposition: form-data; name=&quot;file&quot;
+
+
+--df3fc61f0d23b50ebc2becebd67a971a
+Content-Disposition: form-data; name=&quot;image_type&quot;
+
+Collection
+--df3fc61f0d23b50ebc2becebd67a971a
+Content-Disposition: form-data; name=&quot;public&quot;
+
+False
+--df3fc61f0d23b50ebc2becebd67a971a--
+' https://test-v2.tramatch.com/api/bytebox/v2/images/upload
+
+2. Test Case ID: VshojL
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Missing filename&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' -H 'Content-Type: multipart/form-data; boundary=5f5cdc961e1a863b4a9998315b108c17' -d '--076a742e56f4f636234e6ba23edfb66e
+Content-Disposition: form-data; name=&quot;file&quot;
+
+
+--076a742e56f4f636234e6ba23edfb66e
+Content-Disposition: form-data; name=&quot;image_type&quot;
+
+Logo
+--076a742e56f4f636234e6ba23edfb66e
+Content-Disposition: form-data; name=&quot;public&quot;
+
+False
+--076a742e56f4f636234e6ba23edfb66e--
+' https://test-v2.tramatch.com/api/bytebox/v2/images/upload"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/bytebox/v2/images/preuploaded" time="1.594000">
+			<failure type="failure" message="1. Test Case ID: eIGZI5
+
+- Response violates schema
+
+    {'detail': 'You have exceeded your image upload limit of 10'} is not valid under any of the given schemas
+
+    Schema:
+
+        {
+            &quot;oneOf&quot;: [
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;ObjectNotFound&quot;
+                    ],
+                    &quot;properties&quot;: {
+                        &quot;ObjectNotFound&quot;: {
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;example&quot;: &quot;User not found&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;BadRequest&quot;
+                    ],
+            // Output truncated...
+        }
+
+    Value:
+
+        {
+            &quot;detail&quot;: &quot;You have exceeded your image upload limit of 10&quot;
+        }
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;You have exceeded your image upload limit of 10&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;filename&quot;: &quot;&quot;, &quot;image_type&quot;: &quot;Collection&quot;, &quot;public&quot;: false, &quot;uploaded_url&quot;: &quot;https://A.COM&quot;}' https://test-v2.tramatch.com/api/bytebox/v2/images/preuploaded"/>
+			<failure type="failure" message="1. Test Case ID: eIGZI5
+
+- Response violates schema
+
+    {'detail': 'You have exceeded your image upload limit of 10'} is not valid under any of the given schemas
+
+    Schema:
+
+        {
+            &quot;oneOf&quot;: [
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;ObjectNotFound&quot;
+                    ],
+                    &quot;properties&quot;: {
+                        &quot;ObjectNotFound&quot;: {
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;example&quot;: &quot;User not found&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;BadRequest&quot;
+                    ],
+            // Output truncated...
+        }
+
+    Value:
+
+        {
+            &quot;detail&quot;: &quot;You have exceeded your image upload limit of 10&quot;
+        }
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;You have exceeded your image upload limit of 10&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;filename&quot;: &quot;&quot;, &quot;image_type&quot;: &quot;Collection&quot;, &quot;public&quot;: false, &quot;uploaded_url&quot;: &quot;https://A.COM&quot;}' https://test-v2.tramatch.com/api/bytebox/v2/images/preuploaded
+
+2. Test Case ID: YLJY7R
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;You have exceeded your image upload limit of 10&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;filename&quot;: &quot;&quot;, &quot;image_type&quot;: &quot;Logo&quot;, &quot;uploaded_url&quot;: &quot;https://A.COM&quot;}' https://test-v2.tramatch.com/api/bytebox/v2/images/preuploaded"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/bytebox/v2/images/{user_id}/profile" time="1.516000">
+			<failure type="failure" message="1. Test Case ID: WUnxKW
+
+- Response violates schema
+
+    {'detail': 'Profile photo not found for user_id: 0'} is not valid under any of the given schemas
+
+    Schema:
+
+        {
+            &quot;oneOf&quot;: [
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;ObjectNotFound&quot;
+                    ],
+                    &quot;properties&quot;: {
+                        &quot;ObjectNotFound&quot;: {
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;example&quot;: &quot;User not found&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;BadRequest&quot;
+                    ],
+            // Output truncated...
+        }
+
+    Value:
+
+        {
+            &quot;detail&quot;: &quot;Profile photo not found for user_id: 0&quot;
+        }
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Profile photo not found for user_id: 0&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/bytebox/v2/images/0/profile"/>
+			<failure type="failure" message="1. Test Case ID: WUnxKW
+
+- Response violates schema
+
+    {'detail': 'Profile photo not found for user_id: 0'} is not valid under any of the given schemas
+
+    Schema:
+
+        {
+            &quot;oneOf&quot;: [
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;ObjectNotFound&quot;
+                    ],
+                    &quot;properties&quot;: {
+                        &quot;ObjectNotFound&quot;: {
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;example&quot;: &quot;User not found&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;BadRequest&quot;
+                    ],
+            // Output truncated...
+        }
+
+    Value:
+
+        {
+            &quot;detail&quot;: &quot;Profile photo not found for user_id: 0&quot;
+        }
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Profile photo not found for user_id: 0&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/bytebox/v2/images/0/profile"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/bytebox/v2/images/{filename}/edit" time="1.391000">
+			<failure type="failure" message="1. Test Case ID: yzCpMQ
+
+- Response violates schema
+
+    {'detail': 'Requested image not Found'} is not valid under any of the given schemas
+
+    Schema:
+
+        {
+            &quot;oneOf&quot;: [
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;ObjectNotFound&quot;
+                    ],
+                    &quot;properties&quot;: {
+                        &quot;ObjectNotFound&quot;: {
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;example&quot;: &quot;User not found&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;BadRequest&quot;
+                    ],
+            // Output truncated...
+        }
+
+    Value:
+
+        {
+            &quot;detail&quot;: &quot;Requested image not Found&quot;
+        }
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Requested image not Found&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;image_type&quot;: &quot;Collection&quot;}' https://test-v2.tramatch.com/api/bytebox/v2/images/0/edit"/>
+			<failure type="failure" message="1. Test Case ID: yzCpMQ
+
+- Response violates schema
+
+    {'detail': 'Requested image not Found'} is not valid under any of the given schemas
+
+    Schema:
+
+        {
+            &quot;oneOf&quot;: [
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;ObjectNotFound&quot;
+                    ],
+                    &quot;properties&quot;: {
+                        &quot;ObjectNotFound&quot;: {
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;example&quot;: &quot;User not found&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;BadRequest&quot;
+                    ],
+            // Output truncated...
+        }
+
+    Value:
+
+        {
+            &quot;detail&quot;: &quot;Requested image not Found&quot;
+        }
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Requested image not Found&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;image_type&quot;: &quot;Collection&quot;}' https://test-v2.tramatch.com/api/bytebox/v2/images/0/edit"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/bytebox/v2/images/{user_id}/list" time="1.265000">
+			<failure type="failure" message="1. Test Case ID: CaZPHF
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 200, 404, 500
+
+[400] Bad Request:
+
+    `Failed to deserialize query string: image_type: unknown variant `null`, expected one of `Collection`, `Profile Photo`, `Cover`, `Background`, `Logo`, `Internal``
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/bytebox/v2/images/0/list?image_type=null&amp;public=true'"/>
+			<failure type="failure" message="1. Test Case ID: CaZPHF
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 200, 404, 500
+
+[400] Bad Request:
+
+    `Failed to deserialize query string: image_type: unknown variant `null`, expected one of `Collection`, `Profile Photo`, `Cover`, `Background`, `Logo`, `Internal``
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/bytebox/v2/images/0/list?image_type=null&amp;public=true'
+
+2. Test Case ID: vaE6IP
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 404, 500
+
+[401] Unauthorized:
+
+    `{&quot;error&quot;:&quot;Unauthorized Request&quot;}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/bytebox/v2/images/0/list"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/bytebox/v2/kyc/snapshots" time="1.218000">
+			<failure type="failure" message="1. Test Case ID: xbtqHa
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 500
+
+[401] Unauthorized:
+
+    `{&quot;error&quot;:&quot;Unauthorized&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;filename&quot;: &quot;&quot;, &quot;user_id&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/bytebox/v2/kyc/snapshots"/>
+			<failure type="failure" message="1. Test Case ID: xbtqHa
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 500
+
+[401] Unauthorized:
+
+    `{&quot;error&quot;:&quot;Unauthorized&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;filename&quot;: &quot;&quot;, &quot;user_id&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/bytebox/v2/kyc/snapshots"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/bytebox/v2/kyc/metrics" time="1.250000">
+			<failure type="failure" message="1. Test Case ID: JHmMy4
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 500
+
+[401] Unauthorized:
+
+    `{&quot;error&quot;:&quot;Unauthorized&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;group_by_timestamp&quot;: null}' https://test-v2.tramatch.com/api/bytebox/v2/kyc/metrics"/>
+			<failure type="failure" message="1. Test Case ID: JHmMy4
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 500
+
+[401] Unauthorized:
+
+    `{&quot;error&quot;:&quot;Unauthorized&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;group_by_timestamp&quot;: null}' https://test-v2.tramatch.com/api/bytebox/v2/kyc/metrics"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/bytebox/v2/kyc/documents/{filename}" time="1.125000">
+			<failure type="failure" message="1. Test Case ID: 4AZ4zp
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 404, 500
+
+[401] Unauthorized:
+
+    `{&quot;error&quot;:&quot;Unauthorized&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/bytebox/v2/kyc/documents/0"/>
+			<failure type="failure" message="1. Test Case ID: 4AZ4zp
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 404, 500
+
+[401] Unauthorized:
+
+    `{&quot;error&quot;:&quot;Unauthorized&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/bytebox/v2/kyc/documents/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/bytebox/v2/kyc/verifications/list" time="0.828000">
+			<failure type="failure" message="1. Test Case ID: fcrelj
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 500
+
+[401] Unauthorized:
+
+    `{&quot;error&quot;:&quot;Unauthorized&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{}' https://test-v2.tramatch.com/api/bytebox/v2/kyc/verifications/list"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/bytebox/v2/kyc/verifications" time="1.938000">
+			<failure type="failure" message="1. Test Case ID: nKlZTN
+
+- Server error
+
+- Response violates schema
+
+    {'detail': 'Failed to create verification document: error returned from database: duplicate key value violates unique constraint &quot;kycrequestdocuments_bucket_url_key&quot;'} is not valid under any of the given schemas
+
+    Schema:
+
+        {
+            &quot;oneOf&quot;: [
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;ObjectNotFound&quot;
+                    ],
+                    &quot;properties&quot;: {
+                        &quot;ObjectNotFound&quot;: {
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;example&quot;: &quot;User not found&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;BadRequest&quot;
+                    ],
+            // Output truncated...
+        }
+
+    Value:
+
+        {
+            &quot;detail&quot;: &quot;Failed to create verification document: error returned from da...
+        }
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+[500] Internal Server Error:
+
+    `{&quot;detail&quot;:&quot;Failed to create verification document: error returned from database: duplicate key value violates unique constraint \&quot;kycrequestdocuments_bucket_url_key\&quot;&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;description&quot;: &quot;&quot;, &quot;document_type&quot;: &quot;SNAPSHOT&quot;, &quot;filename&quot;: &quot;&quot;, &quot;uploaded_url&quot;: &quot;https://A.COM&quot;}' https://test-v2.tramatch.com/api/bytebox/v2/kyc/verifications"/>
+			<failure type="failure" message="1. Test Case ID: nKlZTN
+
+- Server error
+
+- Response violates schema
+
+    {'detail': 'Failed to create verification document: error returned from database: duplicate key value violates unique constraint &quot;kycrequestdocuments_bucket_url_key&quot;'} is not valid under any of the given schemas
+
+    Schema:
+
+        {
+            &quot;oneOf&quot;: [
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;ObjectNotFound&quot;
+                    ],
+                    &quot;properties&quot;: {
+                        &quot;ObjectNotFound&quot;: {
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;example&quot;: &quot;User not found&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;BadRequest&quot;
+                    ],
+            // Output truncated...
+        }
+
+    Value:
+
+        {
+            &quot;detail&quot;: &quot;Failed to create verification document: error returned from da...
+        }
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+[500] Internal Server Error:
+
+    `{&quot;detail&quot;:&quot;Failed to create verification document: error returned from database: duplicate key value violates unique constraint \&quot;kycrequestdocuments_bucket_url_key\&quot;&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;description&quot;: &quot;&quot;, &quot;document_type&quot;: &quot;SNAPSHOT&quot;, &quot;filename&quot;: &quot;&quot;, &quot;uploaded_url&quot;: &quot;https://A.COM&quot;}' https://test-v2.tramatch.com/api/bytebox/v2/kyc/verifications"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/bytebox/v2/kyc/verifications/users/{user_id}" time="1.110000">
+			<failure type="failure" message="1. Test Case ID: iwfj46
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 404, 500
+
+[401] Unauthorized:
+
+    `{&quot;error&quot;:&quot;Unauthorized&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/bytebox/v2/kyc/verifications/users/0"/>
+			<failure type="failure" message="1. Test Case ID: iwfj46
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 404, 500
+
+[401] Unauthorized:
+
+    `{&quot;error&quot;:&quot;Unauthorized&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/bytebox/v2/kyc/verifications/users/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/bytebox/v2/kyc/verifications/users/{user_id}/revoke" time="1.188000">
+			<failure type="failure" message="1. Test Case ID: tckfrT
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 404, 500
+
+[401] Unauthorized:
+
+    `{&quot;error&quot;:&quot;Unauthorized&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;reason&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/bytebox/v2/kyc/verifications/users/0/revoke"/>
+			<failure type="failure" message="1. Test Case ID: tckfrT
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 404, 500
+
+[401] Unauthorized:
+
+    `{&quot;error&quot;:&quot;Unauthorized&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;reason&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/bytebox/v2/kyc/verifications/users/0/revoke"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/bytebox/v2/kyc/verifications/{reference_id}" time="1.235000">
+			<failure type="failure" message="1. Test Case ID: GA1pPP
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 200, 404, 500
+
+[400] Bad Request:
+
+    `Invalid URL: Cannot parse `reference_id` with value `0`: UUID parsing failed: invalid length: expected length 32 for simple format, found 1`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;description&quot;: &quot;&quot;, &quot;moderator&quot;: null, &quot;status&quot;: &quot;ACCEPTED&quot;}' https://test-v2.tramatch.com/api/bytebox/v2/kyc/verifications/0"/>
+			<failure type="failure" message="1. Test Case ID: GA1pPP
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 200, 404, 500
+
+[400] Bad Request:
+
+    `Invalid URL: Cannot parse `reference_id` with value `0`: UUID parsing failed: invalid length: expected length 32 for simple format, found 1`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;description&quot;: &quot;&quot;, &quot;moderator&quot;: null, &quot;status&quot;: &quot;ACCEPTED&quot;}' https://test-v2.tramatch.com/api/bytebox/v2/kyc/verifications/0
+
+2. Test Case ID: NE4hpH
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 404, 500
+
+[401] Unauthorized:
+
+    `{&quot;error&quot;:&quot;Unauthorized&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;description&quot;: &quot;&quot;, &quot;status&quot;: &quot;ACCEPTED&quot;}' https://test-v2.tramatch.com/api/bytebox/v2/kyc/verifications/e3e70682-c209-4cac-629f-6fbed82c07cd"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/bytebox/v2/kyc/verifications/users/{user_id}/{reference_id}" time="1.187000">
+			<failure type="failure" message="1. Test Case ID: 2TudRS
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 200, 404, 500
+
+[400] Bad Request:
+
+    `Invalid URL: Cannot parse `reference_id` with value `0`: UUID parsing failed: invalid length: expected length 32 for simple format, found 1`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/bytebox/v2/kyc/verifications/users/0/0"/>
+			<failure type="failure" message="1. Test Case ID: 2TudRS
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 200, 404, 500
+
+[400] Bad Request:
+
+    `Invalid URL: Cannot parse `reference_id` with value `0`: UUID parsing failed: invalid length: expected length 32 for simple format, found 1`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/bytebox/v2/kyc/verifications/users/0/0
+
+2. Test Case ID: VfcrVL
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 404, 500
+
+[401] Unauthorized:
+
+    `{&quot;error&quot;:&quot;Unauthorized&quot;}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/bytebox/v2/kyc/verifications/users/0/e3e70682-c209-4cac-629f-6fbed82c07cd"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+	</testsuite>
+</testsuites>

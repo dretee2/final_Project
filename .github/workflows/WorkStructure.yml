@@ -45,7 +45,6 @@ jobs:
         run: |
           echo "USER_EMAIL=${{ secrets.USER_EMAIL }}" >> $GITHUB_ENV
           echo "USER_PASSWORD=${{ secrets.USER_PASSWORD }}" >> $GITHUB_ENV
-          
 
       - name: Set PYTHONPATH
         run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
@@ -53,21 +52,22 @@ jobs:
       - name: Create reports directory
         run: mkdir -p reports
 
-      - name: Run schemathesis test - ${{ matrix.testfile }}
-        run: python ${{ matrix.testfile }}
-
-      - name: Debug - list reports folder
-        run: ls -R reports
-
-      - name: Sanitize artifact name (replace / with _)
+      - name: Derive report name from test file
+        id: reportname
         run: |
-          SAFE_NAME="${{ matrix.testfile }}"
-          SAFE_NAME="${SAFE_NAME//\//_}"
-          SAFE_NAME="${SAFE_NAME%.py}"  # remove .py
-          echo "SAFE_ARTIFACT_NAME=$SAFE_NAME" >> $GITHUB_ENV
+          TEST_FILE="${{ matrix.testfile }}"
+          BASE_NAME=$(basename "$TEST_FILE" .py)
+          REPORT_PATH="reports/${BASE_NAME}_report.xml"
+          echo "REPORT_PATH=$REPORT_PATH" >> $GITHUB_ENV
+          echo "REPORT_FILE_NAME=${BASE_NAME}_report.xml" >> $GITHUB_ENV
+          echo "SAFE_NAME=${TEST_FILE//\//_}" >> $GITHUB_ENV
 
-      - name: Upload reports for ${{ matrix.testfile }}
+      - name: Run schemathesis test - ${{ matrix.testfile }}
+        run: |
+          python ${{ matrix.testfile }} > "$REPORT_PATH"
+
+      - name: Upload report for ${{ matrix.testfile }}
         uses: actions/upload-artifact@v4
         with:
-          name: schemathesis-report-${{ env.SAFE_ARTIFACT_NAME }}
-          path: reports/
+          name: schemathesis-report-${{ env.SAFE_NAME }}
+          path: ${{ env.REPORT_PATH }}

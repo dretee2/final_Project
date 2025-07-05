@@ -1,0 +1,331 @@
+<?xml version="1.0" ?>
+<testsuites disabled="0" errors="2" failures="4" tests="6" time="36.62499999998545">
+	<testsuite disabled="0" errors="2" failures="4" name="schemathesis" skipped="6" tests="6" time="36.62499999998545" hostname="UyahTee">
+		<testcase name="GET /api/feature-switch/v2/features" time="6.719000">
+			<failure type="failure" message="1. Test Case ID: VIa85F
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;features&quot;:[{&quot;id&quot;:2,&quot;code&quot;:&quot;FEATURE_SEARCH_FILTERS&quot;,&quot;active&quot;:true,&quot;is_mobile_active&quot;:false,&quot;is_web_active&quot;:false,&quot;is_global&quot;:true,&quot;location_data&quot;:{&quot;countries&quot;:[{&quot;code&quot;:&quot;RU&quot;,&quot;enabled&quot;:true}],&quot;continents&quot;:[{&quot;code&quot;:&quot;AF&quot;,&quot;enabled&quot;:true},{&quot;code&quot;:&quot;AS&quot;,&quot;enabled&quot;:true}]},&quot;subfeatures&quot;:[]},{&quot;id&quot;:5,&quot;code&quot;:&quot;FEATURE_RECOMMENDATIONS&quot;,&quot;active&quot;:true,&quot;is_mobile_active&quot;:false,&quot;is_web_active&quot;:false,&quot;is_global&quot;:true,&quot;location_data&quot;:{&quot;countries&quot;:[],&quot;continents&quot;:[]},&quot;subfeatures&quot;:[{&quot;id&quot;:10,&quot;code&quot;:&quot;FEATURE_RECOMMENDATIONS_SWIPE // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/feature-switch/v2/features
+
+2. Test Case ID: 8RyyIN
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/feature-switch/v2/features`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Authorization header missing&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/feature-switch/v2/features"/>
+			<failure type="failure" message="1. Test Case ID: VIa85F
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;features&quot;:[{&quot;id&quot;:2,&quot;code&quot;:&quot;FEATURE_SEARCH_FILTERS&quot;,&quot;active&quot;:true,&quot;is_mobile_active&quot;:false,&quot;is_web_active&quot;:false,&quot;is_global&quot;:true,&quot;location_data&quot;:{&quot;countries&quot;:[{&quot;code&quot;:&quot;RU&quot;,&quot;enabled&quot;:true}],&quot;continents&quot;:[{&quot;code&quot;:&quot;AF&quot;,&quot;enabled&quot;:true},{&quot;code&quot;:&quot;AS&quot;,&quot;enabled&quot;:true}]},&quot;subfeatures&quot;:[]},{&quot;id&quot;:5,&quot;code&quot;:&quot;FEATURE_RECOMMENDATIONS&quot;,&quot;active&quot;:true,&quot;is_mobile_active&quot;:false,&quot;is_web_active&quot;:false,&quot;is_global&quot;:true,&quot;location_data&quot;:{&quot;countries&quot;:[],&quot;continents&quot;:[]},&quot;subfeatures&quot;:[{&quot;id&quot;:10,&quot;code&quot;:&quot;FEATURE_RECOMMENDATIONS_SWIPE // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/feature-switch/v2/features
+
+2. Test Case ID: 8RyyIN
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/feature-switch/v2/features`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Authorization header missing&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/feature-switch/v2/features"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/feature-switch/v2/features/{code}" time="4.905000">
+			<failure type="failure" message="1. Test Case ID: UU3B9f
+
+- Response violates schema
+
+    {'detail': 'Feature not found'} is not valid under any of the given schemas
+
+    Schema:
+
+        {
+            &quot;oneOf&quot;: [
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;ObjectNotFound&quot;
+                    ],
+                    &quot;properties&quot;: {
+                        &quot;ObjectNotFound&quot;: {
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;example&quot;: &quot;User not found&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;BadRequest&quot;
+                    ],
+            // Output truncated...
+        }
+
+    Value:
+
+        {
+            &quot;detail&quot;: &quot;Feature not found&quot;
+        }
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Feature not found&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/feature-switch/v2/features/0"/>
+			<failure type="failure" message="1. Test Case ID: UU3B9f
+
+- Response violates schema
+
+    {'detail': 'Feature not found'} is not valid under any of the given schemas
+
+    Schema:
+
+        {
+            &quot;oneOf&quot;: [
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;ObjectNotFound&quot;
+                    ],
+                    &quot;properties&quot;: {
+                        &quot;ObjectNotFound&quot;: {
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;example&quot;: &quot;User not found&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;BadRequest&quot;
+                    ],
+            // Output truncated...
+        }
+
+    Value:
+
+        {
+            &quot;detail&quot;: &quot;Feature not found&quot;
+        }
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Feature not found&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/feature-switch/v2/features/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/feature-switch/v2/features/{code}/toggle" time="10.157000">
+			<error type="error">Schema Error
+
+Path parameter 'code' is not defined</error>
+			<error type="error">Schema Error
+
+Path parameter 'code' is not defined</error>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/feature-switch/v2/features/{parent_code}/subfeature/toggle" time="10.125000">
+			<error type="error">Schema Error
+
+Path parameter 'parent_code' is not defined</error>
+			<error type="error">Schema Error
+
+Path parameter 'parent_code' is not defined</error>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/feature-switch/v2/health" time="3.282000">
+			<failure type="failure" message="1. Test Case ID: 64kjOF
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;status&quot;:&quot;ok&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/feature-switch/v2/health
+
+2. Test Case ID: HnnsR8
+
+- API accepts requests without authentication
+
+    Expected 401, got `200 OK` for `GET /api/feature-switch/v2/health`
+
+[200] OK:
+
+    `{&quot;status&quot;:&quot;ok&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/feature-switch/v2/health"/>
+			<failure type="failure" message="1. Test Case ID: 64kjOF
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;status&quot;:&quot;ok&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/feature-switch/v2/health
+
+2. Test Case ID: HnnsR8
+
+- API accepts requests without authentication
+
+    Expected 401, got `200 OK` for `GET /api/feature-switch/v2/health`
+
+[200] OK:
+
+    `{&quot;status&quot;:&quot;ok&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/feature-switch/v2/health"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/feature-switch/v2/features/{parent_code}/{code}" time="1.437000">
+			<failure type="failure" message="1. Test Case ID: H46EtL
+
+- Response violates schema
+
+    {'detail': 'Subfeature not found'} is not valid under any of the given schemas
+
+    Schema:
+
+        {
+            &quot;oneOf&quot;: [
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;ObjectNotFound&quot;
+                    ],
+                    &quot;properties&quot;: {
+                        &quot;ObjectNotFound&quot;: {
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;example&quot;: &quot;User not found&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;BadRequest&quot;
+                    ],
+            // Output truncated...
+        }
+
+    Value:
+
+        {
+            &quot;detail&quot;: &quot;Subfeature not found&quot;
+        }
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Subfeature not found&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/feature-switch/v2/features/0/0"/>
+			<failure type="failure" message="1. Test Case ID: H46EtL
+
+- Response violates schema
+
+    {'detail': 'Subfeature not found'} is not valid under any of the given schemas
+
+    Schema:
+
+        {
+            &quot;oneOf&quot;: [
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;ObjectNotFound&quot;
+                    ],
+                    &quot;properties&quot;: {
+                        &quot;ObjectNotFound&quot;: {
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;example&quot;: &quot;User not found&quot;
+                },
+                {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;required&quot;: [
+                        &quot;BadRequest&quot;
+                    ],
+            // Output truncated...
+        }
+
+    Value:
+
+        {
+            &quot;detail&quot;: &quot;Subfeature not found&quot;
+        }
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Subfeature not found&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/feature-switch/v2/features/0/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+	</testsuite>
+</testsuites>

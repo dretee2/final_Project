@@ -1,0 +1,1362 @@
+<?xml version="1.0" ?>
+<testsuites disabled="0" errors="0" failures="24" tests="24" time="65.59400000002643">
+	<testsuite disabled="0" errors="0" failures="24" name="schemathesis" skipped="24" tests="24" time="65.59400000002643" hostname="UyahTee">
+		<testcase name="PUT /api/recommendations/v2/preferences/" time="3.547000">
+			<failure type="failure" message="1. Test Case ID: 8Rm1E8
+
+- Response violates schema
+
+    '2024-01-31T13:31:27.737747' is not a 'date-time'
+
+    Schema at /properties/created_at/anyOf/0:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;
+        }
+
+    Value:
+
+        &quot;2024-01-31T13:31:27.737747&quot;
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;countries&quot;:[],&quot;reasons&quot;:[],&quot;from_height&quot;:&quot;7 feet 8 inches&quot;,&quot;to_height&quot;:&quot;4 feet 1 inches&quot;,&quot;from_age&quot;:18,&quot;to_age&quot;:58,&quot;religions&quot;:[&quot;Others&quot;,&quot;Judaism&quot;,&quot;Hinduism&quot;,&quot;Others&quot;,&quot;Hinduism&quot;],&quot;ethnicities&quot;:[&quot;Asian&quot;,&quot;Asian&quot;],&quot;marital_type&quot;:&quot;Monogamy&quot;,&quot;body_types&quot;:[],&quot;drinking_statuses&quot;:[],&quot;smoking_statuses&quot;:[],&quot;education_levels&quot;:[],&quot;has_children&quot;:[&quot;Yes but all grown&quot;,&quot;Yes but all grown&quot;],&quot;want_children&quot;:[],&quot;open_for_relocation&quot;:&quot;No&quot;,&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;updated_at&quot;:&quot;2025-07-05T20:51:53.185945Z&quot; // Output truncated...`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;body_types&quot;: null, &quot;countries&quot;: [], &quot;drinking_statuses&quot;: null, &quot;education_levels&quot;: null, &quot;ethnicities&quot;: null, &quot;from_age&quot;: null, &quot;from_height&quot;: null, &quot;has_children&quot;: null, &quot;marital_type&quot;: null, &quot;open_for_relocation&quot;: null, &quot;reasons&quot;: null, &quot;religions&quot;: null, &quot;smoking_statuses&quot;: null, &quot;to_age&quot;: null, &quot;to_height&quot;: null, &quot;want_children&quot;: null}' https://test-v2.tramatch.com/api/recommendations/v2/preferences/
+
+2. Test Case ID: bZbn25
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `PUT /api/recommendations/v2/preferences/`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;body_types&quot;: null, &quot;countries&quot;: [], &quot;drinking_statuses&quot;: null, &quot;education_levels&quot;: null, &quot;ethnicities&quot;: null, &quot;from_age&quot;: null, &quot;from_height&quot;: null, &quot;has_children&quot;: null, &quot;marital_type&quot;: null, &quot;open_for_relocation&quot;: null, &quot;reasons&quot;: null, &quot;religions&quot;: null, &quot;smoking_statuses&quot;: null, &quot;to_age&quot;: null, &quot;to_height&quot;: null, &quot;want_children&quot;: null}' https://test-v2.tramatch.com/api/recommendations/v2/preferences/"/>
+			<failure type="failure" message="1. Test Case ID: 8Rm1E8
+
+- Response violates schema
+
+    '2024-01-31T13:31:27.737747' is not a 'date-time'
+
+    Schema at /properties/created_at/anyOf/0:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;
+        }
+
+    Value:
+
+        &quot;2024-01-31T13:31:27.737747&quot;
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;countries&quot;:[],&quot;reasons&quot;:[],&quot;from_height&quot;:&quot;7 feet 8 inches&quot;,&quot;to_height&quot;:&quot;4 feet 1 inches&quot;,&quot;from_age&quot;:18,&quot;to_age&quot;:58,&quot;religions&quot;:[&quot;Others&quot;,&quot;Judaism&quot;,&quot;Hinduism&quot;,&quot;Others&quot;,&quot;Hinduism&quot;],&quot;ethnicities&quot;:[&quot;Asian&quot;,&quot;Asian&quot;],&quot;marital_type&quot;:&quot;Monogamy&quot;,&quot;body_types&quot;:[],&quot;drinking_statuses&quot;:[],&quot;smoking_statuses&quot;:[],&quot;education_levels&quot;:[],&quot;has_children&quot;:[&quot;Yes but all grown&quot;,&quot;Yes but all grown&quot;],&quot;want_children&quot;:[],&quot;open_for_relocation&quot;:&quot;No&quot;,&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;updated_at&quot;:&quot;2025-07-05T20:51:53.185945Z&quot; // Output truncated...`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;body_types&quot;: null, &quot;countries&quot;: [], &quot;drinking_statuses&quot;: null, &quot;education_levels&quot;: null, &quot;ethnicities&quot;: null, &quot;from_age&quot;: null, &quot;from_height&quot;: null, &quot;has_children&quot;: null, &quot;marital_type&quot;: null, &quot;open_for_relocation&quot;: null, &quot;reasons&quot;: null, &quot;religions&quot;: null, &quot;smoking_statuses&quot;: null, &quot;to_age&quot;: null, &quot;to_height&quot;: null, &quot;want_children&quot;: null}' https://test-v2.tramatch.com/api/recommendations/v2/preferences/
+
+2. Test Case ID: bZbn25
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `PUT /api/recommendations/v2/preferences/`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;body_types&quot;: null, &quot;countries&quot;: [], &quot;drinking_statuses&quot;: null, &quot;education_levels&quot;: null, &quot;ethnicities&quot;: null, &quot;from_age&quot;: null, &quot;from_height&quot;: null, &quot;has_children&quot;: null, &quot;marital_type&quot;: null, &quot;open_for_relocation&quot;: null, &quot;reasons&quot;: null, &quot;religions&quot;: null, &quot;smoking_statuses&quot;: null, &quot;to_age&quot;: null, &quot;to_height&quot;: null, &quot;want_children&quot;: null}' https://test-v2.tramatch.com/api/recommendations/v2/preferences/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/recommendations/v2/preferences/" time="1.968000">
+			<failure type="failure" message="1. Test Case ID: JhKFpW
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 201, 422
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Your preference has already been set, would you like to edit them?&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;body_types&quot;: [], &quot;countries&quot;: [], &quot;drinking_statuses&quot;: [], &quot;education_levels&quot;: [], &quot;ethnicities&quot;: [], &quot;from_age&quot;: 18, &quot;from_height&quot;: null, &quot;has_children&quot;: [], &quot;marital_type&quot;: &quot;Monogamy&quot;, &quot;open_for_relocation&quot;: &quot;No&quot;, &quot;reasons&quot;: [], &quot;religions&quot;: [], &quot;smoking_statuses&quot;: [], &quot;to_age&quot;: 18, &quot;to_height&quot;: null, &quot;want_children&quot;: []}' https://test-v2.tramatch.com/api/recommendations/v2/preferences/"/>
+			<failure type="failure" message="1. Test Case ID: JhKFpW
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 201, 422
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Your preference has already been set, would you like to edit them?&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;body_types&quot;: [], &quot;countries&quot;: [], &quot;drinking_statuses&quot;: [], &quot;education_levels&quot;: [], &quot;ethnicities&quot;: [], &quot;from_age&quot;: 18, &quot;from_height&quot;: null, &quot;has_children&quot;: [], &quot;marital_type&quot;: &quot;Monogamy&quot;, &quot;open_for_relocation&quot;: &quot;No&quot;, &quot;reasons&quot;: [], &quot;religions&quot;: [], &quot;smoking_statuses&quot;: [], &quot;to_age&quot;: 18, &quot;to_height&quot;: null, &quot;want_children&quot;: []}' https://test-v2.tramatch.com/api/recommendations/v2/preferences/
+
+2. Test Case ID: gifbz9
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Your preference has already been set, would you like to edit them?&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;body_types&quot;: [], &quot;drinking_statuses&quot;: [], &quot;education_levels&quot;: [], &quot;ethnicities&quot;: [], &quot;from_age&quot;: 18, &quot;has_children&quot;: [], &quot;marital_type&quot;: &quot;Monogamy&quot;, &quot;open_for_relocation&quot;: &quot;No&quot;, &quot;religions&quot;: [], &quot;smoking_statuses&quot;: [], &quot;to_age&quot;: 18, &quot;want_children&quot;: []}' https://test-v2.tramatch.com/api/recommendations/v2/preferences/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/preferences/" time="4.657000">
+			<failure type="failure" message="1. Test Case ID: pA3dQH
+
+- Response violates schema
+
+    '2024-01-31T13:31:27.737747' is not a 'date-time'
+
+    Schema at /properties/created_at/anyOf/0:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;
+        }
+
+    Value:
+
+        &quot;2024-01-31T13:31:27.737747&quot;
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;countries&quot;:[],&quot;reasons&quot;:[],&quot;from_height&quot;:&quot;7 feet 8 inches&quot;,&quot;to_height&quot;:&quot;4 feet 1 inches&quot;,&quot;from_age&quot;:18,&quot;to_age&quot;:58,&quot;religions&quot;:[&quot;Others&quot;,&quot;Judaism&quot;,&quot;Hinduism&quot;,&quot;Others&quot;,&quot;Hinduism&quot;],&quot;ethnicities&quot;:[&quot;Asian&quot;,&quot;Asian&quot;],&quot;marital_type&quot;:&quot;Monogamy&quot;,&quot;body_types&quot;:[],&quot;drinking_statuses&quot;:[],&quot;smoking_statuses&quot;:[],&quot;education_levels&quot;:[],&quot;has_children&quot;:[&quot;Yes but all grown&quot;,&quot;Yes but all grown&quot;],&quot;want_children&quot;:[],&quot;open_for_relocation&quot;:&quot;No&quot;,&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;updated_at&quot;:&quot;2025-07-05T20:50:53.891979Z&quot; // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/preferences/
+
+2. Test Case ID: Qh5DUF
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/recommendations/v2/preferences/`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/preferences/"/>
+			<failure type="failure" message="1. Test Case ID: pA3dQH
+
+- Response violates schema
+
+    '2024-01-31T13:31:27.737747' is not a 'date-time'
+
+    Schema at /properties/created_at/anyOf/0:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;
+        }
+
+    Value:
+
+        &quot;2024-01-31T13:31:27.737747&quot;
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;countries&quot;:[],&quot;reasons&quot;:[],&quot;from_height&quot;:&quot;7 feet 8 inches&quot;,&quot;to_height&quot;:&quot;4 feet 1 inches&quot;,&quot;from_age&quot;:18,&quot;to_age&quot;:58,&quot;religions&quot;:[&quot;Others&quot;,&quot;Judaism&quot;,&quot;Hinduism&quot;,&quot;Others&quot;,&quot;Hinduism&quot;],&quot;ethnicities&quot;:[&quot;Asian&quot;,&quot;Asian&quot;],&quot;marital_type&quot;:&quot;Monogamy&quot;,&quot;body_types&quot;:[],&quot;drinking_statuses&quot;:[],&quot;smoking_statuses&quot;:[],&quot;education_levels&quot;:[],&quot;has_children&quot;:[&quot;Yes but all grown&quot;,&quot;Yes but all grown&quot;],&quot;want_children&quot;:[],&quot;open_for_relocation&quot;:&quot;No&quot;,&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;updated_at&quot;:&quot;2025-07-05T20:50:53.891979Z&quot; // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/preferences/
+
+2. Test Case ID: Qh5DUF
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/recommendations/v2/preferences/`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/preferences/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/preferences/countries" time="4.813000">
+			<failure type="failure" message="1. Test Case ID: gLqZSh
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;countries&quot;:[&quot;Aruba&quot;,&quot;Afghanistan&quot;,&quot;Angola&quot;,&quot;Anguilla&quot;,&quot;Åland Islands&quot;,&quot;Albania&quot;,&quot;Andorra&quot;,&quot;United Arab Emirates&quot;,&quot;Argentina&quot;,&quot;Armenia&quot;,&quot;American Samoa&quot;,&quot;Antarctica&quot;,&quot;French Southern Territories&quot;,&quot;Antigua and Barbuda&quot;,&quot;Australia&quot;,&quot;Austria&quot;,&quot;Azerbaijan&quot;,&quot;Burundi&quot;,&quot;Belgium&quot;,&quot;Benin&quot;,&quot;Bonaire, Sint Eustatius and Saba&quot;,&quot;Burkina Faso&quot;,&quot;Bangladesh&quot;,&quot;Bulgaria&quot;,&quot;Bahrain&quot;,&quot;Bahamas&quot;,&quot;Bosnia and Herzegovina&quot;,&quot;Saint Barthélemy&quot;,&quot;Belarus&quot;,&quot;Belize&quot;,&quot;Bermuda&quot;,&quot;Bolivia, Plurinational State of&quot;,&quot;Brazil&quot;,&quot;Barbados&quot;,&quot;Brunei D // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/preferences/countries
+
+2. Test Case ID: T3t7RN
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/recommendations/v2/preferences/countries`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/preferences/countries"/>
+			<failure type="failure" message="1. Test Case ID: gLqZSh
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;countries&quot;:[&quot;Aruba&quot;,&quot;Afghanistan&quot;,&quot;Angola&quot;,&quot;Anguilla&quot;,&quot;Åland Islands&quot;,&quot;Albania&quot;,&quot;Andorra&quot;,&quot;United Arab Emirates&quot;,&quot;Argentina&quot;,&quot;Armenia&quot;,&quot;American Samoa&quot;,&quot;Antarctica&quot;,&quot;French Southern Territories&quot;,&quot;Antigua and Barbuda&quot;,&quot;Australia&quot;,&quot;Austria&quot;,&quot;Azerbaijan&quot;,&quot;Burundi&quot;,&quot;Belgium&quot;,&quot;Benin&quot;,&quot;Bonaire, Sint Eustatius and Saba&quot;,&quot;Burkina Faso&quot;,&quot;Bangladesh&quot;,&quot;Bulgaria&quot;,&quot;Bahrain&quot;,&quot;Bahamas&quot;,&quot;Bosnia and Herzegovina&quot;,&quot;Saint Barthélemy&quot;,&quot;Belarus&quot;,&quot;Belize&quot;,&quot;Bermuda&quot;,&quot;Bolivia, Plurinational State of&quot;,&quot;Brazil&quot;,&quot;Barbados&quot;,&quot;Brunei D // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/preferences/countries
+
+2. Test Case ID: T3t7RN
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/recommendations/v2/preferences/countries`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/preferences/countries"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/matches/recommendations/" time="3.469000">
+			<failure type="failure" message="1. Test Case ID: v5Vt7x
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/matches/recommendations/?page=0&amp;per_page=0'"/>
+			<failure type="failure" message="1. Test Case ID: v5Vt7x
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/matches/recommendations/?page=0&amp;per_page=0'
+
+2. Test Case ID: luiKUn
+
+- Response violates schema
+
+    '2025-07-05T20:52:04.575881' is not a 'date-time'
+
+    Schema at /properties/data/items/properties/created_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Created At&quot;
+        }
+
+    Value:
+
+        &quot;2025-07-05T20:52:04.575881&quot;
+
+[200] OK:
+
+    `{&quot;data&quot;:[{&quot;recipient_id&quot;:&quot;184fd48ced78422383b20d1b45d82699&quot;,&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;status&quot;:&quot;PENDING&quot;,&quot;source&quot;:&quot;system&quot;,&quot;metaData&quot;:{&quot;matchPercentage&quot;:0.4615384638309479,&quot;profileImage&quot;:null,&quot;distance&quot;:290973.9375,&quot;profile&quot;:{&quot;keycloakId&quot;:&quot;184fd48ced78422383b20d1b45d82699&quot;,&quot;username&quot;:&quot;John da3203d3&quot;,&quot;confirmed&quot;:true,&quot;first_name&quot;:&quot;Wendy&quot;,&quot;last_name&quot;:&quot;Ashley&quot;,&quot;height&quot;:167.64,&quot;sex&quot;:&quot;male&quot;,&quot;age&quot;:23,&quot;about&quot;:null,&quot;occupation&quot;:null,&quot;want_children&quot;:&quot;Undecided/Open&quot;,&quot;has_children&quot;:&quot;Yes but all gro // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/recommendations/v2/matches/recommendations/
+
+3. Test Case ID: mJtKcX
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/recommendations/v2/matches/recommendations/`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/matches/recommendations/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/matches/requests" time="3.922000">
+			<failure type="failure" message="1. Test Case ID: bqXuRZ
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;data&quot;:[],&quot;page&quot;:1,&quot;per_page&quot;:20,&quot;total&quot;:0,&quot;next_page&quot;:null,&quot;previous_page&quot;:null}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/matches/requests?per_page=20&amp;x-schemathesis-unknown-property=42'
+
+2. Test Case ID: tVINWg
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/recommendations/v2/matches/requests`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X GET 'https://test-v2.tramatch.com/api/recommendations/v2/matches/requests?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<failure type="failure" message="1. Test Case ID: bqXuRZ
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;data&quot;:[],&quot;page&quot;:1,&quot;per_page&quot;:20,&quot;total&quot;:0,&quot;next_page&quot;:null,&quot;previous_page&quot;:null}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/matches/requests?per_page=20&amp;x-schemathesis-unknown-property=42'
+
+2. Test Case ID: tVINWg
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/recommendations/v2/matches/requests`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X GET 'https://test-v2.tramatch.com/api/recommendations/v2/matches/requests?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/recommendations/v2/matches/requests" time="3.234000">
+			<failure type="failure" message="1. Test Case ID: kGMsrM
+
+- Response violates schema
+
+    '2025-06-11T19:34:49.740964' is not a 'date-time'
+
+    Schema at /properties/created_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Created At&quot;
+        }
+
+    Value:
+
+        &quot;2025-06-11T19:34:49.740964&quot;
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;recipient_id&quot;:&quot;&quot;,&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;status&quot;:&quot;PENDING&quot;,&quot;viewed_by_recipient&quot;:false,&quot;source&quot;:&quot;Request&quot;,&quot;created_at&quot;:&quot;2025-06-11T19:34:49.740964&quot;,&quot;room_id&quot;:null,&quot;id&quot;:3190,&quot;match_request_remains&quot;:null}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;currentUsername&quot;: &quot;&quot;, &quot;recipientUsername&quot;: &quot;&quot;, &quot;relatedUserId&quot;: &quot;&quot;, &quot;source&quot;: &quot;Request&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/requests
+
+2. Test Case ID: pWYLqw
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/recommendations/v2/matches/requests`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;currentUsername&quot;: &quot;&quot;, &quot;recipientUsername&quot;: &quot;&quot;, &quot;relatedUserId&quot;: &quot;&quot;, &quot;source&quot;: &quot;Request&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/requests"/>
+			<failure type="failure" message="1. Test Case ID: kGMsrM
+
+- Response violates schema
+
+    '2025-06-11T19:34:49.740964' is not a 'date-time'
+
+    Schema at /properties/created_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Created At&quot;
+        }
+
+    Value:
+
+        &quot;2025-06-11T19:34:49.740964&quot;
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;recipient_id&quot;:&quot;&quot;,&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;status&quot;:&quot;PENDING&quot;,&quot;viewed_by_recipient&quot;:false,&quot;source&quot;:&quot;Request&quot;,&quot;created_at&quot;:&quot;2025-06-11T19:34:49.740964&quot;,&quot;room_id&quot;:null,&quot;id&quot;:3190,&quot;match_request_remains&quot;:null}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;currentUsername&quot;: &quot;&quot;, &quot;recipientUsername&quot;: &quot;&quot;, &quot;relatedUserId&quot;: &quot;&quot;, &quot;source&quot;: &quot;Request&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/requests
+
+2. Test Case ID: pWYLqw
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/recommendations/v2/matches/requests`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;currentUsername&quot;: &quot;&quot;, &quot;recipientUsername&quot;: &quot;&quot;, &quot;relatedUserId&quot;: &quot;&quot;, &quot;source&quot;: &quot;Request&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/requests"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/recommendations/v2/matches/requests" time="1.718000">
+			<failure type="failure" message="1. Test Case ID: KqRQGa
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 422
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Match request not found&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;currentUsername&quot;: &quot;&quot;, &quot;relatedUserId&quot;: &quot;&quot;, &quot;source&quot;: &quot;Request&quot;, &quot;status&quot;: &quot;BLOCKED&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/requests"/>
+			<failure type="failure" message="1. Test Case ID: KqRQGa
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 422
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Match request not found&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;currentUsername&quot;: &quot;&quot;, &quot;relatedUserId&quot;: &quot;&quot;, &quot;source&quot;: &quot;Request&quot;, &quot;status&quot;: &quot;BLOCKED&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/requests"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/recommendations/v2/matches/advanced/requests" time="3.343000">
+			<failure type="failure" message="1. Test Case ID: 5Hq0hJ
+
+- Response violates schema
+
+    '2025-06-11T19:34:49.740964' is not a 'date-time'
+
+    Schema at /properties/created_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Created At&quot;
+        }
+
+    Value:
+
+        &quot;2025-06-11T19:34:49.740964&quot;
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;recipient_id&quot;:&quot;&quot;,&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;status&quot;:&quot;PENDING&quot;,&quot;viewed_by_recipient&quot;:false,&quot;source&quot;:&quot;Request&quot;,&quot;created_at&quot;:&quot;2025-06-11T19:34:49.740964&quot;,&quot;room_id&quot;:null,&quot;id&quot;:3190,&quot;match_request_remains&quot;:null}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;currentUsername&quot;: &quot;&quot;, &quot;recipientUsername&quot;: &quot;&quot;, &quot;relatedUserId&quot;: &quot;&quot;, &quot;source&quot;: &quot;Request&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/advanced/requests
+
+2. Test Case ID: 2NzWws
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/recommendations/v2/matches/advanced/requests`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;currentUsername&quot;: &quot;&quot;, &quot;recipientUsername&quot;: &quot;&quot;, &quot;relatedUserId&quot;: &quot;&quot;, &quot;source&quot;: &quot;Request&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/advanced/requests"/>
+			<failure type="failure" message="1. Test Case ID: 5Hq0hJ
+
+- Response violates schema
+
+    '2025-06-11T19:34:49.740964' is not a 'date-time'
+
+    Schema at /properties/created_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Created At&quot;
+        }
+
+    Value:
+
+        &quot;2025-06-11T19:34:49.740964&quot;
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;recipient_id&quot;:&quot;&quot;,&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;status&quot;:&quot;PENDING&quot;,&quot;viewed_by_recipient&quot;:false,&quot;source&quot;:&quot;Request&quot;,&quot;created_at&quot;:&quot;2025-06-11T19:34:49.740964&quot;,&quot;room_id&quot;:null,&quot;id&quot;:3190,&quot;match_request_remains&quot;:null}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;currentUsername&quot;: &quot;&quot;, &quot;recipientUsername&quot;: &quot;&quot;, &quot;relatedUserId&quot;: &quot;&quot;, &quot;source&quot;: &quot;Request&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/advanced/requests
+
+2. Test Case ID: 2NzWws
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/recommendations/v2/matches/advanced/requests`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;currentUsername&quot;: &quot;&quot;, &quot;recipientUsername&quot;: &quot;&quot;, &quot;relatedUserId&quot;: &quot;&quot;, &quot;source&quot;: &quot;Request&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/advanced/requests"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/matches/requests/mutual" time="3.577000">
+			<failure type="failure" message="1. Test Case ID: JqQr56
+
+- Response violates schema
+
+    '2024-02-09T14:59:55.103633' is not a 'date-time'
+
+    Schema at /properties/data/items/properties/created_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Created At&quot;
+        }
+
+    Value:
+
+        &quot;2024-02-09T14:59:55.103633&quot;
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;data&quot;:[{&quot;recipient_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;user_id&quot;:&quot;1f60ce317a83440584a8d6d78d741728&quot;,&quot;status&quot;:&quot;ACCEPTED&quot;,&quot;viewed_by_recipient&quot;:null,&quot;source&quot;:null,&quot;created_at&quot;:&quot;2024-12-31T11:44:08.653681&quot;,&quot;room_id&quot;:&quot;4b18f2b7-5e50-5c8c-aa9f-c79ecc2e9cf7&quot;,&quot;id&quot;:2460,&quot;match_request_remains&quot;:null},{&quot;recipient_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;user_id&quot;:&quot;7a92635b455246959bc0882a967f3f49&quot;,&quot;status&quot;:&quot;ACCEPTED&quot;,&quot;viewed_by_recipient&quot;:null,&quot;source&quot;:null,&quot;created_at&quot;:&quot;2024-12-11T08:37:16.065461&quot;,&quot;room_id&quot;:&quot;def4b // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/matches/requests/mutual?per_page=20&amp;x-schemathesis-unknown-property=42'
+
+2. Test Case ID: 7EWZyM
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/recommendations/v2/matches/requests/mutual`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X GET 'https://test-v2.tramatch.com/api/recommendations/v2/matches/requests/mutual?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<failure type="failure" message="1. Test Case ID: JqQr56
+
+- Response violates schema
+
+    '2024-02-09T14:59:55.103633' is not a 'date-time'
+
+    Schema at /properties/data/items/properties/created_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Created At&quot;
+        }
+
+    Value:
+
+        &quot;2024-02-09T14:59:55.103633&quot;
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;data&quot;:[{&quot;recipient_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;user_id&quot;:&quot;1f60ce317a83440584a8d6d78d741728&quot;,&quot;status&quot;:&quot;ACCEPTED&quot;,&quot;viewed_by_recipient&quot;:null,&quot;source&quot;:null,&quot;created_at&quot;:&quot;2024-12-31T11:44:08.653681&quot;,&quot;room_id&quot;:&quot;4b18f2b7-5e50-5c8c-aa9f-c79ecc2e9cf7&quot;,&quot;id&quot;:2460,&quot;match_request_remains&quot;:null},{&quot;recipient_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;user_id&quot;:&quot;7a92635b455246959bc0882a967f3f49&quot;,&quot;status&quot;:&quot;ACCEPTED&quot;,&quot;viewed_by_recipient&quot;:null,&quot;source&quot;:null,&quot;created_at&quot;:&quot;2024-12-11T08:37:16.065461&quot;,&quot;room_id&quot;:&quot;def4b // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/matches/requests/mutual?per_page=20&amp;x-schemathesis-unknown-property=42'
+
+2. Test Case ID: 7EWZyM
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/recommendations/v2/matches/requests/mutual`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X GET 'https://test-v2.tramatch.com/api/recommendations/v2/matches/requests/mutual?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/recommendations/v2/matches/requests/{recipient_id}/" time="3.046000">
+			<failure type="failure" message="1. Test Case ID: iWQYqD
+
+- Response violates schema
+
+    '2024-02-01T13:02:57.904594' is not a 'date-time'
+
+    Schema at /properties/created_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Created At&quot;
+        }
+
+    Value:
+
+        &quot;2024-02-01T13:02:57.904594&quot;
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;recipient_id&quot;:&quot;ce854ef0da3048b2a8c0eda1720d31e5&quot;,&quot;user_id&quot;:&quot;6b539f216c7f4a2e99288371b7aac31f&quot;,&quot;status&quot;:&quot;ACCEPTED&quot;,&quot;viewed_by_recipient&quot;:true,&quot;source&quot;:&quot;Recommendations&quot;,&quot;created_at&quot;:&quot;2024-02-01T13:02:57.904594&quot;,&quot;room_id&quot;:&quot;65bcd1828add8f000e353172&quot;,&quot;id&quot;:4,&quot;match_request_remains&quot;:null}`
+
+Reproduce with: 
+
+    curl -X POST https://test-v2.tramatch.com/api/recommendations/v2/matches/requests/0/
+
+2. Test Case ID: 8qcz5N
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/recommendations/v2/matches/requests/{recipient_id}/`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X POST https://test-v2.tramatch.com/api/recommendations/v2/matches/requests/0/"/>
+			<failure type="failure" message="1. Test Case ID: iWQYqD
+
+- Response violates schema
+
+    '2024-02-01T13:02:57.904594' is not a 'date-time'
+
+    Schema at /properties/created_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Created At&quot;
+        }
+
+    Value:
+
+        &quot;2024-02-01T13:02:57.904594&quot;
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;recipient_id&quot;:&quot;ce854ef0da3048b2a8c0eda1720d31e5&quot;,&quot;user_id&quot;:&quot;6b539f216c7f4a2e99288371b7aac31f&quot;,&quot;status&quot;:&quot;ACCEPTED&quot;,&quot;viewed_by_recipient&quot;:true,&quot;source&quot;:&quot;Recommendations&quot;,&quot;created_at&quot;:&quot;2024-02-01T13:02:57.904594&quot;,&quot;room_id&quot;:&quot;65bcd1828add8f000e353172&quot;,&quot;id&quot;:4,&quot;match_request_remains&quot;:null}`
+
+Reproduce with: 
+
+    curl -X POST https://test-v2.tramatch.com/api/recommendations/v2/matches/requests/0/
+
+2. Test Case ID: 8qcz5N
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/recommendations/v2/matches/requests/{recipient_id}/`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X POST https://test-v2.tramatch.com/api/recommendations/v2/matches/requests/0/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/recommendations/v2/matches/recommendations/{recipient_id}" time="3.297000">
+			<failure type="failure" message="1. Test Case ID: GBwTDJ
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;recipient_id&quot;:&quot;0&quot;,&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;status&quot;:&quot;BLOCKED&quot;,&quot;source&quot;:&quot;system&quot;,&quot;metaData&quot;:null,&quot;created_at&quot;:&quot;2025-06-11T19:35:08.296381&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;source&quot;: &quot;system&quot;, &quot;status&quot;: &quot;BLOCKED&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/recommendations/0
+
+2. Test Case ID: VNJLR7
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `PUT /api/recommendations/v2/matches/recommendations/{recipient_id}`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;source&quot;: &quot;system&quot;, &quot;status&quot;: &quot;BLOCKED&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/recommendations/0"/>
+			<failure type="failure" message="1. Test Case ID: GBwTDJ
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;recipient_id&quot;:&quot;0&quot;,&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;status&quot;:&quot;BLOCKED&quot;,&quot;source&quot;:&quot;system&quot;,&quot;metaData&quot;:null,&quot;created_at&quot;:&quot;2025-06-11T19:35:08.296381&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;source&quot;: &quot;system&quot;, &quot;status&quot;: &quot;BLOCKED&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/recommendations/0
+
+2. Test Case ID: VNJLR7
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `PUT /api/recommendations/v2/matches/recommendations/{recipient_id}`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;source&quot;: &quot;system&quot;, &quot;status&quot;: &quot;BLOCKED&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/recommendations/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/matches/recommendations/rejected/" time="3.109000">
+			<failure type="failure" message="1. Test Case ID: Ar03sH
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/recommendations/v2/matches/recommendations/rejected/`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X GET 'https://test-v2.tramatch.com/api/recommendations/v2/matches/recommendations/rejected/?start_date=2000-01-01T00%3A00%3A00Z&amp;page=1&amp;per_page=10'"/>
+			<failure type="failure" message="1. Test Case ID: Ar03sH
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/recommendations/v2/matches/recommendations/rejected/`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X GET 'https://test-v2.tramatch.com/api/recommendations/v2/matches/recommendations/rejected/?start_date=2000-01-01T00%3A00%3A00Z&amp;page=1&amp;per_page=10'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/health/" time="1.688000">
+			<failure type="failure" message="1. Test Case ID: omwJrW
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/recommendations/v2/health/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/recommendations/v2/filters/" time="1.140000">
+			<failure type="failure" message="1. Test Case ID: Bc0mlU
+
+- Missing header not rejected
+
+    Missing header not rejected (got 422, expected 401)
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;value_error&quot;,&quot;loc&quot;:[&quot;body&quot;,&quot;code&quot;],&quot;msg&quot;:&quot;Value error, Invalid code&quot;,&quot;input&quot;:&quot;&quot;,&quot;ctx&quot;:{&quot;error&quot;:{}}}]}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;code&quot;: &quot;&quot;, &quot;credit_cost&quot;: 0, &quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/filters/"/>
+			<failure type="failure" message="1. Test Case ID: Bc0mlU
+
+- Missing header not rejected
+
+    Missing header not rejected (got 422, expected 401)
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;value_error&quot;,&quot;loc&quot;:[&quot;body&quot;,&quot;code&quot;],&quot;msg&quot;:&quot;Value error, Invalid code&quot;,&quot;input&quot;:&quot;&quot;,&quot;ctx&quot;:{&quot;error&quot;:{}}}]}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;code&quot;: &quot;&quot;, &quot;credit_cost&quot;: 0, &quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/filters/
+
+2. Test Case ID: gz9bpq
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;value_error&quot;,&quot;loc&quot;:[&quot;body&quot;,&quot;code&quot;],&quot;msg&quot;:&quot;Value error, Invalid code&quot;,&quot;input&quot;:&quot;&quot;,&quot;ctx&quot;:{&quot;error&quot;:{}}}]}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;code&quot;: &quot;&quot;, &quot;credit_cost&quot;: 0, &quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/filters/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/filters/" time="3.156000">
+			<failure type="failure" message="1. Test Case ID: ut9Azc
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/recommendations/v2/filters/`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X GET 'https://test-v2.tramatch.com/api/recommendations/v2/filters/?page=1&amp;per_page=10&amp;is_active=true'"/>
+			<failure type="failure" message="1. Test Case ID: ut9Azc
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/recommendations/v2/filters/`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X GET 'https://test-v2.tramatch.com/api/recommendations/v2/filters/?page=1&amp;per_page=10&amp;is_active=true'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/filters/{code}" time="1.438000">
+			<failure type="failure" message="1. Test Case ID: oOHoZe
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 422
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Search filter with code 0 not found&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/filters/0"/>
+			<failure type="failure" message="1. Test Case ID: oOHoZe
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 422
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Search filter with code 0 not found&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/filters/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/filters/fields" time="1.032000">
+			<failure type="failure" message="1. Test Case ID: TvsWbE
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/filters/fields"/>
+			<failure type="failure" message="1. Test Case ID: TvsWbE
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/filters/fields"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="DELETE /api/recommendations/v2/filters/{code}" time="1.079000">
+			<failure type="failure" message="1. Test Case ID: 4O4sME
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/recommendations/v2/filters/0"/>
+			<failure type="failure" message="1. Test Case ID: 4O4sME
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/recommendations/v2/filters/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/recommendations/v2/filters/{code}" time="1.171000">
+			<failure type="failure" message="1. Test Case ID: sFIr0K
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;credit_cost&quot;: 0, &quot;description&quot;: &quot;&quot;, &quot;is_active&quot;: null, &quot;name&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/filters/0"/>
+			<failure type="failure" message="1. Test Case ID: sFIr0K
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;credit_cost&quot;: 0, &quot;description&quot;: &quot;&quot;, &quot;is_active&quot;: null, &quot;name&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/filters/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/filters/credit-point/balance" time="2.937000">
+			<failure type="failure" message="1. Test Case ID: d00T25
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;points&quot;:20,&quot;token_type&quot;:&quot;FREE&quot;,&quot;created_at&quot;:&quot;2025-03-30T01:09:34.681380Z&quot;,&quot;updated_at&quot;:&quot;2025-03-30T01:09:34.681380Z&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/filters/credit-point/balance
+
+2. Test Case ID: r1QZVg
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/recommendations/v2/filters/credit-point/balance`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/filters/credit-point/balance"/>
+			<failure type="failure" message="1. Test Case ID: d00T25
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;points&quot;:20,&quot;token_type&quot;:&quot;FREE&quot;,&quot;created_at&quot;:&quot;2025-03-30T01:09:34.681380Z&quot;,&quot;updated_at&quot;:&quot;2025-03-30T01:09:34.681380Z&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/filters/credit-point/balance
+
+2. Test Case ID: r1QZVg
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/recommendations/v2/filters/credit-point/balance`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/filters/credit-point/balance"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/recommendations/v2/filters/search" time="3.734000">
+			<failure type="failure" message="1. Test Case ID: zh3Slf
+
+- Response violates schema
+
+    '2025-07-05T20:52:02.289306' is not a 'date-time'
+
+    Schema at /properties/data/items/properties/created_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Created At&quot;
+        }
+
+    Value:
+
+        &quot;2025-07-05T20:52:02.289306&quot;
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;data&quot;:[{&quot;recipient_id&quot;:&quot;fbec94d66bd0484f8356b6ef4d533a78&quot;,&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;status&quot;:&quot;PENDING&quot;,&quot;source&quot;:&quot;system&quot;,&quot;metaData&quot;:{&quot;matchPercentage&quot;:0.3076923191547394,&quot;profileImage&quot;:null,&quot;distance&quot;:290973.9375,&quot;profile&quot;:{&quot;keycloakId&quot;:&quot;fbec94d66bd0484f8356b6ef4d533a78&quot;,&quot;username&quot;:&quot;Darryl c9ea4883&quot;,&quot;confirmed&quot;:true,&quot;first_name&quot;:&quot;Megan&quot;,&quot;last_name&quot;:&quot;Cline&quot;,&quot;height&quot;:127.0,&quot;sex&quot;:&quot;male&quot;,&quot;age&quot;:29,&quot;about&quot;:null,&quot;occupation&quot;:null,&quot;want_children&quot;:&quot;Does Not Want Children&quot;,&quot;has_children&quot;:&quot;Yes but // Output truncated...`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;age_limit&quot;: null, &quot;body_types&quot;: null, &quot;countries&quot;: null, &quot;drinking_statuses&quot;: null, &quot;education_levels&quot;: null, &quot;ethnicities&quot;: null, &quot;has_children&quot;: null, &quot;height_range&quot;: null, &quot;marital_statuses&quot;: null, &quot;marital_type&quot;: null, &quot;occupations&quot;: null, &quot;open_for_relocation&quot;: null, &quot;page&quot;: 1, &quot;per_page&quot;: 10, &quot;reasons&quot;: null, &quot;religions&quot;: null, &quot;smoking_statuses&quot;: null, &quot;want_children&quot;: null}' https://test-v2.tramatch.com/api/recommendations/v2/filters/search
+
+2. Test Case ID: fXDEtq
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/recommendations/v2/filters/search`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;age_limit&quot;: null, &quot;body_types&quot;: null, &quot;countries&quot;: null, &quot;drinking_statuses&quot;: null, &quot;education_levels&quot;: null, &quot;ethnicities&quot;: null, &quot;has_children&quot;: null, &quot;height_range&quot;: null, &quot;marital_statuses&quot;: null, &quot;marital_type&quot;: null, &quot;occupations&quot;: null, &quot;open_for_relocation&quot;: null, &quot;page&quot;: 1, &quot;per_page&quot;: 10, &quot;reasons&quot;: null, &quot;religions&quot;: null, &quot;smoking_statuses&quot;: null, &quot;want_children&quot;: null}' https://test-v2.tramatch.com/api/recommendations/v2/filters/search"/>
+			<failure type="failure" message="1. Test Case ID: zh3Slf
+
+- Response violates schema
+
+    '2025-07-05T20:52:02.289306' is not a 'date-time'
+
+    Schema at /properties/data/items/properties/created_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Created At&quot;
+        }
+
+    Value:
+
+        &quot;2025-07-05T20:52:02.289306&quot;
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;data&quot;:[{&quot;recipient_id&quot;:&quot;fbec94d66bd0484f8356b6ef4d533a78&quot;,&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;status&quot;:&quot;PENDING&quot;,&quot;source&quot;:&quot;system&quot;,&quot;metaData&quot;:{&quot;matchPercentage&quot;:0.3076923191547394,&quot;profileImage&quot;:null,&quot;distance&quot;:290973.9375,&quot;profile&quot;:{&quot;keycloakId&quot;:&quot;fbec94d66bd0484f8356b6ef4d533a78&quot;,&quot;username&quot;:&quot;Darryl c9ea4883&quot;,&quot;confirmed&quot;:true,&quot;first_name&quot;:&quot;Megan&quot;,&quot;last_name&quot;:&quot;Cline&quot;,&quot;height&quot;:127.0,&quot;sex&quot;:&quot;male&quot;,&quot;age&quot;:29,&quot;about&quot;:null,&quot;occupation&quot;:null,&quot;want_children&quot;:&quot;Does Not Want Children&quot;,&quot;has_children&quot;:&quot;Yes but // Output truncated...`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;age_limit&quot;: null, &quot;body_types&quot;: null, &quot;countries&quot;: null, &quot;drinking_statuses&quot;: null, &quot;education_levels&quot;: null, &quot;ethnicities&quot;: null, &quot;has_children&quot;: null, &quot;height_range&quot;: null, &quot;marital_statuses&quot;: null, &quot;marital_type&quot;: null, &quot;occupations&quot;: null, &quot;open_for_relocation&quot;: null, &quot;page&quot;: 1, &quot;per_page&quot;: 10, &quot;reasons&quot;: null, &quot;religions&quot;: null, &quot;smoking_statuses&quot;: null, &quot;want_children&quot;: null}' https://test-v2.tramatch.com/api/recommendations/v2/filters/search
+
+2. Test Case ID: fXDEtq
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/recommendations/v2/filters/search`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;age_limit&quot;: null, &quot;body_types&quot;: null, &quot;countries&quot;: null, &quot;drinking_statuses&quot;: null, &quot;education_levels&quot;: null, &quot;ethnicities&quot;: null, &quot;has_children&quot;: null, &quot;height_range&quot;: null, &quot;marital_statuses&quot;: null, &quot;marital_type&quot;: null, &quot;occupations&quot;: null, &quot;open_for_relocation&quot;: null, &quot;page&quot;: 1, &quot;per_page&quot;: 10, &quot;reasons&quot;: null, &quot;religions&quot;: null, &quot;smoking_statuses&quot;: null, &quot;want_children&quot;: null}' https://test-v2.tramatch.com/api/recommendations/v2/filters/search"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/recommendations/v2/filters/search/user-history" time="3.392000">
+			<failure type="failure" message="1. Test Case ID: tAao0j
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;page&quot;:1,&quot;per_page&quot;:10,&quot;total&quot;:28,&quot;previous_page&quot;:null,&quot;next_page&quot;:2,&quot;history&quot;:[{&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;filter_data&quot;:{&quot;page&quot;:1,&quot;per_page&quot;:10},&quot;created_at&quot;:&quot;2025-06-11T20:58:45.456590Z&quot;,&quot;updated_at&quot;:&quot;2025-06-11T20:58:45.456590Z&quot;},{&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;filter_data&quot;:{&quot;page&quot;:1,&quot;per_page&quot;:10},&quot;created_at&quot;:&quot;2025-06-11T21:18:08.393404Z&quot;,&quot;updated_at&quot;:&quot;2025-06-11T21:18:08.393404Z&quot;},{&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;filter_data&quot;:{&quot;page&quot;:1,&quot;per_page&quot;:10},&quot;c // Output truncated...`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/filters/search/user-history?per_page=10&amp;x-schemathesis-unknown-property=42'
+
+2. Test Case ID: ttikiG
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/recommendations/v2/filters/search/user-history`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X POST 'https://test-v2.tramatch.com/api/recommendations/v2/filters/search/user-history?per_page=10&amp;x-schemathesis-unknown-property=42'"/>
+			<failure type="failure" message="1. Test Case ID: tAao0j
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;page&quot;:1,&quot;per_page&quot;:10,&quot;total&quot;:28,&quot;previous_page&quot;:null,&quot;next_page&quot;:2,&quot;history&quot;:[{&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;filter_data&quot;:{&quot;page&quot;:1,&quot;per_page&quot;:10},&quot;created_at&quot;:&quot;2025-06-11T20:58:45.456590Z&quot;,&quot;updated_at&quot;:&quot;2025-06-11T20:58:45.456590Z&quot;},{&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;filter_data&quot;:{&quot;page&quot;:1,&quot;per_page&quot;:10},&quot;created_at&quot;:&quot;2025-06-11T21:18:08.393404Z&quot;,&quot;updated_at&quot;:&quot;2025-06-11T21:18:08.393404Z&quot;},{&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;filter_data&quot;:{&quot;page&quot;:1,&quot;per_page&quot;:10},&quot;c // Output truncated...`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/filters/search/user-history?per_page=10&amp;x-schemathesis-unknown-property=42'
+
+2. Test Case ID: ttikiG
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/recommendations/v2/filters/search/user-history`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X POST 'https://test-v2.tramatch.com/api/recommendations/v2/filters/search/user-history?per_page=10&amp;x-schemathesis-unknown-property=42'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/recommendations/v2/filters/search/history" time="1.127000">
+			<failure type="failure" message="1. Test Case ID: l4hceu
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;created_at&quot;: null, &quot;page&quot;: 1, &quot;per_page&quot;: 10, &quot;user_id&quot;: null}' https://test-v2.tramatch.com/api/recommendations/v2/filters/search/history"/>
+			<failure type="failure" message="1. Test Case ID: l4hceu
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;created_at&quot;: null, &quot;page&quot;: 1, &quot;per_page&quot;: 10, &quot;user_id&quot;: null}' https://test-v2.tramatch.com/api/recommendations/v2/filters/search/history"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+	</testsuite>
+</testsuites>
