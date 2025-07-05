@@ -1,0 +1,2818 @@
+<?xml version="1.0" ?>
+<testsuites disabled="0" errors="0" failures="62" tests="62" time="130.25599999996484">
+	<testsuite disabled="0" errors="0" failures="62" name="schemathesis" skipped="61" tests="62" time="130.25599999996484" hostname="UyahTee">
+		<testcase name="POST /api/main/v2/contact/search" time="1.844000">
+			<failure type="failure" message="1. Test Case ID: emug7R
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;created_at&quot;: null, &quot;email&quot;: null, &quot;name&quot;: null, &quot;status&quot;: null, &quot;tag&quot;: null, &quot;tickets&quot;: null}' 'https://test-v2.tramatch.com/api/main/v2/contact/search?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<failure type="failure" message="1. Test Case ID: emug7R
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;created_at&quot;: null, &quot;email&quot;: null, &quot;name&quot;: null, &quot;status&quot;: null, &quot;tag&quot;: null, &quot;tickets&quot;: null}' 'https://test-v2.tramatch.com/api/main/v2/contact/search?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/main/v2/contact/" time="1.298000">
+			<failure type="failure" message="1. Test Case ID: 9VWgsq
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 201, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: multipart/form-data; boundary=35f52d0e435dad779c5031a4d3173f44' -d '--d6d7552e66c8198500a0b77089d8097b
+Content-Disposition: form-data; name=&quot;image&quot;
+
+None
+--d6d7552e66c8198500a0b77089d8097b--
+' 'https://test-v2.tramatch.com/api/main/v2/contact/?email=0%40A.COM&amp;subject=&amp;text=&amp;x-schemathesis-unknown-property=42'"/>
+			<failure type="failure" message="1. Test Case ID: 9VWgsq
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 201, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: multipart/form-data; boundary=35f52d0e435dad779c5031a4d3173f44' -d '--d6d7552e66c8198500a0b77089d8097b
+Content-Disposition: form-data; name=&quot;image&quot;
+
+None
+--d6d7552e66c8198500a0b77089d8097b--
+' 'https://test-v2.tramatch.com/api/main/v2/contact/?email=0%40A.COM&amp;subject=&amp;text=&amp;x-schemathesis-unknown-property=42'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/contact/{message_id}" time="1.843000">
+			<failure type="failure" message="1. Test Case ID: lc31qw
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/main/v2/contact/0"/>
+			<failure type="failure" message="1. Test Case ID: lc31qw
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/main/v2/contact/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/main/v2/contact/{message_id}" time="1.704000">
+			<failure type="failure" message="1. Test Case ID: v0Bdz1
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;status&quot;: &quot;TODO&quot;}' https://test-v2.tramatch.com/api/main/v2/contact/0"/>
+			<failure type="failure" message="1. Test Case ID: v0Bdz1
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;status&quot;: &quot;TODO&quot;}' https://test-v2.tramatch.com/api/main/v2/contact/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/contact/ticket/{code}/" time="1.812000">
+			<failure type="failure" message="1. Test Case ID: 5Y6qji
+
+- Missing header not rejected
+
+    Missing header not rejected (got 422, expected 401)
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;uuid_parsing&quot;,&quot;loc&quot;:[&quot;path&quot;,&quot;code&quot;],&quot;msg&quot;:&quot;Input should be a valid UUID, invalid length: expected length 32 for simple format, found 1&quot;,&quot;input&quot;:&quot;0&quot;,&quot;ctx&quot;:{&quot;error&quot;:&quot;invalid length: expected length 32 for simple format, found 1&quot;}}]}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/main/v2/contact/ticket/0/"/>
+			<failure type="failure" message="1. Test Case ID: 5Y6qji
+
+- Missing header not rejected
+
+    Missing header not rejected (got 422, expected 401)
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;uuid_parsing&quot;,&quot;loc&quot;:[&quot;path&quot;,&quot;code&quot;],&quot;msg&quot;:&quot;Input should be a valid UUID, invalid length: expected length 32 for simple format, found 1&quot;,&quot;input&quot;:&quot;0&quot;,&quot;ctx&quot;:{&quot;error&quot;:&quot;invalid length: expected length 32 for simple format, found 1&quot;}}]}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/main/v2/contact/ticket/0/
+
+2. Test Case ID: 5K0L1d
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/main/v2/contact/ticket/e3e70682-c209-4cac-629f-6fbed82c07cd/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/main/v2/contact/newsletter" time="2.624000">
+			<failure type="failure" message="1. Test Case ID: y5r3Wq
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;email&quot;: &quot;0@A.COM&quot;}' https://test-v2.tramatch.com/api/main/v2/contact/newsletter"/>
+			<failure type="failure" message="1. Test Case ID: y5r3Wq
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;email&quot;: &quot;0@A.COM&quot;}' https://test-v2.tramatch.com/api/main/v2/contact/newsletter
+
+2. Test Case ID: 606aMO
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 201, 422
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Already subscribed&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;email&quot;: &quot;0@A.COM&quot;}' https://test-v2.tramatch.com/api/main/v2/contact/newsletter"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/main/v2/contact/ticket/" time="1.453000">
+			<failure type="failure" message="1. Test Case ID: H61hZZ
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;assignee&quot;: null, &quot;message_id&quot;: 0, &quot;ticket&quot;: &quot;https://A.COM&quot;}' https://test-v2.tramatch.com/api/main/v2/contact/ticket/"/>
+			<failure type="failure" message="1. Test Case ID: H61hZZ
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;assignee&quot;: null, &quot;message_id&quot;: 0, &quot;ticket&quot;: &quot;https://A.COM&quot;}' https://test-v2.tramatch.com/api/main/v2/contact/ticket/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/main/v2/contact/ticket/{code}/" time="1.641000">
+			<failure type="failure" message="1. Test Case ID: wubdGP
+
+- Missing header not rejected
+
+    Missing header not rejected (got 422, expected 401)
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;uuid_parsing&quot;,&quot;loc&quot;:[&quot;path&quot;,&quot;code&quot;],&quot;msg&quot;:&quot;Input should be a valid UUID, invalid length: expected length 32 for simple format, found 1&quot;,&quot;input&quot;:&quot;0&quot;,&quot;ctx&quot;:{&quot;error&quot;:&quot;invalid length: expected length 32 for simple format, found 1&quot;}}]}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;status&quot;: &quot;TODO&quot;}' https://test-v2.tramatch.com/api/main/v2/contact/ticket/0/"/>
+			<failure type="failure" message="1. Test Case ID: wubdGP
+
+- Missing header not rejected
+
+    Missing header not rejected (got 422, expected 401)
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;uuid_parsing&quot;,&quot;loc&quot;:[&quot;path&quot;,&quot;code&quot;],&quot;msg&quot;:&quot;Input should be a valid UUID, invalid length: expected length 32 for simple format, found 1&quot;,&quot;input&quot;:&quot;0&quot;,&quot;ctx&quot;:{&quot;error&quot;:&quot;invalid length: expected length 32 for simple format, found 1&quot;}}]}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;status&quot;: &quot;TODO&quot;}' https://test-v2.tramatch.com/api/main/v2/contact/ticket/0/
+
+2. Test Case ID: IRx8n6
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;status&quot;: &quot;TODO&quot;}' https://test-v2.tramatch.com/api/main/v2/contact/ticket/e3e70682-c209-4cac-629f-6fbed82c07cd/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="DELETE /api/main/v2/locations/{location_id}" time="1.687000">
+			<failure type="failure" message="1. Test Case ID: sdrxF1
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/main/v2/locations/0"/>
+			<failure type="failure" message="1. Test Case ID: sdrxF1
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/main/v2/locations/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/main/v2/locations/" time="1.782000">
+			<failure type="failure" message="1. Test Case ID: T0veqS
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;id&quot;: 0, &quot;parent&quot;: null, &quot;text&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/locations/"/>
+			<failure type="failure" message="1. Test Case ID: T0veqS
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;id&quot;: 0, &quot;parent&quot;: null, &quot;text&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/locations/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/main/v2/locations/{location_id}" time="1.688000">
+			<failure type="failure" message="1. Test Case ID: Jw8jd5
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;id&quot;: 0, &quot;parent&quot;: null, &quot;text&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/locations/0"/>
+			<failure type="failure" message="1. Test Case ID: Jw8jd5
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;id&quot;: 0, &quot;parent&quot;: null, &quot;text&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/locations/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/locations/" time="5.939000">
+			<failure type="failure" message="1. Test Case ID: bkvASq
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;locations&quot;:[{&quot;parent&quot;:null,&quot;id&quot;:88151,&quot;text&quot;:&quot;Birmingham&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88169,&quot;text&quot;:&quot;Calera&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88135,&quot;text&quot;:&quot;Ashland&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88150,&quot;text&quot;:&quot;Bibb County&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88161,&quot;text&quot;:&quot;Brookside&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88168,&quot;text&quot;:&quot;Cahaba Heights&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88127,&quot;text&quot;:&quot;Alexander City&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88134,&quot;text&quot;:&quot;Ashford&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88142,&quot;text&quot;:&quot;Baldwin County&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88149,&quot;text&quot;:&quot;Bessemer&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88157,&quot;t // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/locations/?per_page=50&amp;x-schemathesis-unknown-property=42'"/>
+			<failure type="failure" message="1. Test Case ID: bkvASq
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;locations&quot;:[{&quot;parent&quot;:null,&quot;id&quot;:88151,&quot;text&quot;:&quot;Birmingham&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88169,&quot;text&quot;:&quot;Calera&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88135,&quot;text&quot;:&quot;Ashland&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88150,&quot;text&quot;:&quot;Bibb County&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88161,&quot;text&quot;:&quot;Brookside&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88168,&quot;text&quot;:&quot;Cahaba Heights&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88127,&quot;text&quot;:&quot;Alexander City&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88134,&quot;text&quot;:&quot;Ashford&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88142,&quot;text&quot;:&quot;Baldwin County&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88149,&quot;text&quot;:&quot;Bessemer&quot;},{&quot;parent&quot;:null,&quot;id&quot;:88157,&quot;t // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/locations/?per_page=50&amp;x-schemathesis-unknown-property=42'
+
+2. Test Case ID: mzO5ov
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/locations/?page=0'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/keywords/" time="6.187000">
+			<failure type="failure" message="1. Test Case ID: Su1RZg
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/keywords/?location_id=0'"/>
+			<failure type="failure" message="1. Test Case ID: Su1RZg
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/keywords/?location_id=0'
+
+2. Test Case ID: 94ivhW
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `{&quot;message&quot;:&quot;Error occured while performing db operations, please try again.&quot;}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/keywords/?location_id=-6317157995622359782'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/main/v2/keywords/{keyword_id}" time="1.594000">
+			<failure type="failure" message="1. Test Case ID: ZsCWVa
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;description&quot;: &quot;&quot;, &quot;title&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/keywords/0"/>
+			<failure type="failure" message="1. Test Case ID: ZsCWVa
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;description&quot;: &quot;&quot;, &quot;title&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/keywords/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/main/v2/locations/search" time="3.656000">
+			<failure type="failure" message="1. Test Case ID: PIkDO9
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `null`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;cordinates&quot;: null, &quot;ip_address&quot;: null}' https://test-v2.tramatch.com/api/main/v2/locations/search
+
+2. Test Case ID: SUQakc
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/main/v2/locations/search`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;cordinates&quot;: null, &quot;ip_address&quot;: null}' https://test-v2.tramatch.com/api/main/v2/locations/search"/>
+			<failure type="failure" message="1. Test Case ID: PIkDO9
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `null`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;cordinates&quot;: null, &quot;ip_address&quot;: null}' https://test-v2.tramatch.com/api/main/v2/locations/search
+
+2. Test Case ID: SUQakc
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/main/v2/locations/search`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;User Not authenticated&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;cordinates&quot;: null, &quot;ip_address&quot;: null}' https://test-v2.tramatch.com/api/main/v2/locations/search"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/main/v2/keywords/" time="1.594000">
+			<failure type="failure" message="1. Test Case ID: pHulvE
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;description&quot;: &quot;&quot;, &quot;title&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/keywords/"/>
+			<failure type="failure" message="1. Test Case ID: pHulvE
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;description&quot;: &quot;&quot;, &quot;title&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/keywords/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/main/v2/keywords/location" time="1.563000">
+			<failure type="failure" message="1. Test Case ID: U8WMkr
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;keyword&quot;: 0, &quot;location&quot;: 0}' https://test-v2.tramatch.com/api/main/v2/keywords/location"/>
+			<failure type="failure" message="1. Test Case ID: U8WMkr
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;keyword&quot;: 0, &quot;location&quot;: 0}' https://test-v2.tramatch.com/api/main/v2/keywords/location"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="DELETE /api/main/v2/keywords/{keyword_id}" time="1.517000">
+			<failure type="failure" message="1. Test Case ID: immAhL
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 204, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/main/v2/keywords/0"/>
+			<failure type="failure" message="1. Test Case ID: immAhL
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 204, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/main/v2/keywords/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/keywords/{keyword_id}/locations" time="2.235000">
+			<failure type="failure" message="1. Test Case ID: fQmUVk
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 422
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;keyword does not exist&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/main/v2/keywords/0/locations"/>
+			<failure type="failure" message="1. Test Case ID: fQmUVk
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 422
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;keyword does not exist&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/main/v2/keywords/0/locations"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="DELETE /api/main/v2/keywords/{keyword_id}/locations/{location_id}" time="2.172000">
+			<failure type="failure" message="1. Test Case ID: e31eu1
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 204, 422
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;invalid keyword or location&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/main/v2/keywords/0/locations/0"/>
+			<failure type="failure" message="1. Test Case ID: e31eu1
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 204, 422
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;invalid keyword or location&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/main/v2/keywords/0/locations/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/main/v2/careers/" time="1.797000">
+			<failure type="failure" message="1. Test Case ID: dksay6
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;description&quot;: &quot;&quot;, &quot;level&quot;: &quot;L1&quot;, &quot;locations&quot;: [], &quot;title&quot;: &quot;&quot;, &quot;type&quot;: &quot;Full-Time&quot;}' https://test-v2.tramatch.com/api/main/v2/careers/"/>
+			<failure type="failure" message="1. Test Case ID: dksay6
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;description&quot;: &quot;&quot;, &quot;level&quot;: &quot;L1&quot;, &quot;locations&quot;: [], &quot;title&quot;: &quot;&quot;, &quot;type&quot;: &quot;Full-Time&quot;}' https://test-v2.tramatch.com/api/main/v2/careers/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/main/v2/careers/search" time="3.188000">
+			<failure type="failure" message="1. Test Case ID: HcDqCF
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;total&quot;:10,&quot;next_page&quot;:null,&quot;previous_page&quot;:null,&quot;pages&quot;:1,&quot;page&quot;:1,&quot;per_page&quot;:20,&quot;jobs&quot;:[{&quot;title&quot;:&quot;Quality Assurance Engineer&quot;,&quot;description&quot;:&quot;&lt;p&gt;ensuring the quality assurance of the portals and Mobile apps&lt;/p&gt;&quot;,&quot;locations&quot;:[&quot;lagos&quot;],&quot;type&quot;:&quot;Full-Time&quot;,&quot;level&quot;:&quot;L2&quot;,&quot;status&quot;:&quot;CLOSED&quot;,&quot;id&quot;:10,&quot;code&quot;:&quot;ee8cc7f9-c722-3036-85d6-fb8270e7243a&quot;,&quot;creator&quot;:&quot;efd6fbe3c6ef4501ae8febe4c00b4245&quot;,&quot;created_at&quot;:&quot;2024-12-13T06:56:15.617102Z&quot;},{&quot;title&quot;:&quot;Mid-level Systems Analyst&quot;,&quot;description&quot;:&quot;&lt;p&gt;Lorem ipsum&lt;/p&gt;&quot;,&quot;locations&quot; // Output truncated...`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;codes&quot;: null, &quot;job_ids&quot;: null, &quot;level&quot;: null, &quot;posted_at&quot;: null, &quot;status&quot;: null, &quot;type&quot;: null}' 'https://test-v2.tramatch.com/api/main/v2/careers/search?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<failure type="failure" message="1. Test Case ID: HcDqCF
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;total&quot;:10,&quot;next_page&quot;:null,&quot;previous_page&quot;:null,&quot;pages&quot;:1,&quot;page&quot;:1,&quot;per_page&quot;:20,&quot;jobs&quot;:[{&quot;title&quot;:&quot;Quality Assurance Engineer&quot;,&quot;description&quot;:&quot;&lt;p&gt;ensuring the quality assurance of the portals and Mobile apps&lt;/p&gt;&quot;,&quot;locations&quot;:[&quot;lagos&quot;],&quot;type&quot;:&quot;Full-Time&quot;,&quot;level&quot;:&quot;L2&quot;,&quot;status&quot;:&quot;CLOSED&quot;,&quot;id&quot;:10,&quot;code&quot;:&quot;ee8cc7f9-c722-3036-85d6-fb8270e7243a&quot;,&quot;creator&quot;:&quot;efd6fbe3c6ef4501ae8febe4c00b4245&quot;,&quot;created_at&quot;:&quot;2024-12-13T06:56:15.617102Z&quot;},{&quot;title&quot;:&quot;Mid-level Systems Analyst&quot;,&quot;description&quot;:&quot;&lt;p&gt;Lorem ipsum&lt;/p&gt;&quot;,&quot;locations&quot; // Output truncated...`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;codes&quot;: null, &quot;job_ids&quot;: null, &quot;level&quot;: null, &quot;posted_at&quot;: null, &quot;status&quot;: null, &quot;type&quot;: null}' 'https://test-v2.tramatch.com/api/main/v2/careers/search?per_page=20&amp;x-schemathesis-unknown-property=42'
+
+2. Test Case ID: mZVJls
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `{&quot;message&quot;:&quot;Error occured while performing db operations, please try again.&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{}' 'https://test-v2.tramatch.com/api/main/v2/careers/search?page=0'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/main/v2/careers/{code}" time="1.876000">
+			<failure type="failure" message="1. Test Case ID: Y0NoMk
+
+- Missing header not rejected
+
+    Missing header not rejected (got 422, expected 401)
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;uuid_parsing&quot;,&quot;loc&quot;:[&quot;path&quot;,&quot;code&quot;],&quot;msg&quot;:&quot;Input should be a valid UUID, invalid length: expected length 32 for simple format, found 1&quot;,&quot;input&quot;:&quot;0&quot;,&quot;ctx&quot;:{&quot;error&quot;:&quot;invalid length: expected length 32 for simple format, found 1&quot;}}]}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;description&quot;: null, &quot;level&quot;: null, &quot;locations&quot;: null, &quot;status&quot;: null, &quot;title&quot;: null, &quot;type&quot;: null}' https://test-v2.tramatch.com/api/main/v2/careers/0"/>
+			<failure type="failure" message="1. Test Case ID: Y0NoMk
+
+- Missing header not rejected
+
+    Missing header not rejected (got 422, expected 401)
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;uuid_parsing&quot;,&quot;loc&quot;:[&quot;path&quot;,&quot;code&quot;],&quot;msg&quot;:&quot;Input should be a valid UUID, invalid length: expected length 32 for simple format, found 1&quot;,&quot;input&quot;:&quot;0&quot;,&quot;ctx&quot;:{&quot;error&quot;:&quot;invalid length: expected length 32 for simple format, found 1&quot;}}]}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;description&quot;: null, &quot;level&quot;: null, &quot;locations&quot;: null, &quot;status&quot;: null, &quot;title&quot;: null, &quot;type&quot;: null}' https://test-v2.tramatch.com/api/main/v2/careers/0
+
+2. Test Case ID: 2EldHx
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{}' https://test-v2.tramatch.com/api/main/v2/careers/e3e70682-c209-4cac-629f-6fbed82c07cd"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/careers/{code}" time="3.033000">
+			<failure type="failure" message="1. Test Case ID: n41nsF
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/careers/0"/>
+			<failure type="failure" message="1. Test Case ID: n41nsF
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/careers/0
+
+2. Test Case ID: eP0U2Y
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 422
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Job Post not Found&quot;}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/careers/e3e70682-c209-4cac-629f-6fbed82c07cd"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/careers/resume/{filename}/" time="1.546000">
+			<failure type="failure" message="1. Test Case ID: Kqd4dG
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X GET 'https://test-v2.tramatch.com/api/main/v2/careers/resume/0/?document_type=resume'"/>
+			<failure type="failure" message="1. Test Case ID: Kqd4dG
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X GET 'https://test-v2.tramatch.com/api/main/v2/careers/resume/0/?document_type=resume'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/careers/applicants/" time="1.734000">
+			<failure type="failure" message="1. Test Case ID: fb3QsR
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/careers/applicants/?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<failure type="failure" message="1. Test Case ID: fb3QsR
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/careers/applicants/?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/main/v2/careers/jobs/{code}" time="2.172000">
+			<failure type="failure" message="1. Test Case ID: fDUmss
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: multipart/form-data; boundary=611f2534cc671977bef9cdc030d738cf' -d '--612da2bc48c7ea580e87a17fa65c1112
+Content-Disposition: form-data; name=&quot;country&quot;
+
+
+--612da2bc48c7ea580e87a17fa65c1112
+Content-Disposition: form-data; name=&quot;cover_letter&quot;
+
+None
+--612da2bc48c7ea580e87a17fa65c1112
+Content-Disposition: form-data; name=&quot;cover_letter_file&quot;
+
+None
+--612da2bc48c7ea580e87a17fa65c1112
+Content-Disposition: form-data; name=&quot;email&quot;
+
+0@A.COM
+--612da2bc48c7ea580e87a17fa65c1112
+Content-Disposition: form-data; name=&quot;full_name&quot;
+
+
+--612da2bc48c7ea580e87a17fa65c1112
+Content-Disposition: form-data; name=&quot;phone&quot;
+
+
+--612da2bc48c7ea580e87a17fa65c1112
+Content-Disposition: form-data; name=&quot;resume&quot;
+
+
+--612da2bc48c7ea580e87a17fa65c1112--
+' https://test-v2.tramatch.com/api/main/v2/careers/jobs/0"/>
+			<failure type="failure" message="1. Test Case ID: fDUmss
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: multipart/form-data; boundary=611f2534cc671977bef9cdc030d738cf' -d '--612da2bc48c7ea580e87a17fa65c1112
+Content-Disposition: form-data; name=&quot;country&quot;
+
+
+--612da2bc48c7ea580e87a17fa65c1112
+Content-Disposition: form-data; name=&quot;cover_letter&quot;
+
+None
+--612da2bc48c7ea580e87a17fa65c1112
+Content-Disposition: form-data; name=&quot;cover_letter_file&quot;
+
+None
+--612da2bc48c7ea580e87a17fa65c1112
+Content-Disposition: form-data; name=&quot;email&quot;
+
+0@A.COM
+--612da2bc48c7ea580e87a17fa65c1112
+Content-Disposition: form-data; name=&quot;full_name&quot;
+
+
+--612da2bc48c7ea580e87a17fa65c1112
+Content-Disposition: form-data; name=&quot;phone&quot;
+
+
+--612da2bc48c7ea580e87a17fa65c1112
+Content-Disposition: form-data; name=&quot;resume&quot;
+
+
+--612da2bc48c7ea580e87a17fa65c1112--
+' https://test-v2.tramatch.com/api/main/v2/careers/jobs/0
+
+2. Test Case ID: I6oTKo
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;value_error&quot;,&quot;loc&quot;:[&quot;body&quot;,&quot;resume&quot;],&quot;msg&quot;:&quot;Value error, Expected UploadFile, received: &lt;class 'str'&gt;&quot;,&quot;input&quot;:&quot;&quot;,&quot;ctx&quot;:{&quot;error&quot;:{}}}]}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: multipart/form-data; boundary=71985cc104121b68ef9f4ed812c3e6dc' -d '--85bada89d0176fc029ac38b40fff60aa
+Content-Disposition: form-data; name=&quot;country&quot;
+
+
+--85bada89d0176fc029ac38b40fff60aa
+Content-Disposition: form-data; name=&quot;email&quot;
+
+0@A.COM
+--85bada89d0176fc029ac38b40fff60aa
+Content-Disposition: form-data; name=&quot;full_name&quot;
+
+
+--85bada89d0176fc029ac38b40fff60aa
+Content-Disposition: form-data; name=&quot;phone&quot;
+
+
+--85bada89d0176fc029ac38b40fff60aa
+Content-Disposition: form-data; name=&quot;resume&quot;
+
+
+--85bada89d0176fc029ac38b40fff60aa--
+' https://test-v2.tramatch.com/api/main/v2/careers/jobs/e3e70682-c209-4cac-629f-6fbed82c07cd"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/careers/applicants/{applicant_id}" time="1.609000">
+			<failure type="failure" message="1. Test Case ID: qQIjrS
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/main/v2/careers/applicants/0"/>
+			<failure type="failure" message="1. Test Case ID: qQIjrS
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/main/v2/careers/applicants/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/main/v2/careers/applications/" time="1.640000">
+			<failure type="failure" message="1. Test Case ID: n9SQGT
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;applicant_id&quot;: null, &quot;applied_date&quot;: null, &quot;job_id&quot;: null, &quot;status&quot;: null}' 'https://test-v2.tramatch.com/api/main/v2/careers/applications/?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<failure type="failure" message="1. Test Case ID: n9SQGT
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;applicant_id&quot;: null, &quot;applied_date&quot;: null, &quot;job_id&quot;: null, &quot;status&quot;: null}' 'https://test-v2.tramatch.com/api/main/v2/careers/applications/?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/main/v2/careers/applications/{application_id}/" time="1.702000">
+			<failure type="failure" message="1. Test Case ID: oJLU5N
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;status&quot;: &quot;Offer&quot;}' https://test-v2.tramatch.com/api/main/v2/careers/applications/0/"/>
+			<failure type="failure" message="1. Test Case ID: oJLU5N
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;status&quot;: &quot;Offer&quot;}' https://test-v2.tramatch.com/api/main/v2/careers/applications/0/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/main/v2/engagements/page" time="1.672000">
+			<failure type="failure" message="1. Test Case ID: 1vKRnu
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;language&quot;: &quot;English&quot;, &quot;name&quot;: &quot;Privacy&quot;, &quot;text&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/engagements/page"/>
+			<failure type="failure" message="1. Test Case ID: 1vKRnu
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;language&quot;: &quot;English&quot;, &quot;name&quot;: &quot;Privacy&quot;, &quot;text&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/engagements/page"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/engagements/pages" time="2.484000">
+			<failure type="failure" message="1. Test Case ID: sz6sPq
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/engagements/pages?language=Afrikaans'"/>
+			<failure type="failure" message="1. Test Case ID: sz6sPq
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/engagements/pages?language=Afrikaans'
+
+2. Test Case ID: VGueRS
+
+- Response violates schema
+
+    '2024-09-12T13:17:31.794831' is not a 'date-time'
+
+    Schema at /properties/pages/items/properties/updated_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Updated At&quot;
+        }
+
+    Value:
+
+        &quot;2024-09-12T13:17:31.794831&quot;
+
+[200] OK:
+
+    `{&quot;pages&quot;:[{&quot;name&quot;:&quot;Terms and Conditions&quot;,&quot;text&quot;:&quot;&lt;p&gt;&lt;strong&gt;&lt;span style=\&quot;color:rgb(36, 36, 36);\&quot;&gt;TERMS AND CONDITIONS OF SERVICE&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p style=\&quot;text-align:start\&quot;&gt;&lt;strong&gt;&lt;span style=\&quot;color:rgb(36, 36, 36);\&quot;&gt;1. Introduction&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p style=\&quot;text-align:start\&quot;&gt;&lt;span style=\&quot;color:rgb(36, 36, 36);\&quot;&gt;Welcome to Tramatch, where people of faiths meet with the purpose of marriage within their faith, and/or where serious relationships take place with the intention of culminating in  // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/engagements/pages"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/main/v2/engagements/page" time="1.968000">
+			<failure type="failure" message="1. Test Case ID: AdSbAn
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;language&quot;: &quot;English&quot;, &quot;name&quot;: &quot;Privacy&quot;, &quot;text&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/engagements/page"/>
+			<failure type="failure" message="1. Test Case ID: AdSbAn
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;language&quot;: &quot;English&quot;, &quot;name&quot;: &quot;Privacy&quot;, &quot;text&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/engagements/page"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/engagements/page/{name}" time="2.095000">
+			<failure type="failure" message="1. Test Case ID: KfdxFn
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/engagements/page/0?language=Afrikaans'"/>
+			<failure type="failure" message="1. Test Case ID: KfdxFn
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/engagements/page/0?language=Afrikaans'
+
+2. Test Case ID: xsF2JY
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/engagements/page/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/engagements/faq/{faq_id}" time="2.048000">
+			<failure type="failure" message="1. Test Case ID: lXZzK5
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/engagements/faq/0"/>
+			<failure type="failure" message="1. Test Case ID: lXZzK5
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/engagements/faq/0
+
+2. Test Case ID: 2VcatF
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 422
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;FAQ not found&quot;}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/engagements/faq/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="DELETE /api/main/v2/engagements/faq/{faq_id}" time="1.438000">
+			<failure type="failure" message="1. Test Case ID: OVsv5B
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/main/v2/engagements/faq/0"/>
+			<failure type="failure" message="1. Test Case ID: OVsv5B
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/main/v2/engagements/faq/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/main/v2/engagements/faq/{faq_id}" time="1.548000">
+			<failure type="failure" message="1. Test Case ID: sOBiM5
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;title&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/engagements/faq/0"/>
+			<failure type="failure" message="1. Test Case ID: sOBiM5
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;title&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/engagements/faq/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/engagements/faq" time="2.264000">
+			<failure type="failure" message="1. Test Case ID: bS61Hn
+
+- Response violates schema
+
+    '2024-09-30T14:39:28.134324' is not a 'date-time'
+
+    Schema at /properties/faqs/items/properties/created_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Created At&quot;
+        }
+
+    Value:
+
+        &quot;2024-09-30T14:39:28.134324&quot;
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;page&quot;:1,&quot;per_page&quot;:20,&quot;next_page&quot;:null,&quot;previous_page&quot;:null,&quot;total&quot;:4,&quot;faqs&quot;:[{&quot;title&quot;:&quot;How do I create a profile?&quot;,&quot;created_at&quot;:&quot;2024-07-10T05:14:02.938399&quot;,&quot;id&quot;:2,&quot;answers&quot;:[{&quot;title&quot;:&quot;&lt;p&gt;To create a profile on our dating app, follow these simple steps:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Download the App&lt;/strong&gt;: Visit the App Store (iOS) or Google Play Store (Android) and search for our dating app. Download and install the app on your device.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Sign Up&lt;/strong&gt;: Open the app and tap on \&quot;Sign U // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/engagements/faq?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<failure type="failure" message="1. Test Case ID: bS61Hn
+
+- Response violates schema
+
+    '2024-09-30T14:39:28.134324' is not a 'date-time'
+
+    Schema at /properties/faqs/items/properties/created_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Created At&quot;
+        }
+
+    Value:
+
+        &quot;2024-09-30T14:39:28.134324&quot;
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;page&quot;:1,&quot;per_page&quot;:20,&quot;next_page&quot;:null,&quot;previous_page&quot;:null,&quot;total&quot;:4,&quot;faqs&quot;:[{&quot;title&quot;:&quot;How do I create a profile?&quot;,&quot;created_at&quot;:&quot;2024-07-10T05:14:02.938399&quot;,&quot;id&quot;:2,&quot;answers&quot;:[{&quot;title&quot;:&quot;&lt;p&gt;To create a profile on our dating app, follow these simple steps:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Download the App&lt;/strong&gt;: Visit the App Store (iOS) or Google Play Store (Android) and search for our dating app. Download and install the app on your device.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;Sign Up&lt;/strong&gt;: Open the app and tap on \&quot;Sign U // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/engagements/faq?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/main/v2/engagements/faq" time="1.594000">
+			<failure type="failure" message="1. Test Case ID: NY6j3E
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;title&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/engagements/faq"/>
+			<failure type="failure" message="1. Test Case ID: NY6j3E
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;title&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/engagements/faq"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/main/v2/engagements/faq/{faq_id}/answer" time="1.562000">
+			<failure type="failure" message="1. Test Case ID: GP3FvX
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;title&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/engagements/faq/0/answer"/>
+			<failure type="failure" message="1. Test Case ID: GP3FvX
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;title&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/engagements/faq/0/answer"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/main/v2/engagements/faq/{faq_id}/answer/{answer_id}" time="1.609000">
+			<failure type="failure" message="1. Test Case ID: IYE1Vn
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;title&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/engagements/faq/0/answer/0"/>
+			<failure type="failure" message="1. Test Case ID: IYE1Vn
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;title&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/engagements/faq/0/answer/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="DELETE /api/main/v2/engagements/faq/{faq_id}/answer/{answer_id}" time="1.656000">
+			<failure type="failure" message="1. Test Case ID: r1Thdf
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/main/v2/engagements/faq/0/answer/0"/>
+			<failure type="failure" message="1. Test Case ID: r1Thdf
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/main/v2/engagements/faq/0/answer/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/engagements/faq/{faq_id}/answer/{answer_id}" time="2.219000">
+			<failure type="failure" message="1. Test Case ID: ig1QdW
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/engagements/faq/0/answer/0"/>
+			<failure type="failure" message="1. Test Case ID: ig1QdW
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/engagements/faq/0/answer/0
+
+2. Test Case ID: JyE4m5
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 422
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Answer not Found&quot;}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/engagements/faq/0/answer/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/blog/posts" time="3.157000">
+			<failure type="failure" message="1. Test Case ID: onOW7a
+
+- Response violates schema
+
+    '2024-06-11T07:36:27.513391' is not a 'date-time'
+
+    Schema at /properties/posts/items/properties/created_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Created At&quot;
+        }
+
+    Value:
+
+        &quot;2024-06-11T07:36:27.513391&quot;
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;posts&quot;:[{&quot;title&quot;:&quot;Lorem Ipsum Is a Dummy Text&quot;,&quot;slug_url&quot;:&quot;lorem-ipsum-is-a-dummy-text&quot;,&quot;text&quot;:&quot;&lt;h2&gt;&lt;span style=\&quot;color:rgb(0, 0, 0);\&quot;&gt;&lt;span style=\&quot;background-color:rgb(255, 255, 255);\&quot;&gt;What is Lorem Ipsum?&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;&lt;p style=\&quot;text-align:justify\&quot;&gt;&lt;strong&gt;&lt;span style=\&quot;color:rgb(0, 0, 0);\&quot;&gt;&lt;span style=\&quot;background-color:rgb(255, 255, 255);\&quot;&gt;Lorem Ipsum&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;span style=\&quot;color:rgb(0, 0, 0);\&quot;&gt;&lt;span style=\&quot;background-color:rgb(255, 255, 255);\&quot;&gt; is simply dummy text of the p // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/blog/posts?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<failure type="failure" message="1. Test Case ID: onOW7a
+
+- Response violates schema
+
+    '2024-06-11T07:36:27.513391' is not a 'date-time'
+
+    Schema at /properties/posts/items/properties/created_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Created At&quot;
+        }
+
+    Value:
+
+        &quot;2024-06-11T07:36:27.513391&quot;
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;posts&quot;:[{&quot;title&quot;:&quot;Lorem Ipsum Is a Dummy Text&quot;,&quot;slug_url&quot;:&quot;lorem-ipsum-is-a-dummy-text&quot;,&quot;text&quot;:&quot;&lt;h2&gt;&lt;span style=\&quot;color:rgb(0, 0, 0);\&quot;&gt;&lt;span style=\&quot;background-color:rgb(255, 255, 255);\&quot;&gt;What is Lorem Ipsum?&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;&lt;p style=\&quot;text-align:justify\&quot;&gt;&lt;strong&gt;&lt;span style=\&quot;color:rgb(0, 0, 0);\&quot;&gt;&lt;span style=\&quot;background-color:rgb(255, 255, 255);\&quot;&gt;Lorem Ipsum&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;span style=\&quot;color:rgb(0, 0, 0);\&quot;&gt;&lt;span style=\&quot;background-color:rgb(255, 255, 255);\&quot;&gt; is simply dummy text of the p // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/blog/posts?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/main/v2/blog/posts/{post_id}" time="1.500000">
+			<failure type="failure" message="1. Test Case ID: dT1br2
+
+- Missing header not rejected
+
+    Missing header not rejected (got 422, expected 401)
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;value_error&quot;,&quot;loc&quot;:[&quot;body&quot;,&quot;image&quot;],&quot;msg&quot;:&quot;Value error, Expected UploadFile, received: &lt;class 'str'&gt;&quot;,&quot;input&quot;:&quot;None&quot;,&quot;ctx&quot;:{&quot;error&quot;:{}}}]}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: multipart/form-data; boundary=0c412f1475d592166955fd706c330d6a' -d '--1a7b4b8e3b93f19a6f6c2e62c97deae6
+Content-Disposition: form-data; name=&quot;categories_id&quot;
+
+1, 3, 4
+--1a7b4b8e3b93f19a6f6c2e62c97deae6
+Content-Disposition: form-data; name=&quot;image&quot;
+
+None
+--1a7b4b8e3b93f19a6f6c2e62c97deae6
+Content-Disposition: form-data; name=&quot;slug_url&quot;
+
+None
+--1a7b4b8e3b93f19a6f6c2e62c97deae6
+Content-Disposition: form-data; name=&quot;tags_id&quot;
+
+1, 3, 4
+--1a7b4b8e3b93f19a6f6c2e62c97deae6
+Content-Disposition: form-data; name=&quot;text&quot;
+
+None
+--1a7b4b8e3b93f19a6f6c2e62c97deae6
+Content-Disposition: form-data; name=&quot;title&quot;
+
+None
+--1a7b4b8e3b93f19a6f6c2e62c97deae6--
+' https://test-v2.tramatch.com/api/main/v2/blog/posts/0"/>
+			<failure type="failure" message="1. Test Case ID: dT1br2
+
+- Missing header not rejected
+
+    Missing header not rejected (got 422, expected 401)
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;value_error&quot;,&quot;loc&quot;:[&quot;body&quot;,&quot;image&quot;],&quot;msg&quot;:&quot;Value error, Expected UploadFile, received: &lt;class 'str'&gt;&quot;,&quot;input&quot;:&quot;None&quot;,&quot;ctx&quot;:{&quot;error&quot;:{}}}]}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: multipart/form-data; boundary=0c412f1475d592166955fd706c330d6a' -d '--1a7b4b8e3b93f19a6f6c2e62c97deae6
+Content-Disposition: form-data; name=&quot;categories_id&quot;
+
+1, 3, 4
+--1a7b4b8e3b93f19a6f6c2e62c97deae6
+Content-Disposition: form-data; name=&quot;image&quot;
+
+None
+--1a7b4b8e3b93f19a6f6c2e62c97deae6
+Content-Disposition: form-data; name=&quot;slug_url&quot;
+
+None
+--1a7b4b8e3b93f19a6f6c2e62c97deae6
+Content-Disposition: form-data; name=&quot;tags_id&quot;
+
+1, 3, 4
+--1a7b4b8e3b93f19a6f6c2e62c97deae6
+Content-Disposition: form-data; name=&quot;text&quot;
+
+None
+--1a7b4b8e3b93f19a6f6c2e62c97deae6
+Content-Disposition: form-data; name=&quot;title&quot;
+
+None
+--1a7b4b8e3b93f19a6f6c2e62c97deae6--
+' https://test-v2.tramatch.com/api/main/v2/blog/posts/0
+
+2. Test Case ID: CWvOXp
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/main/v2/blog/posts/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="DELETE /api/main/v2/blog/posts/{post_id}" time="1.750000">
+			<failure type="failure" message="1. Test Case ID: QOE7aR
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/main/v2/blog/posts/0"/>
+			<failure type="failure" message="1. Test Case ID: QOE7aR
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/main/v2/blog/posts/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/main/v2/blog/posts/{post_id}/inline-image" time="1.594000">
+			<failure type="failure" message="1. Test Case ID: 84ZCKR
+
+- Missing header not rejected
+
+    Missing header not rejected (got 422, expected 401)
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;value_error&quot;,&quot;loc&quot;:[&quot;body&quot;,&quot;file&quot;],&quot;msg&quot;:&quot;Value error, Expected UploadFile, received: &lt;class 'str'&gt;&quot;,&quot;input&quot;:&quot;&quot;,&quot;ctx&quot;:{&quot;error&quot;:{}}}]}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: multipart/form-data; boundary=7526818448336e59e81ecd57e2468aac' -d '--fd0f5b22a8cf4df3fb71726c87fe8c04
+Content-Disposition: form-data; name=&quot;file&quot;
+
+
+--fd0f5b22a8cf4df3fb71726c87fe8c04--
+' https://test-v2.tramatch.com/api/main/v2/blog/posts/0/inline-image"/>
+			<failure type="failure" message="1. Test Case ID: 84ZCKR
+
+- Missing header not rejected
+
+    Missing header not rejected (got 422, expected 401)
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;value_error&quot;,&quot;loc&quot;:[&quot;body&quot;,&quot;file&quot;],&quot;msg&quot;:&quot;Value error, Expected UploadFile, received: &lt;class 'str'&gt;&quot;,&quot;input&quot;:&quot;&quot;,&quot;ctx&quot;:{&quot;error&quot;:{}}}]}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: multipart/form-data; boundary=7526818448336e59e81ecd57e2468aac' -d '--fd0f5b22a8cf4df3fb71726c87fe8c04
+Content-Disposition: form-data; name=&quot;file&quot;
+
+
+--fd0f5b22a8cf4df3fb71726c87fe8c04--
+' https://test-v2.tramatch.com/api/main/v2/blog/posts/0/inline-image
+
+2. Test Case ID: 2S8jBb
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;value_error&quot;,&quot;loc&quot;:[&quot;body&quot;,&quot;file&quot;],&quot;msg&quot;:&quot;Value error, Expected UploadFile, received: &lt;class 'str'&gt;&quot;,&quot;input&quot;:&quot;&quot;,&quot;ctx&quot;:{&quot;error&quot;:{}}}]}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' -H 'Content-Type: multipart/form-data; boundary=134a8aca328dfed5cb52e14661fa8b60' -d '--79da6d5350edaac440f55aaeeab0491b
+Content-Disposition: form-data; name=&quot;file&quot;
+
+
+--79da6d5350edaac440f55aaeeab0491b--
+' https://test-v2.tramatch.com/api/main/v2/blog/posts/0/inline-image"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/blog/posts/{post_slug}" time="2.077000">
+			<failure type="failure" message="1. Test Case ID: 5DXbp8
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/blog/posts/0"/>
+			<failure type="failure" message="1. Test Case ID: 5DXbp8
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/blog/posts/0
+
+2. Test Case ID: 1BMQjJ
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 422
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Blog Post not Found&quot;}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/blog/posts/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="DELETE /api/main/v2/blog/categories/{cat_id}" time="1.656000">
+			<failure type="failure" message="1. Test Case ID: ZcHrwm
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/main/v2/blog/categories/0"/>
+			<failure type="failure" message="1. Test Case ID: ZcHrwm
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/main/v2/blog/categories/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/main/v2/blog/categories/{cat_id}" time="1.328000">
+			<failure type="failure" message="1. Test Case ID: Fu4HuH
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;description&quot;: null, &quot;is_featured&quot;: null, &quot;name&quot;: null}' https://test-v2.tramatch.com/api/main/v2/blog/categories/0"/>
+			<failure type="failure" message="1. Test Case ID: Fu4HuH
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;description&quot;: null, &quot;is_featured&quot;: null, &quot;name&quot;: null}' https://test-v2.tramatch.com/api/main/v2/blog/categories/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/blog/categories/{cat_id}" time="2.016000">
+			<failure type="failure" message="1. Test Case ID: pxnSbI
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/blog/categories/0"/>
+			<failure type="failure" message="1. Test Case ID: pxnSbI
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/blog/categories/0
+
+2. Test Case ID: gXMjvU
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 422
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Requested Category not found&quot;}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/blog/categories/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/blog/categories" time="2.438000">
+			<failure type="failure" message="1. Test Case ID: TrG1CU
+
+- Response violates schema
+
+    '2024-06-10T07:48:07.012525' is not a 'date-time'
+
+    Schema at /properties/categories/items/properties/created_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Created At&quot;
+        }
+
+    Value:
+
+        &quot;2024-06-10T07:48:07.012525&quot;
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;categories&quot;:[{&quot;name&quot;:&quot;Dating Tips &amp; Advice&quot;,&quot;description&quot;:&quot;Welcome to Dating Tips &amp; Advice, your go-to resource for all things dating. From crafting the perfect online profile to planning unforgettable dates, this category is packed with practical tips and expert guidance to help you succeed in the dating world. Whether you're new to dating or looking to brush up on your skills, our articles cover a wide range of topics, including conversation starters, body language, and overcoming first-date jitters. Le // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/blog/categories?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<failure type="failure" message="1. Test Case ID: TrG1CU
+
+- Response violates schema
+
+    '2024-06-10T07:48:07.012525' is not a 'date-time'
+
+    Schema at /properties/categories/items/properties/created_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Created At&quot;
+        }
+
+    Value:
+
+        &quot;2024-06-10T07:48:07.012525&quot;
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;categories&quot;:[{&quot;name&quot;:&quot;Dating Tips &amp; Advice&quot;,&quot;description&quot;:&quot;Welcome to Dating Tips &amp; Advice, your go-to resource for all things dating. From crafting the perfect online profile to planning unforgettable dates, this category is packed with practical tips and expert guidance to help you succeed in the dating world. Whether you're new to dating or looking to brush up on your skills, our articles cover a wide range of topics, including conversation starters, body language, and overcoming first-date jitters. Le // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/blog/categories?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/main/v2/blog/categories" time="1.375000">
+			<failure type="failure" message="1. Test Case ID: tnzoRJ
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;description&quot;: &quot;&quot;, &quot;is_featured&quot;: false, &quot;name&quot;: &quot;&quot;, &quot;order&quot;: 0}' https://test-v2.tramatch.com/api/main/v2/blog/categories"/>
+			<failure type="failure" message="1. Test Case ID: tnzoRJ
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;description&quot;: &quot;&quot;, &quot;is_featured&quot;: false, &quot;name&quot;: &quot;&quot;, &quot;order&quot;: 0}' https://test-v2.tramatch.com/api/main/v2/blog/categories"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/blog/categories/{cat_id}/posts" time="2.484000">
+			<failure type="failure" message="1. Test Case ID: zoI3Kb
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;category_id&quot;:0,&quot;posts&quot;:[],&quot;total&quot;:0,&quot;page&quot;:1,&quot;per_page&quot;:20,&quot;next_page&quot;:null,&quot;previous_page&quot;:null}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/blog/categories/0/posts?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<failure type="failure" message="1. Test Case ID: zoI3Kb
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;category_id&quot;:0,&quot;posts&quot;:[],&quot;total&quot;:0,&quot;page&quot;:1,&quot;per_page&quot;:20,&quot;next_page&quot;:null,&quot;previous_page&quot;:null}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/blog/categories/0/posts?per_page=20&amp;x-schemathesis-unknown-property=42'
+
+2. Test Case ID: GTrltC
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `{&quot;message&quot;:&quot;Error occured while performing db operations, please try again.&quot;}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/blog/categories/108403392589993882057642780529547094514/posts?page=25967'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/main/v2/blog/tags" time="2.280000">
+			<failure type="failure" message="1. Test Case ID: eSV6MV
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;name&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/blog/tags"/>
+			<failure type="failure" message="1. Test Case ID: eSV6MV
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 201, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;name&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/blog/tags"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/blog/tags" time="3.031000">
+			<failure type="failure" message="1. Test Case ID: m5sLkL
+
+- Response violates schema
+
+    '2024-06-10T09:54:55.026428' is not a 'date-time'
+
+    Schema at /properties/tags/items/properties/created_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Created At&quot;
+        }
+
+    Value:
+
+        &quot;2024-06-10T09:54:55.026428&quot;
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;tags&quot;:[{&quot;name&quot;:&quot;DatingAdvice&quot;,&quot;id&quot;:1,&quot;created_at&quot;:&quot;2024-06-10T09:49:33.045004&quot;,&quot;posts_count&quot;:2},{&quot;name&quot;:&quot;RelationshipTips&quot;,&quot;id&quot;:2,&quot;created_at&quot;:&quot;2024-06-10T09:49:43.651384&quot;,&quot;posts_count&quot;:1},{&quot;name&quot;:&quot;OnlineDating&quot;,&quot;id&quot;:3,&quot;created_at&quot;:&quot;2024-06-10T09:49:52.187499&quot;,&quot;posts_count&quot;:1},{&quot;name&quot;:&quot;LoveAndRomance&quot;,&quot;id&quot;:4,&quot;created_at&quot;:&quot;2024-06-10T09:50:01.468058&quot;,&quot;posts_count&quot;:1},{&quot;name&quot;:&quot;SelfLove&quot;,&quot;id&quot;:6,&quot;created_at&quot;:&quot;2024-06-10T09:54:55.026428&quot;,&quot;posts_count&quot;:3}],&quot;page&quot;:1,&quot;per_page&quot;:20,&quot;next_page&quot;:null,&quot;previous_page&quot; // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/blog/tags?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<failure type="failure" message="1. Test Case ID: m5sLkL
+
+- Response violates schema
+
+    '2024-06-10T09:54:55.026428' is not a 'date-time'
+
+    Schema at /properties/tags/items/properties/created_at:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;format&quot;: &quot;date-time&quot;,
+            &quot;title&quot;: &quot;Created At&quot;
+        }
+
+    Value:
+
+        &quot;2024-06-10T09:54:55.026428&quot;
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;tags&quot;:[{&quot;name&quot;:&quot;DatingAdvice&quot;,&quot;id&quot;:1,&quot;created_at&quot;:&quot;2024-06-10T09:49:33.045004&quot;,&quot;posts_count&quot;:2},{&quot;name&quot;:&quot;RelationshipTips&quot;,&quot;id&quot;:2,&quot;created_at&quot;:&quot;2024-06-10T09:49:43.651384&quot;,&quot;posts_count&quot;:1},{&quot;name&quot;:&quot;OnlineDating&quot;,&quot;id&quot;:3,&quot;created_at&quot;:&quot;2024-06-10T09:49:52.187499&quot;,&quot;posts_count&quot;:1},{&quot;name&quot;:&quot;LoveAndRomance&quot;,&quot;id&quot;:4,&quot;created_at&quot;:&quot;2024-06-10T09:50:01.468058&quot;,&quot;posts_count&quot;:1},{&quot;name&quot;:&quot;SelfLove&quot;,&quot;id&quot;:6,&quot;created_at&quot;:&quot;2024-06-10T09:54:55.026428&quot;,&quot;posts_count&quot;:3}],&quot;page&quot;:1,&quot;per_page&quot;:20,&quot;next_page&quot;:null,&quot;previous_page&quot; // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/blog/tags?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/blog/tags/{tag_id}" time="2.125000">
+			<failure type="failure" message="1. Test Case ID: 2LQQyB
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/blog/tags/0"/>
+			<failure type="failure" message="1. Test Case ID: 2LQQyB
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/blog/tags/0
+
+2. Test Case ID: 7hIp4u
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 422
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Blog tag not found&quot;}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/blog/tags/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/main/v2/blog/tags/{tag_id}" time="2.282000">
+			<failure type="failure" message="1. Test Case ID: u3OzEG
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;name&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/blog/tags/0"/>
+			<failure type="failure" message="1. Test Case ID: u3OzEG
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;name&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/main/v2/blog/tags/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/blog/tags/{tag_id}/posts" time="2.625000">
+			<failure type="failure" message="1. Test Case ID: 6Nk54h
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;tag_id&quot;:0,&quot;posts&quot;:[],&quot;total&quot;:0,&quot;page&quot;:1,&quot;per_page&quot;:20,&quot;next_page&quot;:null,&quot;previous_page&quot;:null}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/blog/tags/0/posts?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<failure type="failure" message="1. Test Case ID: 6Nk54h
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+[200] OK:
+
+    `{&quot;tag_id&quot;:0,&quot;posts&quot;:[],&quot;total&quot;:0,&quot;page&quot;:1,&quot;per_page&quot;:20,&quot;next_page&quot;:null,&quot;previous_page&quot;:null}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/blog/tags/0/posts?per_page=20&amp;x-schemathesis-unknown-property=42'
+
+2. Test Case ID: tgxqMt
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `{&quot;message&quot;:&quot;Error occured while performing db operations, please try again.&quot;}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' 'https://test-v2.tramatch.com/api/main/v2/blog/tags/108403392589993882057642780529547094514/posts?page=25967'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="DELETE /api/main/v2/blog/tags/{tag_id}" time="1.437000">
+			<failure type="failure" message="1. Test Case ID: gaxoTI
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/main/v2/blog/tags/0"/>
+			<failure type="failure" message="1. Test Case ID: gaxoTI
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 422
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;You don't have enough permission to complete this request&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/main/v2/blog/tags/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/main/v2/health/" time="2.032000">
+			<failure type="failure" message="1. Test Case ID: kK0cWt
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/main/v2/health/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/main/v2/blog/posts" time="2.782000">
+			<failure type="failure" message="1. Test Case ID: LhAffy
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;value_error&quot;,&quot;loc&quot;:[&quot;body&quot;,&quot;image&quot;],&quot;msg&quot;:&quot;Value error, Expected UploadFile, received: &lt;class 'str'&gt;&quot;,&quot;input&quot;:&quot;&quot;,&quot;ctx&quot;:{&quot;error&quot;:{}}}]}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: multipart/form-data; boundary=8789d2890ad442d51f14bd7e30a9cdb1' -d '--239c5fbe2de476c8ab4409aff309a0bc
+Content-Disposition: form-data; name=&quot;categories_id&quot;
+
+636, 3838, 3737
+--239c5fbe2de476c8ab4409aff309a0bc
+Content-Disposition: form-data; name=&quot;tags_id&quot;
+
+636, 3838, 3737
+--239c5fbe2de476c8ab4409aff309a0bc
+Content-Disposition: form-data; name=&quot;image&quot;
+
+
+--239c5fbe2de476c8ab4409aff309a0bc
+Content-Disposition: form-data; name=&quot;title&quot;
+
+
+--239c5fbe2de476c8ab4409aff309a0bc
+Content-Disposition: form-data; name=&quot;slug_url&quot;
+
+
+--239c5fbe2de476c8ab4409aff309a0bc
+Content-Disposition: form-data; name=&quot;text&quot;
+
+
+--239c5fbe2de476c8ab4409aff309a0bc--
+' https://test-v2.tramatch.com/api/main/v2/blog/posts"/>
+			<failure type="failure" message="1. Test Case ID: LhAffy
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;value_error&quot;,&quot;loc&quot;:[&quot;body&quot;,&quot;image&quot;],&quot;msg&quot;:&quot;Value error, Expected UploadFile, received: &lt;class 'str'&gt;&quot;,&quot;input&quot;:&quot;&quot;,&quot;ctx&quot;:{&quot;error&quot;:{}}}]}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: multipart/form-data; boundary=8789d2890ad442d51f14bd7e30a9cdb1' -d '--239c5fbe2de476c8ab4409aff309a0bc
+Content-Disposition: form-data; name=&quot;categories_id&quot;
+
+636, 3838, 3737
+--239c5fbe2de476c8ab4409aff309a0bc
+Content-Disposition: form-data; name=&quot;tags_id&quot;
+
+636, 3838, 3737
+--239c5fbe2de476c8ab4409aff309a0bc
+Content-Disposition: form-data; name=&quot;image&quot;
+
+
+--239c5fbe2de476c8ab4409aff309a0bc
+Content-Disposition: form-data; name=&quot;title&quot;
+
+
+--239c5fbe2de476c8ab4409aff309a0bc
+Content-Disposition: form-data; name=&quot;slug_url&quot;
+
+
+--239c5fbe2de476c8ab4409aff309a0bc
+Content-Disposition: form-data; name=&quot;text&quot;
+
+
+--239c5fbe2de476c8ab4409aff309a0bc--
+' https://test-v2.tramatch.com/api/main/v2/blog/posts
+
+2. Test Case ID: DZEwNe
+
+- Missing header not rejected
+
+    Missing header not rejected (got 422, expected 401)
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;value_error&quot;,&quot;loc&quot;:[&quot;body&quot;,&quot;image&quot;],&quot;msg&quot;:&quot;Value error, Expected UploadFile, received: &lt;class 'str'&gt;&quot;,&quot;input&quot;:&quot;&quot;,&quot;ctx&quot;:{&quot;error&quot;:{}}}]}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Cookie: [Filtered]' -H 'Content-Type: multipart/form-data; boundary=bed49131e97b8b914e297cbd69191365' -d '--dcbcf1c07953af4134a747ae9b09b55b
+Content-Disposition: form-data; name=&quot;categories_id&quot;
+
+1, 3, 4
+--dcbcf1c07953af4134a747ae9b09b55b
+Content-Disposition: form-data; name=&quot;image&quot;
+
+
+--dcbcf1c07953af4134a747ae9b09b55b
+Content-Disposition: form-data; name=&quot;slug_url&quot;
+
+
+--dcbcf1c07953af4134a747ae9b09b55b
+Content-Disposition: form-data; name=&quot;tags_id&quot;
+
+1, 3, 4
+--dcbcf1c07953af4134a747ae9b09b55b
+Content-Disposition: form-data; name=&quot;text&quot;
+
+
+--dcbcf1c07953af4134a747ae9b09b55b
+Content-Disposition: form-data; name=&quot;title&quot;
+
+
+--dcbcf1c07953af4134a747ae9b09b55b--
+' https://test-v2.tramatch.com/api/main/v2/blog/posts"/>
+			<failure type="failure" message="1. Test Case ID: LhAffy
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;value_error&quot;,&quot;loc&quot;:[&quot;body&quot;,&quot;image&quot;],&quot;msg&quot;:&quot;Value error, Expected UploadFile, received: &lt;class 'str'&gt;&quot;,&quot;input&quot;:&quot;&quot;,&quot;ctx&quot;:{&quot;error&quot;:{}}}]}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: multipart/form-data; boundary=8789d2890ad442d51f14bd7e30a9cdb1' -d '--239c5fbe2de476c8ab4409aff309a0bc
+Content-Disposition: form-data; name=&quot;categories_id&quot;
+
+636, 3838, 3737
+--239c5fbe2de476c8ab4409aff309a0bc
+Content-Disposition: form-data; name=&quot;tags_id&quot;
+
+636, 3838, 3737
+--239c5fbe2de476c8ab4409aff309a0bc
+Content-Disposition: form-data; name=&quot;image&quot;
+
+
+--239c5fbe2de476c8ab4409aff309a0bc
+Content-Disposition: form-data; name=&quot;title&quot;
+
+
+--239c5fbe2de476c8ab4409aff309a0bc
+Content-Disposition: form-data; name=&quot;slug_url&quot;
+
+
+--239c5fbe2de476c8ab4409aff309a0bc
+Content-Disposition: form-data; name=&quot;text&quot;
+
+
+--239c5fbe2de476c8ab4409aff309a0bc--
+' https://test-v2.tramatch.com/api/main/v2/blog/posts
+
+2. Test Case ID: DZEwNe
+
+- Missing header not rejected
+
+    Missing header not rejected (got 422, expected 401)
+
+[422] Unprocessable Entity:
+
+    `{&quot;detail&quot;:[{&quot;type&quot;:&quot;value_error&quot;,&quot;loc&quot;:[&quot;body&quot;,&quot;image&quot;],&quot;msg&quot;:&quot;Value error, Expected UploadFile, received: &lt;class 'str'&gt;&quot;,&quot;input&quot;:&quot;&quot;,&quot;ctx&quot;:{&quot;error&quot;:{}}}]}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Cookie: [Filtered]' -H 'Content-Type: multipart/form-data; boundary=bed49131e97b8b914e297cbd69191365' -d '--dcbcf1c07953af4134a747ae9b09b55b
+Content-Disposition: form-data; name=&quot;categories_id&quot;
+
+1, 3, 4
+--dcbcf1c07953af4134a747ae9b09b55b
+Content-Disposition: form-data; name=&quot;image&quot;
+
+
+--dcbcf1c07953af4134a747ae9b09b55b
+Content-Disposition: form-data; name=&quot;slug_url&quot;
+
+
+--dcbcf1c07953af4134a747ae9b09b55b
+Content-Disposition: form-data; name=&quot;tags_id&quot;
+
+1, 3, 4
+--dcbcf1c07953af4134a747ae9b09b55b
+Content-Disposition: form-data; name=&quot;text&quot;
+
+
+--dcbcf1c07953af4134a747ae9b09b55b
+Content-Disposition: form-data; name=&quot;title&quot;
+
+
+--dcbcf1c07953af4134a747ae9b09b55b--
+' https://test-v2.tramatch.com/api/main/v2/blog/posts"/>
+		</testcase>
+	</testsuite>
+</testsuites>
