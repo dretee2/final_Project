@@ -4,12 +4,13 @@ from Utilities.user_auth import get_access_token_for_user
 import os
 
 
-token = get_access_token_for_user()
-os.makedirs("reports", exist_ok=True)
+def test_feature_switch():
+    token = get_access_token_for_user()
+    os.makedirs("reports", exist_ok=True)
 
-feature_switch_schema= ReadSchemaProperties.get_feature_switch_schema()
+    feature_switch_schema= ReadSchemaProperties.get_feature_switch_schema()
 
-runner = SchemathesisRunner(token)
+    runner = SchemathesisRunner(token)
 
-for name, url in feature_switch_schema.items():
-    runner.run_test(name, url)
+    for name, url in feature_switch_schema.items():
+        runner.run_test(name, url)

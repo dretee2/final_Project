@@ -4,12 +4,14 @@ from Utilities.user_auth import get_access_token_for_user
 import os
 
 
-token = get_access_token_for_user()
-os.makedirs("reports", exist_ok=True)
 
-bytebox_schema= ReadSchemaProperties.get_bytebox_schema()
+def test_bytebox():
+    token = get_access_token_for_user()
+    os.makedirs("reports", exist_ok=True)
 
-runner = SchemathesisRunner(token)
+    bytebox_schema= ReadSchemaProperties.get_bytebox_schema()
 
-for name, url in bytebox_schema.items():
-    runner.run_test(name, url)
+    runner = SchemathesisRunner(token)
+
+    for name, url in bytebox_schema.items():
+        runner.run_test(name, url)

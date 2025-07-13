@@ -1,0 +1,2734 @@
+<?xml version="1.0" ?>
+<testsuites disabled="0" errors="0" failures="49" tests="49" time="306.3260000004666">
+	<testsuite disabled="0" errors="0" failures="49" name="schemathesis" skipped="49" tests="49" time="306.3260000004666" hostname="UyahTee">
+		<testcase name="POST /api/usermgmt/v2/accounts/" time="5.860000">
+			<failure type="failure" message="1. Test Case ID: pjdINT
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;agreed_to_terms&quot;: false, &quot;date_of_birth&quot;: &quot;&quot;, &quot;email&quot;: &quot;&quot;, &quot;first_name&quot;: &quot;&quot;, &quot;last_name&quot;: &quot;&quot;, &quot;password&quot;: &quot;&quot;, &quot;referrer&quot;: &quot;&quot;, &quot;sex&quot;: &quot;male&quot;, &quot;username&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/"/>
+			<failure type="failure" message="1. Test Case ID: pjdINT
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;agreed_to_terms&quot;: false, &quot;date_of_birth&quot;: &quot;&quot;, &quot;email&quot;: &quot;&quot;, &quot;first_name&quot;: &quot;&quot;, &quot;last_name&quot;: &quot;&quot;, &quot;password&quot;: &quot;&quot;, &quot;referrer&quot;: &quot;&quot;, &quot;sex&quot;: &quot;male&quot;, &quot;username&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/
+
+2. Test Case ID: 1HZYOR
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'CreateUserSchema.CommonSchema.FirstName' Error:Field validation for 'FirstName' failed on the 'required' tag\nKey: 'CreateUserSchema.CommonSchema.LastName' Error:Field validation for 'LastName' failed on the 'required' tag\nKey: 'CreateUserSchema.BaseUserValidationSchema.DateOfBirth' Error:Field validation for 'DateOfBirth' failed on the 'required' tag\nKey: 'CreateUserSchema.Password' Error:Field validation for 'Password' failed on the 'required' tag\nKey: 'CreateUserSchema.Email' Error:Fi // Output truncated...`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;date_of_birth&quot;: &quot;&quot;, &quot;email&quot;: &quot;&quot;, &quot;first_name&quot;: &quot;&quot;, &quot;last_name&quot;: &quot;&quot;, &quot;password&quot;: &quot;&quot;, &quot;sex&quot;: &quot;male&quot;, &quot;username&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/usermgmt/v2/accounts/activate" time="5.079000">
+			<failure type="failure" message="1. Test Case ID: 8fqlWt
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 200, 401, 404, 500
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;You can't reactivate an active account&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT https://test-v2.tramatch.com/api/usermgmt/v2/accounts/activate"/>
+			<failure type="failure" message="1. Test Case ID: 8fqlWt
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 200, 401, 404, 500
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;You can't reactivate an active account&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT https://test-v2.tramatch.com/api/usermgmt/v2/accounts/activate
+
+2. Test Case ID: uVhg9w
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;You can't reactivate an active account&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/activate"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/accounts/bulk/profiles" time="7.765000">
+			<failure type="failure" message="1. Test Case ID: z9E1eH
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;profiles&quot;:[]}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;users&quot;: []}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/bulk/profiles
+
+2. Test Case ID: SzLP3A
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/usermgmt/v2/accounts/bulk/profiles`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Authorization header is required&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;users&quot;: []}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/bulk/profiles"/>
+			<failure type="failure" message="1. Test Case ID: z9E1eH
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;profiles&quot;:[]}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;users&quot;: []}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/bulk/profiles
+
+2. Test Case ID: SzLP3A
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/usermgmt/v2/accounts/bulk/profiles`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Authorization header is required&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;users&quot;: []}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/bulk/profiles"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/accounts/confirm" time="1.672000">
+			<failure type="failure" message="1. Test Case ID: mdNa5X
+
+- Missing header not rejected
+
+    Missing header not rejected (got 405, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 405
+    Documented: 200, 400, 401, 500
+
+[405] Method Not Allowed:
+
+    `{&quot;detail&quot;:&quot;Method Not Allowed&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;token&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/confirm"/>
+			<failure type="failure" message="1. Test Case ID: mdNa5X
+
+- Missing header not rejected
+
+    Missing header not rejected (got 405, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 405
+    Documented: 200, 400, 401, 500
+
+[405] Method Not Allowed:
+
+    `{&quot;detail&quot;:&quot;Method Not Allowed&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;token&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/confirm
+
+2. Test Case ID: wb4e8h
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[405] Method Not Allowed:
+
+    `{&quot;detail&quot;:&quot;Method Not Allowed&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;token&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/confirm"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/usermgmt/v2/accounts/email" time="1.157000">
+			<failure type="failure" message="1. Test Case ID: v1XtUs
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'UpdateEmailSchema.Email' Error:Field validation for 'Email' failed on the 'required' tag\nKey: 'UpdateEmailSchema.Token' Error:Field validation for 'Token' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;email&quot;: &quot;&quot;, &quot;token&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/email"/>
+			<failure type="failure" message="1. Test Case ID: v1XtUs
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'UpdateEmailSchema.Email' Error:Field validation for 'Email' failed on the 'required' tag\nKey: 'UpdateEmailSchema.Token' Error:Field validation for 'Token' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;email&quot;: &quot;&quot;, &quot;token&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/email
+
+2. Test Case ID: gPPJFE
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'UpdateEmailSchema.Email' Error:Field validation for 'Email' failed on the 'required' tag\nKey: 'UpdateEmailSchema.Token' Error:Field validation for 'Token' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;email&quot;: &quot;&quot;, &quot;token&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/email"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/accounts/deactivate" time="1.641000">
+			<failure type="failure" message="1. Test Case ID: gFFNbH
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Invalid token&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;token&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/deactivate"/>
+			<failure type="failure" message="1. Test Case ID: gFFNbH
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Invalid token&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;token&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/deactivate
+
+2. Test Case ID: HvBn7U
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Invalid token&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;token&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/deactivate"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/accounts/bulk/status" time="7.312000">
+			<failure type="failure" message="1. Test Case ID: IoDrI9
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;status&quot;:[]}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;users&quot;: []}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/bulk/status
+
+2. Test Case ID: eZcAJt
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/usermgmt/v2/accounts/bulk/status`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Authorization header is required&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;users&quot;: []}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/bulk/status"/>
+			<failure type="failure" message="1. Test Case ID: IoDrI9
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;status&quot;:[]}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;users&quot;: []}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/bulk/status
+
+2. Test Case ID: eZcAJt
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/usermgmt/v2/accounts/bulk/status`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Authorization header is required&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;users&quot;: []}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/bulk/status"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/accounts/forgot-password" time="1.639000">
+			<failure type="failure" message="1. Test Case ID: rLlJgu
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;email&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/forgot-password"/>
+			<failure type="failure" message="1. Test Case ID: rLlJgu
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;email&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/forgot-password
+
+2. Test Case ID: Ip9U1i
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 400, 500
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;user not found&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;email&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/forgot-password"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/usermgmt/v2/accounts/location" time="3.265000">
+			<failure type="failure" message="1. Test Case ID: E1uC0y
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;message&quot;:&quot;User location updated successfully&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;city&quot;: &quot;&quot;, &quot;country&quot;: &quot;&quot;, &quot;latitude&quot;: 0, &quot;longitude&quot;: 0}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/location
+
+2. Test Case ID: qxdDvD
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `PUT /api/usermgmt/v2/accounts/location`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Authorization header is required&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;city&quot;: &quot;&quot;, &quot;country&quot;: &quot;&quot;, &quot;latitude&quot;: 0, &quot;longitude&quot;: 0}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/location"/>
+			<failure type="failure" message="1. Test Case ID: E1uC0y
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;message&quot;:&quot;User location updated successfully&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;city&quot;: &quot;&quot;, &quot;country&quot;: &quot;&quot;, &quot;latitude&quot;: 0, &quot;longitude&quot;: 0}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/location
+
+2. Test Case ID: qxdDvD
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `PUT /api/usermgmt/v2/accounts/location`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Authorization header is required&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;city&quot;: &quot;&quot;, &quot;country&quot;: &quot;&quot;, &quot;latitude&quot;: 0, &quot;longitude&quot;: 0}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/location"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/accounts/login" time="1.813000">
+			<failure type="failure" message="1. Test Case ID: 5JqDgS
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;email&quot;: &quot;&quot;, &quot;password&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/login"/>
+			<failure type="failure" message="1. Test Case ID: 5JqDgS
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;email&quot;: &quot;&quot;, &quot;password&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/login
+
+2. Test Case ID: a54V2r
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'UserLoginSchema.Password' Error:Field validation for 'Password' failed on the 'required' tag\nKey: 'UserLoginSchema.Email' Error:Field validation for 'Email' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;email&quot;: &quot;&quot;, &quot;password&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/login"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="DELETE /api/usermgmt/v2/accounts/logout" time="2.593000">
+			<failure type="failure" message="1. Test Case ID: kays6S
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;message&quot;:&quot;User logged out successfully&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/usermgmt/v2/accounts/logout
+
+2. Test Case ID: TSkac2
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `DELETE /api/usermgmt/v2/accounts/logout`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Authorization header is required&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/usermgmt/v2/accounts/logout"/>
+			<failure type="failure" message="1. Test Case ID: kays6S
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;message&quot;:&quot;User logged out successfully&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/usermgmt/v2/accounts/logout
+
+2. Test Case ID: TSkac2
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `DELETE /api/usermgmt/v2/accounts/logout`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Authorization header is required&quot;}`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/usermgmt/v2/accounts/logout"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/accounts/initiate-username-change" time="2.172000">
+			<failure type="failure" message="1. Test Case ID: ybtJUf
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'RequestUsernameChangeSchema.Username' Error:Field validation for 'Username' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;username&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/initiate-username-change"/>
+			<failure type="failure" message="1. Test Case ID: ybtJUf
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'RequestUsernameChangeSchema.Username' Error:Field validation for 'Username' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;username&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/initiate-username-change
+
+2. Test Case ID: 5ePEg4
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'RequestUsernameChangeSchema.Username' Error:Field validation for 'Username' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;username&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/initiate-username-change"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/usermgmt/v2/accounts/password" time="1.468000">
+			<failure type="failure" message="1. Test Case ID: f1NS0k
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'UpdatePasswordSchema.OldPassword' Error:Field validation for 'OldPassword' failed on the 'required' tag\nKey: 'UpdatePasswordSchema.NewPassword' Error:Field validation for 'NewPassword' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;new_password&quot;: &quot;&quot;, &quot;old_password&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/password"/>
+			<failure type="failure" message="1. Test Case ID: f1NS0k
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'UpdatePasswordSchema.OldPassword' Error:Field validation for 'OldPassword' failed on the 'required' tag\nKey: 'UpdatePasswordSchema.NewPassword' Error:Field validation for 'NewPassword' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;new_password&quot;: &quot;&quot;, &quot;old_password&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/password
+
+2. Test Case ID: 1mbXTS
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'UpdatePasswordSchema.OldPassword' Error:Field validation for 'OldPassword' failed on the 'required' tag\nKey: 'UpdatePasswordSchema.NewPassword' Error:Field validation for 'NewPassword' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;new_password&quot;: &quot;&quot;, &quot;old_password&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/password"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/accounts/oauth/update" time="1.438000">
+			<failure type="failure" message="1. Test Case ID: BNIOdo
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'CompleteOauthProcessRequest.RequestUsernameChangeSchema.Username' Error:Field validation for 'Username' failed on the 'required' tag\nKey: 'CompleteOauthProcessRequest.DateOfBirth' Error:Field validation for 'DateOfBirth' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;agreed_to_terms&quot;: false, &quot;date_of_birth&quot;: &quot;&quot;, &quot;sex&quot;: &quot;male&quot;, &quot;username&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/oauth/update"/>
+			<failure type="failure" message="1. Test Case ID: BNIOdo
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'CompleteOauthProcessRequest.RequestUsernameChangeSchema.Username' Error:Field validation for 'Username' failed on the 'required' tag\nKey: 'CompleteOauthProcessRequest.DateOfBirth' Error:Field validation for 'DateOfBirth' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;agreed_to_terms&quot;: false, &quot;date_of_birth&quot;: &quot;&quot;, &quot;sex&quot;: &quot;male&quot;, &quot;username&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/oauth/update
+
+2. Test Case ID: MtMIHp
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'CompleteOauthProcessRequest.RequestUsernameChangeSchema.Username' Error:Field validation for 'Username' failed on the 'required' tag\nKey: 'CompleteOauthProcessRequest.DateOfBirth' Error:Field validation for 'DateOfBirth' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;date_of_birth&quot;: &quot;&quot;, &quot;sex&quot;: &quot;male&quot;, &quot;username&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/oauth/update"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/accounts/initiate-email-change" time="2.359000">
+			<failure type="failure" message="1. Test Case ID: RaVNYM
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'ChangeEmailRequestSchema.NewEmail' Error:Field validation for 'NewEmail' failed on the 'required' tag\nKey: 'ChangeEmailRequestSchema.Password' Error:Field validation for 'Password' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;new_email&quot;: &quot;&quot;, &quot;password&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/initiate-email-change"/>
+			<failure type="failure" message="1. Test Case ID: RaVNYM
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'ChangeEmailRequestSchema.NewEmail' Error:Field validation for 'NewEmail' failed on the 'required' tag\nKey: 'ChangeEmailRequestSchema.Password' Error:Field validation for 'Password' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;new_email&quot;: &quot;&quot;, &quot;password&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/initiate-email-change
+
+2. Test Case ID: TIhGyU
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'ChangeEmailRequestSchema.NewEmail' Error:Field validation for 'NewEmail' failed on the 'required' tag\nKey: 'ChangeEmailRequestSchema.Password' Error:Field validation for 'Password' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;new_email&quot;: &quot;&quot;, &quot;password&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/initiate-email-change"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/accounts/oauth/callback" time="2.500000">
+			<failure type="failure" message="1. Test Case ID: nQJYgB
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;client_type&quot;: &quot;mobile&quot;, &quot;device_type&quot;: &quot;android&quot;, &quot;provider&quot;: &quot;apple&quot;, &quot;token&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/oauth/callback"/>
+			<failure type="failure" message="1. Test Case ID: nQJYgB
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;client_type&quot;: &quot;mobile&quot;, &quot;device_type&quot;: &quot;android&quot;, &quot;provider&quot;: &quot;apple&quot;, &quot;token&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/oauth/callback
+
+2. Test Case ID: 2lU96s
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 400, 500
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;Failed to authenticate user&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;client_type&quot;: &quot;web&quot;, &quot;provider&quot;: &quot;apple&quot;, &quot;token&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/oauth/callback"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/usermgmt/v2/accounts/public/{user_id}" time="6.640000">
+			<failure type="failure" message="1. Test Case ID: tHNRuO
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Public profile not available&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/usermgmt/v2/accounts/public/0"/>
+			<failure type="failure" message="1. Test Case ID: tHNRuO
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+[404] Not Found:
+
+    `{&quot;detail&quot;:&quot;Public profile not available&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/usermgmt/v2/accounts/public/0
+
+2. Test Case ID: hQ6CNr
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+- Undocumented Content-Type
+
+    Received: text/html
+    Documented: application/json
+
+[400] Bad Request:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;400 Bad Request&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/public/u%F2%89%A9%9B%C3%A78%F2%8D%8D%8D2%00"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/accounts/refresh-token" time="1.250000">
+			<failure type="failure" message="1. Test Case ID: BKZwEQ
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 403
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;Invalid token type, Token should be refresh or fresh&quot;}`
+
+Reproduce with: 
+
+    curl -X POST https://test-v2.tramatch.com/api/usermgmt/v2/accounts/refresh-token"/>
+			<failure type="failure" message="1. Test Case ID: BKZwEQ
+
+- Undocumented HTTP status code
+
+    Received: 401
+    Documented: 200, 403
+
+[401] Unauthorized:
+
+    `{&quot;detail&quot;:&quot;Invalid token type, Token should be refresh or fresh&quot;}`
+
+Reproduce with: 
+
+    curl -X POST https://test-v2.tramatch.com/api/usermgmt/v2/accounts/refresh-token"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/usermgmt/v2/accounts/reset-password" time="1.719000">
+			<failure type="failure" message="1. Test Case ID: ocQVgA
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;email&quot;: &quot;&quot;, &quot;new_password&quot;: &quot;&quot;, &quot;token&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/reset-password"/>
+			<failure type="failure" message="1. Test Case ID: ocQVgA
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;email&quot;: &quot;&quot;, &quot;new_password&quot;: &quot;&quot;, &quot;token&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/reset-password
+
+2. Test Case ID: tsmfJC
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'ResetPasswordSchema.Email' Error:Field validation for 'Email' failed on the 'required' tag\nKey: 'ResetPasswordSchema.Token' Error:Field validation for 'Token' failed on the 'required' tag\nKey: 'ResetPasswordSchema.NewPassword' Error:Field validation for 'NewPassword' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;email&quot;: &quot;&quot;, &quot;new_password&quot;: &quot;&quot;, &quot;token&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/reset-password"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/accounts/send-account-verification" time="1.251000">
+			<failure type="failure" message="1. Test Case ID: Ixi7xK
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+[500] Internal Server Error:
+
+    `{&quot;detail&quot;:&quot;User Account already confirmed&quot;}`
+
+Reproduce with: 
+
+    curl -X POST https://test-v2.tramatch.com/api/usermgmt/v2/accounts/send-account-verification"/>
+			<failure type="failure" message="1. Test Case ID: Ixi7xK
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+[500] Internal Server Error:
+
+    `{&quot;detail&quot;:&quot;User Account already confirmed&quot;}`
+
+Reproduce with: 
+
+    curl -X POST https://test-v2.tramatch.com/api/usermgmt/v2/accounts/send-account-verification"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/usermgmt/v2/accounts/user/{user_id}" time="3.204000">
+			<failure type="failure" message="1. Test Case ID: wDxvcW
+
+- Response violates schema
+
+    None is not of type 'string'
+
+    Schema at /properties/registration_source:
+
+        {
+            &quot;type&quot;: &quot;string&quot;
+        }
+
+    Value:
+
+        null
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;keycloakId&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;username&quot;:&quot;cutebambiii&quot;,&quot;confirmed&quot;:true,&quot;first_name&quot;:&quot;Precious&quot;,&quot;last_name&quot;:&quot;Chiamaka&quot;,&quot;email&quot;:&quot;preciousanthony1997@gmail.com&quot;,&quot;role_id&quot;:2,&quot;height&quot;:&quot;5 feet 4 inches&quot;,&quot;sex&quot;:&quot;male&quot;,&quot;date_of_birth&quot;:&quot;&quot;,&quot;state&quot;:&quot;Lagos&quot;,&quot;country&quot;:&quot;Nigeria&quot;,&quot;religion&quot;:&quot;Christianity&quot;,&quot;ethnicity&quot;:&quot;African&quot;,&quot;marital_type&quot;:&quot;Monogamy&quot;,&quot;body_type&quot;:&quot;Average&quot;,&quot;church_denomination&quot;:null,&quot;about&quot;:&quot;i love traveling, singing and watching movies. I'm looking forward to finding the perfect match // Output truncated...`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;about&quot;: &quot;&quot;, &quot;agreed_to_terms&quot;: false, &quot;body_type&quot;: &quot;&quot;, &quot;completed_signup&quot;: false, &quot;country&quot;: &quot;&quot;, &quot;current_status&quot;: &quot;&quot;, &quot;date_of_birth&quot;: &quot;&quot;, &quot;drinking_status&quot;: &quot;&quot;, &quot;education_level&quot;: &quot;&quot;, &quot;ethnicity&quot;: &quot;&quot;, &quot;first_name&quot;: &quot;&quot;, &quot;has_children&quot;: &quot;&quot;, &quot;height&quot;: &quot;&quot;, &quot;last_name&quot;: &quot;&quot;, &quot;marital_type&quot;: &quot;&quot;, &quot;occupation&quot;: &quot;&quot;, &quot;open_for_relocation&quot;: &quot;&quot;, &quot;religion&quot;: &quot;&quot;, &quot;sex&quot;: &quot;male&quot;, &quot;smoking_status&quot;: &quot;&quot;, &quot;state&quot;: &quot;&quot;, &quot;username&quot;: &quot;&quot;, &quot;want_children&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/user/0
+
+2. Test Case ID: 4Ci5Ke
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `PUT /api/usermgmt/v2/accounts/user/{user_id}`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Authorization header is required&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;about&quot;: &quot;&quot;, &quot;agreed_to_terms&quot;: false, &quot;body_type&quot;: &quot;&quot;, &quot;completed_signup&quot;: false, &quot;country&quot;: &quot;&quot;, &quot;current_status&quot;: &quot;&quot;, &quot;date_of_birth&quot;: &quot;&quot;, &quot;drinking_status&quot;: &quot;&quot;, &quot;education_level&quot;: &quot;&quot;, &quot;ethnicity&quot;: &quot;&quot;, &quot;first_name&quot;: &quot;&quot;, &quot;has_children&quot;: &quot;&quot;, &quot;height&quot;: &quot;&quot;, &quot;last_name&quot;: &quot;&quot;, &quot;marital_type&quot;: &quot;&quot;, &quot;occupation&quot;: &quot;&quot;, &quot;open_for_relocation&quot;: &quot;&quot;, &quot;religion&quot;: &quot;&quot;, &quot;sex&quot;: &quot;male&quot;, &quot;smoking_status&quot;: &quot;&quot;, &quot;state&quot;: &quot;&quot;, &quot;username&quot;: &quot;&quot;, &quot;want_children&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/user/0"/>
+			<failure type="failure" message="1. Test Case ID: wDxvcW
+
+- Response violates schema
+
+    None is not of type 'string'
+
+    Schema at /properties/registration_source:
+
+        {
+            &quot;type&quot;: &quot;string&quot;
+        }
+
+    Value:
+
+        null
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;keycloakId&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;username&quot;:&quot;cutebambiii&quot;,&quot;confirmed&quot;:true,&quot;first_name&quot;:&quot;Precious&quot;,&quot;last_name&quot;:&quot;Chiamaka&quot;,&quot;email&quot;:&quot;preciousanthony1997@gmail.com&quot;,&quot;role_id&quot;:2,&quot;height&quot;:&quot;5 feet 4 inches&quot;,&quot;sex&quot;:&quot;male&quot;,&quot;date_of_birth&quot;:&quot;&quot;,&quot;state&quot;:&quot;Lagos&quot;,&quot;country&quot;:&quot;Nigeria&quot;,&quot;religion&quot;:&quot;Christianity&quot;,&quot;ethnicity&quot;:&quot;African&quot;,&quot;marital_type&quot;:&quot;Monogamy&quot;,&quot;body_type&quot;:&quot;Average&quot;,&quot;church_denomination&quot;:null,&quot;about&quot;:&quot;i love traveling, singing and watching movies. I'm looking forward to finding the perfect match // Output truncated...`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;about&quot;: &quot;&quot;, &quot;agreed_to_terms&quot;: false, &quot;body_type&quot;: &quot;&quot;, &quot;completed_signup&quot;: false, &quot;country&quot;: &quot;&quot;, &quot;current_status&quot;: &quot;&quot;, &quot;date_of_birth&quot;: &quot;&quot;, &quot;drinking_status&quot;: &quot;&quot;, &quot;education_level&quot;: &quot;&quot;, &quot;ethnicity&quot;: &quot;&quot;, &quot;first_name&quot;: &quot;&quot;, &quot;has_children&quot;: &quot;&quot;, &quot;height&quot;: &quot;&quot;, &quot;last_name&quot;: &quot;&quot;, &quot;marital_type&quot;: &quot;&quot;, &quot;occupation&quot;: &quot;&quot;, &quot;open_for_relocation&quot;: &quot;&quot;, &quot;religion&quot;: &quot;&quot;, &quot;sex&quot;: &quot;male&quot;, &quot;smoking_status&quot;: &quot;&quot;, &quot;state&quot;: &quot;&quot;, &quot;username&quot;: &quot;&quot;, &quot;want_children&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/user/0
+
+2. Test Case ID: 4Ci5Ke
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `PUT /api/usermgmt/v2/accounts/user/{user_id}`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Authorization header is required&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;about&quot;: &quot;&quot;, &quot;agreed_to_terms&quot;: false, &quot;body_type&quot;: &quot;&quot;, &quot;completed_signup&quot;: false, &quot;country&quot;: &quot;&quot;, &quot;current_status&quot;: &quot;&quot;, &quot;date_of_birth&quot;: &quot;&quot;, &quot;drinking_status&quot;: &quot;&quot;, &quot;education_level&quot;: &quot;&quot;, &quot;ethnicity&quot;: &quot;&quot;, &quot;first_name&quot;: &quot;&quot;, &quot;has_children&quot;: &quot;&quot;, &quot;height&quot;: &quot;&quot;, &quot;last_name&quot;: &quot;&quot;, &quot;marital_type&quot;: &quot;&quot;, &quot;occupation&quot;: &quot;&quot;, &quot;open_for_relocation&quot;: &quot;&quot;, &quot;religion&quot;: &quot;&quot;, &quot;sex&quot;: &quot;male&quot;, &quot;smoking_status&quot;: &quot;&quot;, &quot;state&quot;: &quot;&quot;, &quot;username&quot;: &quot;&quot;, &quot;want_children&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/user/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/accounts/verify-username" time="1.313000">
+			<failure type="failure" message="1. Test Case ID: VmGvJG
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'RequestUsernameChangeSchema.Username' Error:Field validation for 'Username' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;username&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/verify-username"/>
+			<failure type="failure" message="1. Test Case ID: VmGvJG
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'RequestUsernameChangeSchema.Username' Error:Field validation for 'Username' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;username&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/verify-username
+
+2. Test Case ID: Pqavod
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'RequestUsernameChangeSchema.Username' Error:Field validation for 'Username' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;username&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/verify-username"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/usermgmt/v2/accounts/username" time="1.234000">
+			<failure type="failure" message="1. Test Case ID: jcq47p
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'UpdateUsernameSchema.Username' Error:Field validation for 'Username' failed on the 'required' tag\nKey: 'UpdateUsernameSchema.Token' Error:Field validation for 'Token' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;token&quot;: &quot;&quot;, &quot;username&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/username"/>
+			<failure type="failure" message="1. Test Case ID: jcq47p
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'UpdateUsernameSchema.Username' Error:Field validation for 'Username' failed on the 'required' tag\nKey: 'UpdateUsernameSchema.Token' Error:Field validation for 'Token' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;token&quot;: &quot;&quot;, &quot;username&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/username
+
+2. Test Case ID: Ix5afl
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'UpdateUsernameSchema.Username' Error:Field validation for 'Username' failed on the 'required' tag\nKey: 'UpdateUsernameSchema.Token' Error:Field validation for 'Token' failed on the 'required' tag&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;token&quot;: &quot;&quot;, &quot;username&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/accounts/username"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/admin/logs/visits/aggregations" time="46.656000">
+			<failure type="failure" message="1. Test Case ID: hZrpfh
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;group_by_countries&quot;: false, &quot;group_by_timestamp&quot;: {&quot;interval&quot;: &quot;7days&quot;}}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/logs/visits/aggregations"/>
+			<failure type="failure" message="1. Test Case ID: hZrpfh
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;group_by_countries&quot;: false, &quot;group_by_timestamp&quot;: {&quot;interval&quot;: &quot;7days&quot;}}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/logs/visits/aggregations
+
+2. Test Case ID: lqf17F
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+- Undocumented Content-Type
+
+    Received: text/plain; charset=utf-8
+    Documented: application/json
+
+- Undocumented HTTP status code
+
+    Received: 429
+    Documented: 200, 400, 401, 500
+
+[429] Too Many Requests:
+
+    `Too Many Requests`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '[[{&quot;&quot;: {&quot;\ud8b8\ude94\u478b&quot;: {&quot;\u00ca\u0095&quot;: 2.6823942144680105e-36, &quot;&quot;: 2.6823942144680105e-36, &quot;\u00b3&quot;: 4.887882084447192e+105}}}, {&quot;EO\u00f8&quot;: [{}], &quot;\ud8b7\udcc2\udb2e\uddce\u00c5\u00d0&quot;: [1.5]}, {}], {}, [true], [], [], [], [], [{}, [], {}], {&quot;\u00bc\uda54\udc41\u00ca&quot;: false, &quot;&quot;: 2348}]' https://test-v2.tramatch.com/api/usermgmt/v2/admin/logs/visits/aggregations"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/admin/logs/visits/search" time="32.063000">
+			<failure type="failure" message="1. Test Case ID: 1i66vV
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Invalid request payload: parsing time \&quot;\&quot; as \&quot;2006-01-02T15:04:05Z07:00\&quot;: cannot parse \&quot;\&quot; as \&quot;2006\&quot;&quot;,&quot;details&quot;:&quot;The timestamp.start_date field must be in RFC3339 format (e.g., '2025-05-01T00:00:00Z')&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;completed_signup&quot;: false, &quot;ip_address&quot;: &quot;&quot;, &quot;timestamp&quot;: {&quot;end_date&quot;: &quot;&quot;, &quot;start_date&quot;: &quot;&quot;}, &quot;unique_ip_address&quot;: false, &quot;unique_users&quot;: false, &quot;user_id&quot;: &quot;&quot;}' 'https://test-v2.tramatch.com/api/usermgmt/v2/admin/logs/visits/search?page_size=20'"/>
+			<failure type="failure" message="1. Test Case ID: 1i66vV
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Invalid request payload: parsing time \&quot;\&quot; as \&quot;2006-01-02T15:04:05Z07:00\&quot;: cannot parse \&quot;\&quot; as \&quot;2006\&quot;&quot;,&quot;details&quot;:&quot;The timestamp.start_date field must be in RFC3339 format (e.g., '2025-05-01T00:00:00Z')&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;completed_signup&quot;: false, &quot;ip_address&quot;: &quot;&quot;, &quot;timestamp&quot;: {&quot;end_date&quot;: &quot;&quot;, &quot;start_date&quot;: &quot;&quot;}, &quot;unique_ip_address&quot;: false, &quot;unique_users&quot;: false, &quot;user_id&quot;: &quot;&quot;}' 'https://test-v2.tramatch.com/api/usermgmt/v2/admin/logs/visits/search?page_size=20'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/usermgmt/v2/accounts/user/info" time="3.234000">
+			<failure type="failure" message="1. Test Case ID: bs1JlM
+
+- Response violates schema
+
+    None is not of type 'string'
+
+    Schema at /properties/registration_source:
+
+        {
+            &quot;type&quot;: &quot;string&quot;
+        }
+
+    Value:
+
+        null
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;keycloakId&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;username&quot;:&quot;cutebambiii&quot;,&quot;confirmed&quot;:true,&quot;first_name&quot;:&quot;Precious&quot;,&quot;last_name&quot;:&quot;Chiamaka&quot;,&quot;email&quot;:&quot;preciousanthony1997@gmail.com&quot;,&quot;role_id&quot;:2,&quot;height&quot;:&quot;5 feet 4 inches&quot;,&quot;sex&quot;:&quot;female&quot;,&quot;date_of_birth&quot;:&quot;1997-04-15&quot;,&quot;state&quot;:&quot;Lagos&quot;,&quot;country&quot;:&quot;Nigeria&quot;,&quot;religion&quot;:&quot;Christianity&quot;,&quot;ethnicity&quot;:&quot;African&quot;,&quot;marital_type&quot;:&quot;Monogamy&quot;,&quot;body_type&quot;:&quot;Average&quot;,&quot;church_denomination&quot;:null,&quot;about&quot;:&quot;i love traveling, singing and watching movies. I'm looking forward to finding the p // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/usermgmt/v2/accounts/user/info
+
+2. Test Case ID: Gl2L5z
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/usermgmt/v2/accounts/user/info`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Authorization header is required&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/usermgmt/v2/accounts/user/info"/>
+			<failure type="failure" message="1. Test Case ID: bs1JlM
+
+- Response violates schema
+
+    None is not of type 'string'
+
+    Schema at /properties/registration_source:
+
+        {
+            &quot;type&quot;: &quot;string&quot;
+        }
+
+    Value:
+
+        null
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;keycloakId&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;,&quot;username&quot;:&quot;cutebambiii&quot;,&quot;confirmed&quot;:true,&quot;first_name&quot;:&quot;Precious&quot;,&quot;last_name&quot;:&quot;Chiamaka&quot;,&quot;email&quot;:&quot;preciousanthony1997@gmail.com&quot;,&quot;role_id&quot;:2,&quot;height&quot;:&quot;5 feet 4 inches&quot;,&quot;sex&quot;:&quot;female&quot;,&quot;date_of_birth&quot;:&quot;1997-04-15&quot;,&quot;state&quot;:&quot;Lagos&quot;,&quot;country&quot;:&quot;Nigeria&quot;,&quot;religion&quot;:&quot;Christianity&quot;,&quot;ethnicity&quot;:&quot;African&quot;,&quot;marital_type&quot;:&quot;Monogamy&quot;,&quot;body_type&quot;:&quot;Average&quot;,&quot;church_denomination&quot;:null,&quot;about&quot;:&quot;i love traveling, singing and watching movies. I'm looking forward to finding the p // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/usermgmt/v2/accounts/user/info
+
+2. Test Case ID: Gl2L5z
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `GET /api/usermgmt/v2/accounts/user/info`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Authorization header is required&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/usermgmt/v2/accounts/user/info"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/admin/roles" time="44.311000">
+			<failure type="failure" message="1. Test Case ID: uC7MSD
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;is_default&quot;: false, &quot;name&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/roles"/>
+			<failure type="failure" message="1. Test Case ID: uC7MSD
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;is_default&quot;: false, &quot;name&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/roles
+
+2. Test Case ID: HZZrov
+
+- Accepted negative data
+
+    Allowed statuses: 400, 401, 403, 404, 406, 422, 428, 5xx
+
+- Undocumented Content-Type
+
+    Received: text/plain; charset=utf-8
+    Documented: application/json
+
+- Undocumented HTTP status code
+
+    Received: 429
+    Documented: 200, 400, 401, 409, 500
+
+[429] Too Many Requests:
+
+    `Too Many Requests`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '[]' https://test-v2.tramatch.com/api/usermgmt/v2/admin/roles"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/admin/users/aggregations" time="3.156000">
+			<failure type="failure" message="1. Test Case ID: MeDRGI
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;group_by_countries&quot;: false, &quot;group_by_timestamp&quot;: {&quot;interval&quot;: &quot;7days&quot;}, &quot;response_type&quot;: &quot;json&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/aggregations"/>
+			<failure type="failure" message="1. Test Case ID: MeDRGI
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;group_by_countries&quot;: false, &quot;group_by_timestamp&quot;: {&quot;interval&quot;: &quot;7days&quot;}, &quot;response_type&quot;: &quot;json&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/aggregations
+
+2. Test Case ID: ruPuRr
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 200, 401, 500
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Invalid request payload&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '[]' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/aggregations"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/accounts/{user_id}/initiate-account-deletion" time="4.594000">
+			<failure type="failure" message="1. Test Case ID: VnugED
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;message&quot;:&quot;An email has been sent to you containing your token&quot;}`
+
+Reproduce with: 
+
+    curl -X POST https://test-v2.tramatch.com/api/usermgmt/v2/accounts/0/initiate-account-deletion
+
+2. Test Case ID: k4kdTg
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/usermgmt/v2/accounts/{user_id}/initiate-account-deletion`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Authorization header is required&quot;}`
+
+Reproduce with: 
+
+    curl -X POST https://test-v2.tramatch.com/api/usermgmt/v2/accounts/0/initiate-account-deletion"/>
+			<failure type="failure" message="1. Test Case ID: VnugED
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;message&quot;:&quot;An email has been sent to you containing your token&quot;}`
+
+Reproduce with: 
+
+    curl -X POST https://test-v2.tramatch.com/api/usermgmt/v2/accounts/0/initiate-account-deletion
+
+2. Test Case ID: k4kdTg
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/usermgmt/v2/accounts/{user_id}/initiate-account-deletion`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Authorization header is required&quot;}`
+
+Reproduce with: 
+
+    curl -X POST https://test-v2.tramatch.com/api/usermgmt/v2/accounts/0/initiate-account-deletion"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/admin/users" time="2.704000">
+			<failure type="failure" message="1. Test Case ID: 9rFHTA
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'CreateUserSchema.CommonSchema.FirstName' Error:Field validation for 'FirstName' failed on the 'required' tag\nKey: 'CreateUserSchema.CommonSchema.LastName' Error:Field validation for 'LastName' failed on the 'required' tag\nKey: 'CreateUserSchema.BaseUserValidationSchema.DateOfBirth' Error:Field validation for 'DateOfBirth' failed on the 'required' tag\nKey: 'CreateUserSchema.Password' Error:Field validation for 'Password' failed on the 'required' tag\nKey: 'CreateUserSchema.Email' Error:Fi // Output truncated...`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;agreed_to_terms&quot;: false, &quot;date_of_birth&quot;: &quot;&quot;, &quot;email&quot;: &quot;&quot;, &quot;first_name&quot;: &quot;&quot;, &quot;last_name&quot;: &quot;&quot;, &quot;password&quot;: &quot;&quot;, &quot;referrer&quot;: &quot;&quot;, &quot;sex&quot;: &quot;male&quot;, &quot;username&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users"/>
+			<failure type="failure" message="1. Test Case ID: 9rFHTA
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'CreateUserSchema.CommonSchema.FirstName' Error:Field validation for 'FirstName' failed on the 'required' tag\nKey: 'CreateUserSchema.CommonSchema.LastName' Error:Field validation for 'LastName' failed on the 'required' tag\nKey: 'CreateUserSchema.BaseUserValidationSchema.DateOfBirth' Error:Field validation for 'DateOfBirth' failed on the 'required' tag\nKey: 'CreateUserSchema.Password' Error:Field validation for 'Password' failed on the 'required' tag\nKey: 'CreateUserSchema.Email' Error:Fi // Output truncated...`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;agreed_to_terms&quot;: false, &quot;date_of_birth&quot;: &quot;&quot;, &quot;email&quot;: &quot;&quot;, &quot;first_name&quot;: &quot;&quot;, &quot;last_name&quot;: &quot;&quot;, &quot;password&quot;: &quot;&quot;, &quot;referrer&quot;: &quot;&quot;, &quot;sex&quot;: &quot;male&quot;, &quot;username&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users
+
+2. Test Case ID: IYUlVo
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Key: 'CreateUserSchema.CommonSchema.FirstName' Error:Field validation for 'FirstName' failed on the 'required' tag\nKey: 'CreateUserSchema.CommonSchema.LastName' Error:Field validation for 'LastName' failed on the 'required' tag\nKey: 'CreateUserSchema.BaseUserValidationSchema.DateOfBirth' Error:Field validation for 'DateOfBirth' failed on the 'required' tag\nKey: 'CreateUserSchema.Password' Error:Field validation for 'Password' failed on the 'required' tag\nKey: 'CreateUserSchema.Email' Error:Fi // Output truncated...`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;date_of_birth&quot;: &quot;&quot;, &quot;email&quot;: &quot;&quot;, &quot;first_name&quot;: &quot;&quot;, &quot;last_name&quot;: &quot;&quot;, &quot;password&quot;: &quot;&quot;, &quot;sex&quot;: &quot;male&quot;, &quot;username&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/admin/users/search" time="2.516000">
+			<failure type="failure" message="1. Test Case ID: 4TFPMw
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;admin&quot;: false, &quot;agreed_to_terms&quot;: false, &quot;body_type&quot;: &quot;&quot;, &quot;bulk_ids&quot;: [], &quot;confirmed&quot;: false, &quot;country&quot;: &quot;&quot;, &quot;created_at&quot;: {&quot;end&quot;: &quot;&quot;, &quot;start&quot;: &quot;&quot;}, &quot;current_status&quot;: &quot;&quot;, &quot;date_of_birth&quot;: {&quot;end&quot;: &quot;&quot;, &quot;start&quot;: &quot;&quot;}, &quot;drinking_status&quot;: &quot;&quot;, &quot;education_level&quot;: &quot;&quot;, &quot;email&quot;: &quot;&quot;, &quot;email_domains&quot;: {&quot;domains&quot;: [], &quot;flag&quot;: &quot;EXCLUDES&quot;}, &quot;ethnicity&quot;: &quot;&quot;, &quot;field_has_numbers&quot;: [], &quot;first_name&quot;: &quot;&quot;, &quot;has_children&quot;: &quot;&quot;, &quot;height&quot;: &quot;&quot;, &quot;is_deleted&quot;: false, &quot;last_name&quot;: &quot;&quot;, &quot;marital_type&quot;: &quot;&quot;, &quot;occupation&quot;: &quot;&quot;, &quot;open_for_relocation&quot;: &quot;&quot;, &quot;page&quot;: 1, &quot;religion&quot;: &quot;&quot;, &quot;response_format&quot;: &quot;json&quot;, &quot;role&quot;: &quot;&quot;, &quot;sex&quot;: &quot;Male&quot;, &quot;size&quot;: 10, &quot;smoking_status&quot;: &quot;&quot;, &quot;state&quot;: &quot;&quot;, &quot;suspended&quot;: false, &quot;updated_at&quot;: {&quot;end&quot;: &quot;&quot;, &quot;start&quot;: &quot;&quot;}, &quot;username&quot;: &quot;&quot;, &quot;want_children&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/search"/>
+			<failure type="failure" message="1. Test Case ID: 4TFPMw
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;admin&quot;: false, &quot;agreed_to_terms&quot;: false, &quot;body_type&quot;: &quot;&quot;, &quot;bulk_ids&quot;: [], &quot;confirmed&quot;: false, &quot;country&quot;: &quot;&quot;, &quot;created_at&quot;: {&quot;end&quot;: &quot;&quot;, &quot;start&quot;: &quot;&quot;}, &quot;current_status&quot;: &quot;&quot;, &quot;date_of_birth&quot;: {&quot;end&quot;: &quot;&quot;, &quot;start&quot;: &quot;&quot;}, &quot;drinking_status&quot;: &quot;&quot;, &quot;education_level&quot;: &quot;&quot;, &quot;email&quot;: &quot;&quot;, &quot;email_domains&quot;: {&quot;domains&quot;: [], &quot;flag&quot;: &quot;EXCLUDES&quot;}, &quot;ethnicity&quot;: &quot;&quot;, &quot;field_has_numbers&quot;: [], &quot;first_name&quot;: &quot;&quot;, &quot;has_children&quot;: &quot;&quot;, &quot;height&quot;: &quot;&quot;, &quot;is_deleted&quot;: false, &quot;last_name&quot;: &quot;&quot;, &quot;marital_type&quot;: &quot;&quot;, &quot;occupation&quot;: &quot;&quot;, &quot;open_for_relocation&quot;: &quot;&quot;, &quot;page&quot;: 1, &quot;religion&quot;: &quot;&quot;, &quot;response_format&quot;: &quot;json&quot;, &quot;role&quot;: &quot;&quot;, &quot;sex&quot;: &quot;Male&quot;, &quot;size&quot;: 10, &quot;smoking_status&quot;: &quot;&quot;, &quot;state&quot;: &quot;&quot;, &quot;suspended&quot;: false, &quot;updated_at&quot;: {&quot;end&quot;: &quot;&quot;, &quot;start&quot;: &quot;&quot;}, &quot;username&quot;: &quot;&quot;, &quot;want_children&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/search
+
+2. Test Case ID: ic9cSR
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 200, 401, 500
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Invalid request payload&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '[]' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/search"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/usermgmt/v2/admin/users/settings" time="14.938000">
+			<failure type="failure" message="1. Test Case ID: PrrX2j
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 200, 401, 500
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Invalid query parameters&quot;}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' 'https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/settings?size=null&amp;size=null'"/>
+			<failure type="failure" message="1. Test Case ID: PrrX2j
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 200, 401, 500
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;Invalid query parameters&quot;}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' 'https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/settings?size=null&amp;size=null'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="DELETE /api/usermgmt/v2/admin/users/{user_id}" time="6.078000">
+			<failure type="failure" message="1. Test Case ID: 1yizbb
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/0"/>
+			<failure type="failure" message="1. Test Case ID: 1yizbb
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/0
+
+2. Test Case ID: 79blvX
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+- Undocumented Content-Type
+
+    Received: text/html
+    Documented: application/json
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 200, 401, 404, 500
+
+[400] Bad Request:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;400 Bad Request&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X DELETE -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/u%F2%89%A9%9B%C3%A78%F2%8D%8D%8D2%00"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/usermgmt/v2/admin/users/{user_id}" time="7.312000">
+			<failure type="failure" message="1. Test Case ID: krPJUn
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/0"/>
+			<failure type="failure" message="1. Test Case ID: krPJUn
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/0
+
+2. Test Case ID: nKeIi4
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+- Undocumented Content-Type
+
+    Received: text/html
+    Documented: application/json
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 200, 401, 404, 500
+
+[400] Bad Request:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;400 Bad Request&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/u%F2%89%A9%9B%C3%A78%F2%8D%8D%8D2%00"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/usermgmt/v2/admin/users/{user_id}/confirm" time="5.313000">
+			<failure type="failure" message="1. Test Case ID: VqKslY
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;confirmed&quot;: false}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/0/confirm"/>
+			<failure type="failure" message="1. Test Case ID: VqKslY
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;confirmed&quot;: false}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/0/confirm
+
+2. Test Case ID: itgRpl
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+- Undocumented Content-Type
+
+    Received: text/html
+    Documented: application/json
+
+[400] Bad Request:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;400 Bad Request&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/%F2%8D%8D%8D2%00/confirm"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/usermgmt/v2/admin/users/{user_id}/email" time="3.625000">
+			<failure type="failure" message="1. Test Case ID: EBeU7s
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;email&quot;: &quot;&quot;, &quot;token&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/0/email"/>
+			<failure type="failure" message="1. Test Case ID: EBeU7s
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;email&quot;: &quot;&quot;, &quot;token&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/0/email
+
+2. Test Case ID: 5YNm5g
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+- Undocumented Content-Type
+
+    Received: text/html
+    Documented: application/json
+
+[400] Bad Request:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;400 Bad Request&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;email&quot;: &quot;&quot;, &quot;token&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/%F2%89%A9%9B%C3%A78%F2%8D%8D%8D2%00/email"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/usermgmt/v2/admin/users/{user_id}/role" time="9.781000">
+			<failure type="failure" message="1. Test Case ID: FQha8f
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;role&quot;: &quot;General&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/0/role"/>
+			<failure type="failure" message="1. Test Case ID: FQha8f
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;role&quot;: &quot;General&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/0/role
+
+2. Test Case ID: fULney
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+- Undocumented Content-Type
+
+    Received: text/plain; charset=utf-8
+    Documented: application/json
+
+- Undocumented HTTP status code
+
+    Received: 429
+    Documented: 200, 400, 401, 404, 500
+
+[429] Too Many Requests:
+
+    `Too Many Requests`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;role&quot;: &quot;Developer&quot;, &quot;\udadd\udfad&quot;: [1.437964013675512e-285, 7.011766863261915e+16]}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/%F3%87%9E%AD/role"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/usermgmt/v2/admin/users/{user_id}/deactivate" time="6.280000">
+			<failure type="failure" message="1. Test Case ID: MagOJU
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/0/deactivate"/>
+			<failure type="failure" message="1. Test Case ID: MagOJU
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/0/deactivate
+
+2. Test Case ID: 3Vwttz
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+- Undocumented Content-Type
+
+    Received: text/html
+    Documented: application/json
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 200, 401, 404, 500
+
+[400] Bad Request:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;400 Bad Request&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/u%F2%89%A9%9B%C3%A78%F2%8D%8D%8D2%00/deactivate"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/devices" time="2.578000">
+			<failure type="failure" message="1. Test Case ID: aXWue3
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;type&quot;:&quot;ANDROID&quot;,&quot;active&quot;:false,&quot;id&quot;:1431,&quot;ip_address&quot;:&quot;102.89.69.24&quot;,&quot;created_at&quot;:&quot;2025-07-13T19:30:41.598487Z&quot;,&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;active&quot;: false, &quot;device_id&quot;: &quot;&quot;, &quot;location&quot;: &quot;&quot;, &quot;type&quot;: &quot;ANDROID&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/devices
+
+2. Test Case ID: FXv2Ff
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/usermgmt/v2/devices`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Authorization header is required&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;active&quot;: false, &quot;device_id&quot;: &quot;&quot;, &quot;location&quot;: &quot;&quot;, &quot;type&quot;: &quot;ANDROID&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/devices"/>
+			<failure type="failure" message="1. Test Case ID: aXWue3
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+[200] OK:
+
+    `{&quot;type&quot;:&quot;ANDROID&quot;,&quot;active&quot;:false,&quot;id&quot;:1431,&quot;ip_address&quot;:&quot;102.89.69.24&quot;,&quot;created_at&quot;:&quot;2025-07-13T19:30:41.598487Z&quot;,&quot;user_id&quot;:&quot;5680f8fff33247eab9f20326e019be9c&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;active&quot;: false, &quot;device_id&quot;: &quot;&quot;, &quot;location&quot;: &quot;&quot;, &quot;type&quot;: &quot;ANDROID&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/devices
+
+2. Test Case ID: FXv2Ff
+
+- API accepts requests without authentication
+
+    Expected 401, got `403 Forbidden` for `POST /api/usermgmt/v2/devices`
+
+[403] Forbidden:
+
+    `{&quot;detail&quot;:&quot;Authorization header is required&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;active&quot;: false, &quot;device_id&quot;: &quot;&quot;, &quot;location&quot;: &quot;&quot;, &quot;type&quot;: &quot;ANDROID&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/devices
+
+3. Test Case ID: 4nBWaD
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;device ID is required for mobile devices&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;type&quot;: &quot;IOS&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/devices"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/usermgmt/v2/admin/users/{user_id}/suspend" time="6.937000">
+			<failure type="failure" message="1. Test Case ID: 3LTPdQ
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;suspend&quot;: false}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/0/suspend"/>
+			<failure type="failure" message="1. Test Case ID: 3LTPdQ
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;suspend&quot;: false}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/0/suspend
+
+2. Test Case ID: P8EC5F
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+- Undocumented Content-Type
+
+    Received: text/html
+    Documented: application/json
+
+[400] Bad Request:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;400 Bad Request&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{}' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/%F2%8D%8D%8D2%00/suspend"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/devices/builds" time="2.642000">
+			<failure type="failure" message="1. Test Case ID: 7LRE46
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;platform&quot;: &quot;ANDROID&quot;, &quot;state&quot;: &quot;DEVELOPMENT&quot;, &quot;status&quot;: &quot;ACTIVE&quot;, &quot;update_required&quot;: false, &quot;version&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/devices/builds"/>
+			<failure type="failure" message="1. Test Case ID: 7LRE46
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;platform&quot;: &quot;ANDROID&quot;, &quot;state&quot;: &quot;DEVELOPMENT&quot;, &quot;status&quot;: &quot;ACTIVE&quot;, &quot;update_required&quot;: false, &quot;version&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/devices/builds
+
+2. Test Case ID: 1GM2Wz
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+- Undocumented Content-Type
+
+    Received: text/plain; charset=utf-8
+    Documented: application/json
+
+- Undocumented HTTP status code
+
+    Received: 429
+    Documented: 200, 400, 401, 500
+
+[429] Too Many Requests:
+
+    `Too Many Requests`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{&quot;platform&quot;: &quot;IOS&quot;, &quot;state&quot;: &quot;TESTING&quot;, &quot;status&quot;: &quot;ACTIVE&quot;, &quot;version&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/devices/builds"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/usermgmt/v2/devices/builds/search" time="1.296000">
+			<failure type="failure" message="1. Test Case ID: 2t5rYM
+
+- Server error
+
+[500] Internal Server Error:
+
+    `{&quot;detail&quot;:&quot;ERROR: invalid input value for enum releasestatus: \&quot;achieved\&quot; (SQLSTATE 22P02)&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;limit&quot;: 10, &quot;page&quot;: 1, &quot;platform&quot;: &quot;ANDROID&quot;, &quot;state&quot;: &quot;DEVELOPMENT&quot;, &quot;status&quot;: &quot;achieved&quot;, &quot;version&quot;: &quot;&quot;}' 'https://test-v2.tramatch.com/api/usermgmt/v2/devices/builds/search?platform=&amp;version=&amp;status=&amp;state=&amp;page=1'"/>
+			<failure type="failure" message="1. Test Case ID: 2t5rYM
+
+- Server error
+
+[500] Internal Server Error:
+
+    `{&quot;detail&quot;:&quot;ERROR: invalid input value for enum releasestatus: \&quot;achieved\&quot; (SQLSTATE 22P02)&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;limit&quot;: 10, &quot;page&quot;: 1, &quot;platform&quot;: &quot;ANDROID&quot;, &quot;state&quot;: &quot;DEVELOPMENT&quot;, &quot;status&quot;: &quot;achieved&quot;, &quot;version&quot;: &quot;&quot;}' 'https://test-v2.tramatch.com/api/usermgmt/v2/devices/builds/search?platform=&amp;version=&amp;status=&amp;state=&amp;page=1'
+
+2. Test Case ID: nQx2TT
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+- Undocumented Content-Type
+
+    Received: text/plain; charset=utf-8
+    Documented: application/json
+
+- Undocumented HTTP status code
+
+    Received: 429
+    Documented: 200, 400, 401, 431, 500
+
+[429] Too Many Requests:
+
+    `Too Many Requests`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{}' https://test-v2.tramatch.com/api/usermgmt/v2/devices/builds/search"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/usermgmt/v2/devices/builds/latest/{platform}" time="2.125000">
+			<failure type="failure" message="1. Test Case ID: Mx1pze
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/usermgmt/v2/devices/builds/latest/0"/>
+			<failure type="failure" message="1. Test Case ID: Mx1pze
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/usermgmt/v2/devices/builds/latest/0
+
+2. Test Case ID: xe9PNn
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+- Undocumented Content-Type
+
+    Received: text/plain; charset=utf-8
+    Documented: application/json
+
+- Undocumented HTTP status code
+
+    Received: 429
+    Documented: 200, 400, 401, 404, 500
+
+[429] Too Many Requests:
+
+    `Too Many Requests`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/usermgmt/v2/devices/builds/latest/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/usermgmt/v2/admin/users/{user_id}/reactivate" time="5.579000">
+			<failure type="failure" message="1. Test Case ID: fEAxpe
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/0/reactivate"/>
+			<failure type="failure" message="1. Test Case ID: fEAxpe
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/0/reactivate
+
+2. Test Case ID: tU4dPO
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+- Undocumented Content-Type
+
+    Received: text/html
+    Documented: application/json
+
+- Undocumented HTTP status code
+
+    Received: 400
+    Documented: 200, 401, 404, 500
+
+[400] Bad Request:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;400 Bad Request&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/usermgmt/v2/admin/users/u%F2%89%A9%9B%C3%A78%F2%8D%8D%8D2%00/reactivate"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/usermgmt/v2/devices/builds/{build_number}" time="1.141000">
+			<failure type="failure" message="1. Test Case ID: 8w2kB9
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;invalid build_number format, must be a valid UUID&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/usermgmt/v2/devices/builds/0"/>
+			<failure type="failure" message="1. Test Case ID: 8w2kB9
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;invalid build_number format, must be a valid UUID&quot;}`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/usermgmt/v2/devices/builds/0
+
+2. Test Case ID: QtNpdI
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+- Undocumented Content-Type
+
+    Received: text/plain; charset=utf-8
+    Documented: application/json
+
+- Undocumented HTTP status code
+
+    Received: 429
+    Documented: 200, 400, 404, 500
+
+[429] Too Many Requests:
+
+    `Too Many Requests`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' -H 'Cookie: [Filtered]' https://test-v2.tramatch.com/api/usermgmt/v2/devices/builds/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/usermgmt/v2/devices/builds/{build_number}" time="1.312000">
+			<failure type="failure" message="1. Test Case ID: 2U7I5V
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;invalid build_number format, must be a valid UUID&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;state&quot;: &quot;DEVELOPMENT&quot;, &quot;status&quot;: &quot;achieved&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/devices/builds/0"/>
+			<failure type="failure" message="1. Test Case ID: 2U7I5V
+
+- Missing header not rejected
+
+    Missing header not rejected (got 400, expected 401)
+
+[400] Bad Request:
+
+    `{&quot;detail&quot;:&quot;invalid build_number format, must be a valid UUID&quot;}`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;state&quot;: &quot;DEVELOPMENT&quot;, &quot;status&quot;: &quot;achieved&quot;}' https://test-v2.tramatch.com/api/usermgmt/v2/devices/builds/0
+
+2. Test Case ID: TJ6HJk
+
+- Rejected positive data
+
+    Allowed statuses: 2xx, 401, 403, 404, 5xx
+
+- Undocumented Content-Type
+
+    Received: text/plain; charset=utf-8
+    Documented: application/json
+
+- Undocumented HTTP status code
+
+    Received: 429
+    Documented: 200, 400, 401, 500
+
+[429] Too Many Requests:
+
+    `Too Many Requests`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -H 'Cookie: [Filtered]' -d '{}' https://test-v2.tramatch.com/api/usermgmt/v2/devices/builds/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /settings" time="5.062000">
+			<failure type="failure" message="1. Test Case ID: T6oyY6
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+- Undocumented Content-Type
+
+    Received: text/html; charset=utf-8
+    Documented: application/json
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 400, 401, 500
+
+[404] Not Found:
+
+    `Page not found`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;allow_new_matches_notifications&quot;: false, &quot;allow_newsletter&quot;: false, &quot;allow_unread_message_notifications&quot;: false, &quot;hide_basic_info&quot;: false, &quot;make_contact_info_visible&quot;: false, &quot;make_profile_visible&quot;: false, &quot;notification_interval&quot;: &quot;weekly&quot;}' https://test-v2.tramatch.com/settings"/>
+			<failure type="failure" message="1. Test Case ID: T6oyY6
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+- Undocumented Content-Type
+
+    Received: text/html; charset=utf-8
+    Documented: application/json
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 400, 401, 500
+
+[404] Not Found:
+
+    `Page not found`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;allow_new_matches_notifications&quot;: false, &quot;allow_newsletter&quot;: false, &quot;allow_unread_message_notifications&quot;: false, &quot;hide_basic_info&quot;: false, &quot;make_contact_info_visible&quot;: false, &quot;make_profile_visible&quot;: false, &quot;notification_interval&quot;: &quot;weekly&quot;}' https://test-v2.tramatch.com/settings"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /settings" time="5.953000">
+			<failure type="failure" message="1. Test Case ID: ZuZkaS
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+- Undocumented Content-Type
+
+    Received: text/html; charset=utf-8
+    Documented: application/json
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 400, 401, 500
+
+[404] Not Found:
+
+    `Page not found`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;allow_new_matches_notifications&quot;: false, &quot;allow_newsletter&quot;: false, &quot;allow_unread_message_notifications&quot;: false, &quot;hide_basic_info&quot;: false, &quot;make_contact_info_visible&quot;: false, &quot;make_profile_visible&quot;: false, &quot;notification_interval&quot;: &quot;weekly&quot;}' https://test-v2.tramatch.com/settings"/>
+			<failure type="failure" message="1. Test Case ID: ZuZkaS
+
+- Missing header not rejected
+
+    Missing header not rejected (got 404, expected 401)
+
+- Undocumented Content-Type
+
+    Received: text/html; charset=utf-8
+    Documented: application/json
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 400, 401, 500
+
+[404] Not Found:
+
+    `Page not found`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;allow_new_matches_notifications&quot;: false, &quot;allow_newsletter&quot;: false, &quot;allow_unread_message_notifications&quot;: false, &quot;hide_basic_info&quot;: false, &quot;make_contact_info_visible&quot;: false, &quot;make_profile_visible&quot;: false, &quot;notification_interval&quot;: &quot;weekly&quot;}' https://test-v2.tramatch.com/settings"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /settings" time="12.796000">
+			<failure type="failure" message="1. Test Case ID: V6cGlO
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+- Undocumented Content-Type
+
+    Received: text/html; charset=utf-8
+    Documented: application/json
+
+[200] OK:
+
+    `&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;head&gt;
+      &lt;meta charset=&quot;utf-8&quot;&gt;
+      &lt;title&gt;Tramatch | A traditional matching-making service for people of faith&lt;/title&gt;
+      &lt;base href=&quot;/en/&quot;&gt;
+      &lt;meta name=&quot;description&quot; content=&quot;Discover your perfect match through http://tramatch.com, a premier traditional marriage matchmaking service catering to individuals seeking a partner based on shared traditional values and faith-based beliefs. Our platform warmly welcomes people from diverse religious backgrounds, such as Evange // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/settings
+
+2. Test Case ID: OaJWuV
+
+- API accepts requests without authentication
+
+    Expected 401, got `200 OK` for `GET /settings`
+
+[200] OK:
+
+    `&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;head&gt;
+      &lt;meta charset=&quot;utf-8&quot;&gt;
+      &lt;title&gt;Tramatch | A traditional matching-making service for people of faith&lt;/title&gt;
+      &lt;base href=&quot;/en/&quot;&gt;
+      &lt;meta name=&quot;description&quot; content=&quot;Discover your perfect match through http://tramatch.com, a premier traditional marriage matchmaking service catering to individuals seeking a partner based on shared traditional values and faith-based beliefs. Our platform warmly welcomes people from diverse religious backgrounds, such as Evange // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/settings"/>
+			<failure type="failure" message="1. Test Case ID: V6cGlO
+
+- Missing header not rejected
+
+    Missing header not rejected (got 200, expected 401)
+
+- Undocumented Content-Type
+
+    Received: text/html; charset=utf-8
+    Documented: application/json
+
+[200] OK:
+
+    `&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;head&gt;
+      &lt;meta charset=&quot;utf-8&quot;&gt;
+      &lt;title&gt;Tramatch | A traditional matching-making service for people of faith&lt;/title&gt;
+      &lt;base href=&quot;/en/&quot;&gt;
+      &lt;meta name=&quot;description&quot; content=&quot;Discover your perfect match through http://tramatch.com, a premier traditional marriage matchmaking service catering to individuals seeking a partner based on shared traditional values and faith-based beliefs. Our platform warmly welcomes people from diverse religious backgrounds, such as Evange // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/settings
+
+2. Test Case ID: OaJWuV
+
+- API accepts requests without authentication
+
+    Expected 401, got `200 OK` for `GET /settings`
+
+[200] OK:
+
+    `&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&lt;head&gt;
+      &lt;meta charset=&quot;utf-8&quot;&gt;
+      &lt;title&gt;Tramatch | A traditional matching-making service for people of faith&lt;/title&gt;
+      &lt;base href=&quot;/en/&quot;&gt;
+      &lt;meta name=&quot;description&quot; content=&quot;Discover your perfect match through http://tramatch.com, a premier traditional marriage matchmaking service catering to individuals seeking a partner based on shared traditional values and faith-based beliefs. Our platform warmly welcomes people from diverse religious backgrounds, such as Evange // Output truncated...`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/settings"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+	</testsuite>
+</testsuites>

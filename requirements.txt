@@ -6,3 +6,5 @@ python-dotenv~=1.1.0
 pytest-html
 gevent
 cffi
+Appium-Python-Client~=5.1.1
+selenium~=4.34.2

@@ -4,11 +4,12 @@ from Utilities.runner import SchemathesisRunner
 from Utilities.user_auth import get_access_token_for_user
 import os
 
-token = get_access_token_for_user()
-os.makedirs("reports", exist_ok=True)
+def test_user_management():
+   token = get_access_token_for_user()
+   os.makedirs("reports", exist_ok=True)
 
-user_management_schema= ReadSchemaProperties.get_user_management_schema()
-runner = SchemathesisRunner(token)
+   user_management_schema= ReadSchemaProperties.get_user_management_schema()
+   runner = SchemathesisRunner(token)
 
-for name, url in user_management_schema.items():
-   runner.run_test(name, url)
+   for name, url in user_management_schema.items():
+      runner.run_test(name, url)

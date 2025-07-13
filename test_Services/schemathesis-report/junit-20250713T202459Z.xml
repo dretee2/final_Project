@@ -1,0 +1,968 @@
+<?xml version="1.0" ?>
+<testsuites disabled="0" errors="0" failures="24" tests="24" time="40.79000000003725">
+	<testsuite disabled="0" errors="0" failures="24" name="schemathesis" skipped="24" tests="24" time="40.79000000003725" hostname="UyahTee">
+		<testcase name="GET /api/recommendations/v2/preferences/" time="5.124000">
+			<failure type="failure" message="1. Test Case ID: bqLbLT
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/preferences/"/>
+			<failure type="failure" message="1. Test Case ID: bqLbLT
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/preferences/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/recommendations/v2/preferences/" time="1.249000">
+			<failure type="failure" message="1. Test Case ID: i77lZc
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 201, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;body_types&quot;: [], &quot;countries&quot;: [], &quot;drinking_statuses&quot;: [], &quot;education_levels&quot;: [], &quot;ethnicities&quot;: [], &quot;from_age&quot;: 18, &quot;from_height&quot;: null, &quot;has_children&quot;: [], &quot;marital_type&quot;: &quot;Monogamy&quot;, &quot;open_for_relocation&quot;: &quot;No&quot;, &quot;reasons&quot;: [], &quot;religions&quot;: [], &quot;smoking_statuses&quot;: [], &quot;to_age&quot;: 18, &quot;to_height&quot;: null, &quot;want_children&quot;: []}' https://test-v2.tramatch.com/api/recommendations/v2/preferences/"/>
+			<failure type="failure" message="1. Test Case ID: i77lZc
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 201, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;body_types&quot;: [], &quot;countries&quot;: [], &quot;drinking_statuses&quot;: [], &quot;education_levels&quot;: [], &quot;ethnicities&quot;: [], &quot;from_age&quot;: 18, &quot;from_height&quot;: null, &quot;has_children&quot;: [], &quot;marital_type&quot;: &quot;Monogamy&quot;, &quot;open_for_relocation&quot;: &quot;No&quot;, &quot;reasons&quot;: [], &quot;religions&quot;: [], &quot;smoking_statuses&quot;: [], &quot;to_age&quot;: 18, &quot;to_height&quot;: null, &quot;want_children&quot;: []}' https://test-v2.tramatch.com/api/recommendations/v2/preferences/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/recommendations/v2/preferences/" time="1.859000">
+			<failure type="failure" message="1. Test Case ID: tbbTQl
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;body_types&quot;: null, &quot;countries&quot;: [], &quot;drinking_statuses&quot;: null, &quot;education_levels&quot;: null, &quot;ethnicities&quot;: null, &quot;from_age&quot;: null, &quot;from_height&quot;: null, &quot;has_children&quot;: null, &quot;marital_type&quot;: null, &quot;open_for_relocation&quot;: null, &quot;reasons&quot;: null, &quot;religions&quot;: null, &quot;smoking_statuses&quot;: null, &quot;to_age&quot;: null, &quot;to_height&quot;: null, &quot;want_children&quot;: null}' https://test-v2.tramatch.com/api/recommendations/v2/preferences/"/>
+			<failure type="failure" message="1. Test Case ID: tbbTQl
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;body_types&quot;: null, &quot;countries&quot;: [], &quot;drinking_statuses&quot;: null, &quot;education_levels&quot;: null, &quot;ethnicities&quot;: null, &quot;from_age&quot;: null, &quot;from_height&quot;: null, &quot;has_children&quot;: null, &quot;marital_type&quot;: null, &quot;open_for_relocation&quot;: null, &quot;reasons&quot;: null, &quot;religions&quot;: null, &quot;smoking_statuses&quot;: null, &quot;to_age&quot;: null, &quot;to_height&quot;: null, &quot;want_children&quot;: null}' https://test-v2.tramatch.com/api/recommendations/v2/preferences/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/matches/recommendations/" time="1.359000">
+			<failure type="failure" message="1. Test Case ID: 2v8VhM
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/matches/recommendations/?page=0&amp;per_page=0'"/>
+			<failure type="failure" message="1. Test Case ID: 2v8VhM
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/matches/recommendations/?page=0&amp;per_page=0'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/preferences/countries" time="5.172000">
+			<failure type="failure" message="1. Test Case ID: IkqQRZ
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/preferences/countries"/>
+			<failure type="failure" message="1. Test Case ID: IkqQRZ
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/preferences/countries"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/matches/requests" time="1.280000">
+			<failure type="failure" message="1. Test Case ID: KyWsl6
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/matches/requests?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<failure type="failure" message="1. Test Case ID: KyWsl6
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/matches/requests?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/recommendations/v2/matches/requests" time="1.265000">
+			<failure type="failure" message="1. Test Case ID: ji3QO3
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;currentUsername&quot;: &quot;&quot;, &quot;recipientUsername&quot;: &quot;&quot;, &quot;relatedUserId&quot;: &quot;&quot;, &quot;source&quot;: &quot;Request&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/requests"/>
+			<failure type="failure" message="1. Test Case ID: ji3QO3
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;currentUsername&quot;: &quot;&quot;, &quot;recipientUsername&quot;: &quot;&quot;, &quot;relatedUserId&quot;: &quot;&quot;, &quot;source&quot;: &quot;Request&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/requests"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/recommendations/v2/matches/requests" time="1.781000">
+			<failure type="failure" message="1. Test Case ID: 1eftUW
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;currentUsername&quot;: &quot;&quot;, &quot;relatedUserId&quot;: &quot;&quot;, &quot;source&quot;: &quot;Request&quot;, &quot;status&quot;: &quot;BLOCKED&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/requests"/>
+			<failure type="failure" message="1. Test Case ID: 1eftUW
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;currentUsername&quot;: &quot;&quot;, &quot;relatedUserId&quot;: &quot;&quot;, &quot;source&quot;: &quot;Request&quot;, &quot;status&quot;: &quot;BLOCKED&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/requests"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/recommendations/v2/matches/advanced/requests" time="1.500000">
+			<failure type="failure" message="1. Test Case ID: gEDNCo
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;currentUsername&quot;: &quot;&quot;, &quot;recipientUsername&quot;: &quot;&quot;, &quot;relatedUserId&quot;: &quot;&quot;, &quot;source&quot;: &quot;Request&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/advanced/requests"/>
+			<failure type="failure" message="1. Test Case ID: gEDNCo
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;currentUsername&quot;: &quot;&quot;, &quot;recipientUsername&quot;: &quot;&quot;, &quot;relatedUserId&quot;: &quot;&quot;, &quot;source&quot;: &quot;Request&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/advanced/requests"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/recommendations/v2/matches/requests/{recipient_id}/" time="1.234000">
+			<failure type="failure" message="1. Test Case ID: LfYxMV
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST https://test-v2.tramatch.com/api/recommendations/v2/matches/requests/0/"/>
+			<failure type="failure" message="1. Test Case ID: LfYxMV
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST https://test-v2.tramatch.com/api/recommendations/v2/matches/requests/0/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/matches/requests/mutual" time="1.531000">
+			<failure type="failure" message="1. Test Case ID: zaGCKC
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/matches/requests/mutual?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<failure type="failure" message="1. Test Case ID: zaGCKC
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/matches/requests/mutual?per_page=20&amp;x-schemathesis-unknown-property=42'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/recommendations/v2/matches/recommendations/{recipient_id}" time="1.248000">
+			<failure type="failure" message="1. Test Case ID: ghWJmu
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;source&quot;: &quot;system&quot;, &quot;status&quot;: &quot;BLOCKED&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/recommendations/0"/>
+			<failure type="failure" message="1. Test Case ID: ghWJmu
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;source&quot;: &quot;system&quot;, &quot;status&quot;: &quot;BLOCKED&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/matches/recommendations/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/recommendations/v2/filters/" time="1.422000">
+			<failure type="failure" message="1. Test Case ID: yGfISQ
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;code&quot;: &quot;&quot;, &quot;credit_cost&quot;: 0, &quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/filters/"/>
+			<failure type="failure" message="1. Test Case ID: yGfISQ
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;code&quot;: &quot;&quot;, &quot;credit_cost&quot;: 0, &quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/filters/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/matches/recommendations/rejected/" time="1.189000">
+			<failure type="failure" message="1. Test Case ID: d0SeGx
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/matches/recommendations/rejected/?start_date=2000-01-01T00%3A00%3A00Z&amp;page=1&amp;per_page=10'"/>
+			<failure type="failure" message="1. Test Case ID: d0SeGx
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/matches/recommendations/rejected/?start_date=2000-01-01T00%3A00%3A00Z&amp;page=1&amp;per_page=10'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/health/" time="1.781000">
+			<failure type="failure" message="1. Test Case ID: o4JdIe
+
+- Unsupported method incorrect response
+
+    Missing Allow header for unsupported method TRACE
+
+[405] Method Not Allowed:
+
+    `&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X TRACE -H 'Authorization: [Filtered]' https://test-v2.tramatch.com/api/recommendations/v2/health/"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/filters/{code}" time="1.328000">
+			<failure type="failure" message="1. Test Case ID: Vhm8K8
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/filters/0"/>
+			<failure type="failure" message="1. Test Case ID: Vhm8K8
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/filters/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/filters/fields" time="1.297000">
+			<failure type="failure" message="1. Test Case ID: KX6Gsz
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/filters/fields"/>
+			<failure type="failure" message="1. Test Case ID: KX6Gsz
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/filters/fields"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="PUT /api/recommendations/v2/filters/{code}" time="1.422000">
+			<failure type="failure" message="1. Test Case ID: ruxJwZ
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;credit_cost&quot;: 0, &quot;description&quot;: &quot;&quot;, &quot;is_active&quot;: null, &quot;name&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/filters/0"/>
+			<failure type="failure" message="1. Test Case ID: ruxJwZ
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{&quot;credit_cost&quot;: 0, &quot;description&quot;: &quot;&quot;, &quot;is_active&quot;: null, &quot;name&quot;: &quot;&quot;}' https://test-v2.tramatch.com/api/recommendations/v2/filters/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/filters/" time="1.359000">
+			<failure type="failure" message="1. Test Case ID: 4gmS4G
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/filters/?page=1&amp;per_page=10&amp;is_active=true'"/>
+			<failure type="failure" message="1. Test Case ID: 4gmS4G
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/filters/?page=1&amp;per_page=10&amp;is_active=true'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="DELETE /api/recommendations/v2/filters/{code}" time="1.203000">
+			<failure type="failure" message="1. Test Case ID: 6jtmnI
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/recommendations/v2/filters/0"/>
+			<failure type="failure" message="1. Test Case ID: 6jtmnI
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X DELETE https://test-v2.tramatch.com/api/recommendations/v2/filters/0"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/recommendations/v2/filters/search" time="1.297000">
+			<failure type="failure" message="1. Test Case ID: qvZtVS
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;age_limit&quot;: null, &quot;body_types&quot;: null, &quot;countries&quot;: null, &quot;drinking_statuses&quot;: null, &quot;education_levels&quot;: null, &quot;ethnicities&quot;: null, &quot;has_children&quot;: null, &quot;height_range&quot;: null, &quot;marital_statuses&quot;: null, &quot;marital_type&quot;: null, &quot;occupations&quot;: null, &quot;open_for_relocation&quot;: null, &quot;page&quot;: 1, &quot;per_page&quot;: 10, &quot;reasons&quot;: null, &quot;religions&quot;: null, &quot;smoking_statuses&quot;: null, &quot;want_children&quot;: null}' https://test-v2.tramatch.com/api/recommendations/v2/filters/search"/>
+			<failure type="failure" message="1. Test Case ID: qvZtVS
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;age_limit&quot;: null, &quot;body_types&quot;: null, &quot;countries&quot;: null, &quot;drinking_statuses&quot;: null, &quot;education_levels&quot;: null, &quot;ethnicities&quot;: null, &quot;has_children&quot;: null, &quot;height_range&quot;: null, &quot;marital_statuses&quot;: null, &quot;marital_type&quot;: null, &quot;occupations&quot;: null, &quot;open_for_relocation&quot;: null, &quot;page&quot;: 1, &quot;per_page&quot;: 10, &quot;reasons&quot;: null, &quot;religions&quot;: null, &quot;smoking_statuses&quot;: null, &quot;want_children&quot;: null}' https://test-v2.tramatch.com/api/recommendations/v2/filters/search"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/recommendations/v2/filters/search/user-history" time="1.234000">
+			<failure type="failure" message="1. Test Case ID: q0Ctsy
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/filters/search/user-history?per_page=10&amp;x-schemathesis-unknown-property=42'"/>
+			<failure type="failure" message="1. Test Case ID: q0Ctsy
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' 'https://test-v2.tramatch.com/api/recommendations/v2/filters/search/user-history?per_page=10&amp;x-schemathesis-unknown-property=42'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="POST /api/recommendations/v2/filters/search/history" time="1.250000">
+			<failure type="failure" message="1. Test Case ID: IA8JwR
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;created_at&quot;: null, &quot;page&quot;: 1, &quot;per_page&quot;: 10, &quot;user_id&quot;: null}' https://test-v2.tramatch.com/api/recommendations/v2/filters/search/history"/>
+			<failure type="failure" message="1. Test Case ID: IA8JwR
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 422
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;created_at&quot;: null, &quot;page&quot;: 1, &quot;per_page&quot;: 10, &quot;user_id&quot;: null}' https://test-v2.tramatch.com/api/recommendations/v2/filters/search/history"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+		<testcase name="GET /api/recommendations/v2/filters/credit-point/balance" time="1.406000">
+			<failure type="failure" message="1. Test Case ID: oHTDG9
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/filters/credit-point/balance"/>
+			<failure type="failure" message="1. Test Case ID: oHTDG9
+
+- Server error
+
+- Missing header not rejected
+
+    Missing header not rejected (got 500, expected 401)
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200
+
+[500] Internal Server Error:
+
+    `Internal Server Error`
+
+Reproduce with: 
+
+    curl -X GET https://test-v2.tramatch.com/api/recommendations/v2/filters/credit-point/balance"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+	</testsuite>
+</testsuites>
